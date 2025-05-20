@@ -1,0 +1,79 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <title>Sooa Mo | Portfolio</title>
+  <link rel="stylesheet" href="style.css">
+  <link href="https://fonts.googleapis.com/css2?family=League+Mono&display=swap" rel="stylesheet">
+</head>
+<body>
+  <header>
+    <nav class="navbar">
+      <div class="logo"><a href="index.html">Sooa Mo</a></div>
+      <ul class="nav-links">
+        <li><a href="#projects">Projects</a></li>
+        <li><a href="resume.pdf" target="_blank">Resume</a></li>
+      </ul>
+    </nav>
+  </header>
+
+  <main>
+    <section class="hero">
+      <div class="hero-text">
+        <h1>Designing thoughtful experiences for the digital world</h1>
+      </div>
+      <div class="hero-image">
+        <img src="images/profile-hero.jpg" alt="Profile image of Sooa Mo">
+      </div>
+    </section>
+
+    <section class="projects" id="projects">
+      <h2>Selected Projects</h2>
+      <div class="project-cards">
+        <div class="project-card">
+          <a href="project1.html">
+            <img src="images/project1.jpg" alt="Project 1">
+            <h3>Project Title 1</h3>
+            <p>2024</p>
+          </a>
+        </div>
+        <div class="project-card">
+          <a href="project2.html">
+            <img src="images/project2.jpg" alt="Project 2">
+            <h3>Project Title 2</h3>
+            <p>2023</p>
+          </a>
+        </div>
+        <div class="project-card">
+          <a href="project3.html">
+            <img src="images/project3.jpg" alt="Project 3">
+            <h3>Project Title 3</h3>
+            <p>2022</p>
+          </a>
+        </div>
+      </div>
+    </section>
+
+    <section class="gallery">
+      <h2>Gallery</h2>
+      <div class="gallery-images">
+        <img src="images/gallery1.jpg" alt="Gallery work 1">
+        <img src="images/gallery2.jpg" alt="Gallery work 2">
+        <img src="images/gallery3.jpg" alt="Gallery work 3">
+      </div>
+    </section>
+  </main>
+
+  <footer>
+    <p>Copyright © 2025 Sooa Mo. All rights reserved.</p>
+    <button id="topBtn">Top</button>
+  </footer>
+
+  <script>
+    document.getElementById("topBtn").addEventListener("click", function () {
+      window.scrollTo({ top: 0, behavior: "smooth" });
+    });
+  </script>
+</body>
+</html>
