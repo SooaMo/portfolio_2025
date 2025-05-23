@@ -1,25 +1,106 @@
-footer {
-    background-color: #f2f2f2;
-    margin: 0;
-    padding: 2rem 1rem 2rem 1rem;
-    text-align: center;
-    font-size: 0.9rem;
-    position: relative;
-    z-index: 1;
-  }
-  
-  #topBtn {
-    position: fixed;
-    bottom: 20px;
-    right: 20px;
-    background-color: #658D7F;
-    color: #fff;
-    border: none;
-    padding: 0.6rem 1rem;
-    border-radius: 4px;
-    cursor: pointer;
-    font-family: 'League Mono', monospace;
-    z-index: 999;
-    box-shadow: 0 2px 6px rgba(0, 0, 0, 0.2);
-  }
-  
+/* navbar */
+.nav-link {
+  transition: text-decoration 0.2s ease-in-out;
+}
+
+.nav-link:hover {
+  text-decoration: underline;
+  text-underline-offset: 4px;
+}
+
+/* Project Card */
+.card .badge {
+  font-size: 0.75rem;
+  padding: 0.5em 0.7em;
+  border-style: solid;
+  border-width: 0.15em;
+  margin: 0.15em;
+}
+
+.card .btn {
+  font-size: 0.9rem;
+}
+
+.tag-type {
+  background-color: white;
+  border-color: #666666;
+  color: #666666;
+}
+
+.tag-skill {
+  background-color: white;
+  border-color: #658D7F;
+  color: #658D7F;
+}
+
+/* Custom green solid button with hover reverse on project card */
+.btn-outline-custom {
+  background-color: #658D7F;
+  color: #fff;
+  border: 1.5px solid #658D7F;
+  transition: background-color 0.3s ease, color 0.3s ease, border 0.3s ease;
+}
+
+.btn-outline-custom:hover {
+  background-color: #38574c;
+  color: #ffffff;
+  border: 1.5px solid #658D7F; /* make sure border stays visible */
+}
+
+
+
+/* Contact icon */
+.social-icon {
+  color: #666666;
+  font-size: 1.5rem;
+  transition: color 0.3s ease;
+}
+
+.social-icon:hover {
+  color: #c4302b; /* YouTube red or LinkedIn blue */
+}
+
+/* Optional: Specific hover colors */
+.social-icon .fa-youtube:hover {
+  color: #FF0000;
+}
+
+.social-icon .fa-linkedin:hover {
+  color: #0A66C2;
+}
+
+/* email address copied */
+.email-tooltip-wrapper {
+  position: relative;
+  display: inline-block;
+  cursor: pointer;
+}
+
+.email-tooltip {
+  position: absolute;
+  top: -30px;
+  left: 50%;
+  transform: translateX(-50%);
+  background-color: #666666;
+  color: #fff;
+  padding: 5px 10px;
+  font-size: 0.8rem;
+  border-radius: 4px;
+  white-space: nowrap;
+  opacity: 0;
+  pointer-events: none;
+  transition: opacity 0.3s ease;
+  z-index: 10;
+}
+
+.email-tooltip::after {
+  content: "";
+  position: absolute;
+  top: 100%;
+  left: 50%;
+  transform: translateX(-50%);
+  border-width: 6px;
+  border-style: solid;
+  border-color: #333 transparent transparent transparent;
+}
+
