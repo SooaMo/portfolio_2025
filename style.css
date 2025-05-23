@@ -104,3 +104,18 @@
   border-color: #333 transparent transparent transparent;
 }
 
+/* top icon */
+#backToTopBtn {
+  position: fixed;
+  bottom: 30px;
+  right: 30px;
+  display: none;
+  z-index: 999;
+  width: 48px;
+  height: 48px;
+  font-size: 1rem;
+  padding: 0;
+  justify-content: center;
+  align-items: center;
+  display: flex;
+}
