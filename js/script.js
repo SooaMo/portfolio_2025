@@ -51,3 +51,19 @@ backToTopBtn.addEventListener("click", () => {
     behavior: "smooth"
   });
 });
+
+// img bigger modal
+document.addEventListener("DOMContentLoaded", function () {
+  const zoomableImages = document.querySelectorAll(".zoomable-img");
+  const modalImage = document.getElementById("modalImage");
+
+  zoomableImages.forEach(img => {
+    img.addEventListener("click", () => {
+      const src = img.getAttribute("data-img");
+      modalImage.src = src;
+      const modal = new bootstrap.Modal(document.getElementById("imageModal"));
+      modal.show();
+    });
+  });
+});
+

@@ -10,7 +10,7 @@
 
 /* Project Card */
 .card .badge {
-  font-size: 0.75rem;
+  font-size: 0.78rem;
   padding: 0.5em 0.7em;
   border-style: solid;
   border-width: 0.15em;
@@ -25,12 +25,14 @@
   background-color: white;
   border-color: #666666;
   color: #666666;
+  font-size: 0.9rem;
 }
 
 .tag-skill {
   background-color: white;
   border-color: #658D7F;
   color: #658D7F;
+  font-size: 0.9rem;
 }
 
 /* Custom green solid button with hover reverse on project card */
