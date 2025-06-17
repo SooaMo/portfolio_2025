@@ -1,0 +1,104 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8" />
+  <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+  <title>SFU Grad Studies | Sooa Mo</title>
+
+  <!-- Bootstrap -->
+  <link href="https://cdn.jsdelivr.net/npm/bootstrap@5.3.2/dist/css/bootstrap.min.css" rel="stylesheet" />
+  <!-- Font Awesome -->
+  <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.5.0/css/all.min.css">
+  <!-- Custom CSS -->
+  <link rel="stylesheet" href="style.css" />
+</head>
+<body>
+
+  <!-- Navbar -->
+  <div data-include="partials/navbar.html"></div>
+
+  <!-- Project Detail Section -->
+  <section class="container py-5 mt-5">
+    <h1 class="mb-3">SFU Grad Studies</h1>
+    <p class="text-muted">[Academic / Work] • [Year or Duration]</p>
+
+    <!-- Tags -->
+    <div class="mb-4">
+      <span class="text-muted"> Project Type: </span>
+      <span class="badge tag-skill me-1">• UX/UI Design</span>
+      <span class="badge tag-skill me-1">• Figma Prototype</span>
+      <!-- Add more if needed -->
+    </div>
+
+    <!-- Main Image -->
+    <img src="img/projects/project-title.jpg" alt="[Project Title] Cover" class="img-fluid rounded mb-4" />
+
+    <!-- Overview -->
+    <h3 class="mt-5">0. Overview</h3>
+    <p class="ps-3">
+      [Write a short paragraph introducing the project: What is it? Why was it created? Who is it for?]
+    </p>
+
+    <!-- My Role -->
+    <h3 class="mt-5">1. My Role</h3>
+    <p class="ps-3">
+      [Describe what you specifically contributed: research, design, writing, coding, etc.]
+    </p>
+
+    <!-- Design Decision -->
+    <h3 class="mt-5">2. Design Decision</h3>
+    <p class="ps-3">
+      [Describe a key design choice you made. Why was it made? What trade-offs were considered?]
+    </p>
+
+    <div class="text-center">
+    <img src="img/projects/example.jpg"
+    alt="Example"
+    class="img-fluid rounded shadow-sm mt-3 zoomable-img"
+    data-img="img/projects/example.jpg"
+    style="max-width: 600px; cursor: pointer;">
+    <small class="text-muted d-block mt-2">Fig.1: - </small>
+    </div>
+
+
+    <!-- Notable Result -->
+    <h3 class="mt-5">3. Notable Result</h3>
+    <p class="ps-3">
+      [Highlight an impactful outcome of the project — something measurable, surprising, or meaningful.]
+    </p>
+
+
+    <!-- Takeaway -->
+    <h3 class="mt-5">4. Takeaway</h3>
+    <p class="ps-3">
+      [Reflect on what you learned through the project — whether it's about users, tools, collaboration, or design thinking.]
+    </p>
+
+      <!-- Figma Embed -->
+    <section class="container py-5">
+      <h3 class="mb-4">Interactive Prototype</h3>
+      <div class="ratio ratio-16x9">
+        <iframe
+          src="https://www.figma.com/embed?embed_host=share&url=https://www.figma.com/proto/your-prototype-link"
+          allowfullscreen>
+        </iframe>
+      </div>
+    </section>
+
+    <!-- Links -->
+    <div class="mt-4">
+      <a href="index.html#projects" class="btn btn-outline-secondary">← Back to Projects</a>
+    </div>
+  </section>
+
+  <!-- Footer + Top Button + img modal -->
+  <div data-include="partials/footer.html"></div>
+  <div data-include="partials/topButton.html"></div>
+  <div data-include="partials/imageModal.html"></div>
+
+
+  <!-- Scripts -->
+  <script src="js/include.js"></script>
+  <script src="js/script.js"></script>
+</body>
+</html>
