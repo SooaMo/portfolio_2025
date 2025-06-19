@@ -53,14 +53,19 @@
 
 /* Contact icon */
 .social-icon {
-  color: #666666;
-  font-size: 1.5rem;
-  transition: color 0.3s ease;
+  display: inline-flex;
+  align-items: center;
+  justify-content: center;
+  width: 44px;
+  height: 44px;
+  border: 2px solid #dadada; /* 테두리 색상 */
+  border-radius: 10%; /* 원형 */
+  font-size: 30px;
+  color: #333;
+  transition: all 0.3s ease;
+  text-decoration: none;
 }
 
-.social-icon:hover {
-  color: #c4302b; /* YouTube red or LinkedIn blue */
-}
 
 /* Optional: Specific hover colors */
 .social-icon .fa-youtube:hover {
@@ -69,6 +74,10 @@
 
 .social-icon .fa-linkedin:hover {
   color: #0A66C2;
+}
+
+.social-icon .fa-id-badge:hover {
+  color: #658D7F;
 }
 
 /* email address copied */
@@ -122,3 +131,15 @@
   display: flex;
 }
 
+/*gallery */
+#gallery .carousel-item img {
+  cursor: pointer;
+  border-radius: 12px;
+  max-height: 500px;
+  object-fit: cover;
+}
+
+.modal-content {
+  border-radius: 12px;
+  overflow: hidden;
+}

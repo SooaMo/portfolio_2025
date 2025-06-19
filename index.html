@@ -220,10 +220,63 @@
         </div>
       </section>
       
+
+<!-- Gallery Section -->
+<section class="py-5" id="gallery">
+  <div class="container">
+    <h2 class="mb-4 text-center">Gallery</h2>
+
+    <div class="row" id="galleryGrid">
+      <!-- shown3 -->
+      <div class="col-md-4 mb-4">
+        <img src="img/gallery/1.jpg" class="img-fluid gallery-img" alt="Gallery image 1">
+      </div>
+      <div class="col-md-4 mb-4">
+        <img src="img/gallery/2.jpg" class="img-fluid gallery-img" alt="Gallery image 2">
+      </div>
+      <div class="col-md-4 mb-4">
+        <img src="img/gallery/3.jpg" class="img-fluid gallery-img" alt="Gallery image 3">
+      </div>
+
+      <!-- hidden -->
+      <div class="col-md-4 mb-4 d-none gallery-extra">
+        <img src="img/gallery/3.jpg" class="img-fluid gallery-img" alt="Gallery image 4">
+      </div>
+      <div class="col-md-4 mb-4 d-none gallery-extra">
+        <img src="img/gallery/2.jpg" class="img-fluid gallery-img" alt="Gallery image 5">
+      </div>
+      <div class="col-md-4 mb-4 d-none gallery-extra">
+        <img src="img/gallery/1.jpg" class="img-fluid gallery-img" alt="Gallery image 6">
+      </div>
+    </div>
+
+    <!-- 더 보기 버튼 -->
+    <div class="text-center mt-3">
+      <button id="toggleGalleryBtn" class="btn btn-outline-dark">More</button>
+    </div>
+  </div>
+</section>
+
+<!-- Modal for Zoomed Image -->
+<div class="modal fade" id="imageModal" tabindex="-1" aria-hidden="true">
+  <div class="modal-dialog modal-xl modal-dialog-centered">
+    <div class="modal-content bg-transparent border-0">
+      <div class="modal-body p-0">
+        <img id="modalImage" src="" class="img-fluid w-100" alt="Zoomed Image">
+      </div>
+    </div>
+  </div>
+</div>
+
+
+
+    
+
   
   
   <!-- Contact Section -->
-<section class="container py-5" id="contact">
+<section class="bg-light py-5  py-5" id="contact">
+  <div class="container">
   <h2 class="mb-4">Contact Me!</h2>
   <p>
     <b>Email:</b>
@@ -234,14 +287,21 @@
   </p>
   
   <p>
-    <a href="https://www.youtube.com/channel/UCD7aft2uzSnMPiwY_x1r5sg" target="_blank" class="social-icon me-3">
+    <a href="https://www.youtube.com/channel/UCD7aft2uzSnMPiwY_x1r5sg" target="_blank" class="social-icon">
       <i class="fab fa-youtube"></i>
     </a>
     <a href="https://www.linkedin.com/in/sooamo/" target="_blank" class="social-icon">
       <i class="fab fa-linkedin"></i>
     </a>
+    <a href="pdf/SooaMo_Resume.pdf" target="_blank" class="social-icon me-3">
+      <i class="fas fa-id-badge"></i>
+    </a>
+    
   </p>
+</div>
 </section>
+
+
 
   <!-- Footer -->
   <div data-include="partials/footer.html"></div>
