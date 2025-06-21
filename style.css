@@ -1,0 +1,145 @@
+/* navbar */
+.nav-link {
+  transition: text-decoration 0.2s ease-in-out;
+}
+
+.nav-link:hover {
+  text-decoration: underline;
+  text-underline-offset: 4px;
+}
+
+/* Project Card */
+.card .badge {
+  font-size: 0.78rem;
+  padding: 0.5em 0.7em;
+  border-style: solid;
+  border-width: 0.15em;
+  margin: 0.15em;
+}
+
+.card .btn {
+  font-size: 0.9rem;
+}
+
+.tag-type {
+  background-color: white;
+  border-color: #666666;
+  color: #666666;
+  font-size: 0.9rem;
+}
+
+.tag-skill {
+  background-color: white;
+  border-color: #658D7F;
+  color: #658D7F;
+  font-size: 0.9rem;
+}
+
+/* Custom green solid button with hover reverse on project card */
+.btn-outline-custom {
+  background-color: #658D7F;
+  color: #fff;
+  border: 1.5px solid #658D7F;
+  transition: background-color 0.3s ease, color 0.3s ease, border 0.3s ease;
+}
+
+.btn-outline-custom:hover {
+  background-color: #38574c;
+  color: #ffffff;
+  border: 1.5px solid #658D7F; /* make sure border stays visible */
+}
+
+
+
+/* Contact icon */
+.social-icon {
+  display: inline-flex;
+  align-items: center;
+  justify-content: center;
+  width: 44px;
+  height: 44px;
+  border: 2px solid #dadada; /* 테두리 색상 */
+  border-radius: 10%; /* 원형 */
+  font-size: 30px;
+  color: #333;
+  transition: all 0.3s ease;
+  text-decoration: none;
+}
+
+
+/* Optional: Specific hover colors */
+.social-icon .fa-youtube:hover {
+  color: #FF0000;
+}
+
+.social-icon .fa-linkedin:hover {
+  color: #0A66C2;
+}
+
+.social-icon .fa-id-badge:hover {
+  color: #658D7F;
+}
+
+/* email address copied */
+.email-tooltip-wrapper {
+  position: relative;
+  display: inline-block;
+  cursor: pointer;
+}
+
+.email-tooltip {
+  position: absolute;
+  top: -30px;
+  left: 50%;
+  transform: translateX(-50%);
+  background-color: #666666;
+  color: #fff;
+  padding: 5px 10px;
+  font-size: 0.8rem;
+  border-radius: 4px;
+  white-space: nowrap;
+  opacity: 0;
+  pointer-events: none;
+  transition: opacity 0.3s ease;
+  z-index: 10;
+}
+
+.email-tooltip::after {
+  content: "";
+  position: absolute;
+  top: 100%;
+  left: 50%;
+  transform: translateX(-50%);
+  border-width: 6px;
+  border-style: solid;
+  border-color: #333 transparent transparent transparent;
+}
+
+/* top icon */
+#backToTopBtn {
+  position: fixed;
+  bottom: 30px;
+  right: 30px;
+  display: none;
+  z-index: 999;
+  width: 48px;
+  height: 48px;
+  font-size: 1rem;
+  padding: 0;
+  justify-content: center;
+  align-items: center;
+  display: flex;
+}
+
+/*gallery */
+#gallery .carousel-item img {
+  cursor: pointer;
+  border-radius: 12px;
+  max-height: 500px;
+  object-fit: cover;
+}
+
+.modal-content {
+  border-radius: 12px;
+  overflow: hidden;
+}

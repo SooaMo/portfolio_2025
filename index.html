@@ -1,0 +1,327 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8" />
+  <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+  <title>Sooa Mo | Portfolio</title>
+  <link rel="icon" href="img/logo.png" type="image/png">
+  
+  <!-- Bootstrap CSS -->
+  <link href="https://cdn.jsdelivr.net/npm/bootstrap@5.3.2/dist/css/bootstrap.min.css" rel="stylesheet">
+  <!-- Google Fonts or Material Icons (Optional) -->
+  <link href="https://fonts.googleapis.com/icon?family=Material+Icons" rel="stylesheet">
+  <!-- Custom CSS -->
+  <link rel="stylesheet" href="style.css">
+  <!-- Icon-font-awesome -->
+  <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.5.0/css/all.min.css">
+
+</head>
+
+
+<body>
+
+  <!-- Navbar -->
+  <div data-include="partials/navbar.html"></div>
+
+  <!-- Hero Section -->
+  <section class="vh-100 d-flex align-items-center justify-content-center bg-light" id="home">
+    <div class="text-center">
+      <h1 class="display-4 fw-bold">Hi I'm Sooa Mo!</h1>
+      <p class="lead">A UX/UI Designer & Front-End Developer</p>
+      <a href="#projects" class="btn btn-dark mt-3">View My Work</a>
+    </div>
+  </section>
+
+  <!-- About Section -->
+  <section class="container py-5" id="about">
+    <h2 class="mb-4 text-center">About Me</h2>
+    <div class="row align-items-center">
+      
+      <!-- Profile Image -->
+      <div class="col-md-4 text-center mb-4 mb-md-0">
+        <img src="img/profile.jpg" alt="Sooa Mo Profile Photo" class="img-fluid rounded-circle" style="max-width: 250px;">
+      </div>
+      
+      <!-- About Text -->
+      <div class="col-md-8 ps-md-5">
+        <p>
+          Freshly graduated from SFU’s Interactive Arts & Technology program, I design intuitive, engaging digital experiences rooted in storytelling and prototyping. I’m especially drawn to work that connects people or addresses real-world challenges.
+        </p>
+      </div>
+  
+    </div>
+  </section>
+  
+
+
+
+
+      <!-- Project Cards -->
+      <section class="bg-light py-5" id="projects">
+        <div class="container">
+          <h2 class="mb-4 text-center">Projects</h2>
+      
+          <!-- Filter Buttons -->
+          <div class="mb-4 text-center">
+            <button class="btn btn-outline-dark filter-btn me-2" data-filter="all">All</button>
+            <button class="btn btn-outline-dark filter-btn me-2" data-filter="academic">Academic</button>
+            <button class="btn btn-outline-dark filter-btn" data-filter="work">Work</button>
+          </div>
+      
+          <!-- Project Cards -->
+          <div class="row g-4">
+            
+            <!-- Academic Project Card START -->
+            <div class="col-md-4 project-card" data-type="academic">
+              <div class="card h-100 d-flex flex-column">
+                <img src="img/TheDiary/thediary-thumb.jpg" class="card-img-top" alt="Project TheDiary Thumbnail">
+                <div class="card-body d-flex flex-column">
+                  <h5 class="card-title">The Diary</h5>
+                  <p class="card-subtitle mb-2 text-muted">2025 Mar-Apr</p>
+                  <div class="mb-3">
+                    <span class="badge tag-type me-1">Academic</span>
+                    <span class="badge tag-skill me-1">Speculative Design</span>
+                    <span class="badge tag-skill me-1">Installation</span>
+                    <span class="badge tag-skill me-1">Physical Interaction</span>
+                  </div>
+                  <div class="mt-auto d-flex justify-content-end">
+                    <a href="TheDiary.html" class="btn btn-outline-custom">View Details</a>
+                  </div>
+                </div>
+              </div>
+            </div>
+            <!-- Academic Project Card END-->
+
+            <!-- Work Project Card START -->
+            <div class="col-md-4 project-card" data-type="work">
+              <div class="card h-100 d-flex flex-column">
+                <img src="img/flui/flui-thumb.jpg" class="card-img-top" alt="Project Thumbnail">
+                <div class="card-body d-flex flex-column">
+                  <h5 class="card-title">FLUI Design Hackathon - Banana Art Lab</h5>
+                  <p class="card-subtitle mb-2 text-muted">2025 Feb</p>
+                  <div class="mb-3">
+                    <span class="badge tag-type me-1">Work</span>
+                    <span class="badge tag-skill me-1">Website Redesign</span>
+                    <span class="badge tag-skill me-1">Figma</span>
+                    <span class="badge tag-skill me-1">Branding</span>
+                  </div>
+                  <div class="mt-auto d-flex justify-content-end">
+                    <a href="flui-banana.html" class="btn btn-outline-custom">View Details</a>
+
+                  </div>
+                </div>
+              </div>
+            </div>
+            <!-- Work Project Card END -->   
+            
+            <!-- Academic Project Card START -->
+            <div class="col-md-4 project-card" data-type="academic">
+              <div class="card h-100 d-flex flex-column">
+                <img src="img/jadeco/jadeco-thumb.jpg" class="card-img-top" alt="Project Thumbnail">
+                <div class="card-body d-flex flex-column">
+                  <h5 class="card-title">Jadeco</h5>
+                  <p class="card-subtitle mb-2 text-muted">2024 Sep-Dec</p>
+                  <div class="mb-3">
+                    <span class="badge tag-type me-1">Academic</span>
+                    <span class="badge tag-skill me-1">UX Research</span>
+                    <span class="badge tag-skill me-1">Video</span>
+                    <span class="badge tag-skill me-1">Storyboard</span>
+                  </div>
+                  <div class="mt-auto d-flex justify-content-end">
+                    <a href="jadeco.html" class="btn btn-outline-custom">View Details</a>
+                  </div>
+                </div>
+              </div>
+            </div>
+            <!-- Academic Project Card END-->            
+
+            <!-- Academic Project Card START -->
+            <div class="col-md-4 project-card" data-type="academic">
+              <div class="card h-100 d-flex flex-column">
+                <img src="img/caringconnections/cc-thumb.jpg" class="card-img-top" alt="Project cc Thumbnail">
+                <div class="card-body d-flex flex-column">
+                  <h5 class="card-title">Caring Connections</h5>
+                  <p class="card-subtitle mb-2 text-muted">2024 Nov-Dec</p>
+                  <div class="mb-3">
+                    <span class="badge tag-type me-1">Academic</span>
+                    <span class="badge tag-skill me-1">Board Game Design</span>
+                    <span class="badge tag-skill me-1">Tabletop Simulator Prototype</span>
+                  </div>
+                  <div class="mt-auto d-flex justify-content-end">
+                    <a href="caringConnections.html" class="btn btn-outline-custom">View Details</a>
+                  </div>
+                </div>
+              </div>
+            </div>
+            <!-- Academic Project Card END-->
+
+            <!-- Work Project Card Template -->
+            <div class="col-md-4 project-card" data-type="work">
+              <div class="card h-100 d-flex flex-column">
+                <img src="img/igss/sfu-thumb.jpg" class="card-img-top" alt="Project Thumbnail">
+                <div class="card-body d-flex flex-column">
+                  <h5 class="card-title">IGSS - Graphic Design</h5>
+                  <p class="card-subtitle mb-2 text-muted">2024 Feb - Mar</p>
+                  <div class="mb-3">
+                    <span class="badge tag-type me-1">Work</span>
+                    <span class="badge tag-skill me-1">Graphic Design</span>
+                    <span class="badge tag-skill me-1">Event Collateral Design</span>
+                  </div>
+                  <div class="mt-auto d-flex justify-content-end">
+                    <a href="igss.html" class="btn btn-outline-custom">View Details</a>
+
+                  </div>
+                </div>
+              </div>
+            </div>
+            
+            <!-- Academic Project Card Template 
+           
+            <div class="col-md-4 project-card" data-type="academic">
+              <div class="card h-100 d-flex flex-column">
+                <img src="img/Main/project-thumb.jpg" class="card-img-top" alt="Project Thumbnail">
+                <div class="card-body d-flex flex-column">
+                  <h5 class="card-title">Academic Project</h5>
+                  <p class="card-subtitle mb-2 text-muted">2024</p>
+                  <div class="mb-3">
+                    <span class="badge tag-type me-1">Academic</span>
+                    <span class="badge tag-skill me-1">UX/UI Design</span>
+                    <span class="badge tag-skill me-1">Figma Prototype</span>
+                  </div>
+                  <div class="mt-auto d-flex justify-content-end">
+                    <a href="academicProject.html" class="btn btn-outline-custom">View Details</a>
+                  </div>
+                </div>
+              </div>
+            </div>
+            -->
+      
+            <!-- Work Project Card Template 
+            <div class="col-md-4 project-card" data-type="work">
+              <div class="card h-100 d-flex flex-column">
+                <img src="img/Main/project-thumb.jpg" class="card-img-top" alt="Project Thumbnail">
+                <div class="card-body d-flex flex-column">
+                  <h5 class="card-title">Work Project</h5>
+                  <p class="card-subtitle mb-2 text-muted">2023</p>
+                  <div class="mb-3">
+                    <span class="badge tag-type me-1">Work</span>
+                    <span class="badge tag-skill me-1">HTML/CSS</span>
+                    <span class="badge tag-skill me-1">Video</span>
+                  </div>
+                  <div class="mt-auto d-flex justify-content-end">
+                    <a href="workProject.html" class="btn btn-outline-custom">View Details</a>
+
+                  </div>
+                </div>
+              </div>
+            </div>
+            
+          -->
+      
+          </div>
+        </div>
+      </section>
+      
+
+<!-- Gallery Section -->
+<section class="py-5" id="Archive">
+  <div class="container">
+    <h2 class="mb-4 text-center">Archive</h2>
+   
+
+    <div class="row" id="galleryGrid">
+      <!-- shown3 -->
+      <div class="col-md-4 mb-4">
+        <img src="img/gallery/6.jpg" class="img-fluid gallery-img" alt="Gallery image 1">
+      </div>
+      <div class="col-md-4 mb-4">
+        <img src="img/gallery/5.jpg" class="img-fluid gallery-img" alt="Gallery image 2">
+      </div>
+      <div class="col-md-4 mb-4">
+        <img src="img/gallery/4.jpg" class="img-fluid gallery-img" alt="Gallery image 3">
+      </div>
+
+      <!-- hidden -->
+      <div class="col-md-4 mb-4 d-none gallery-extra">
+        <img src="img/gallery/3.jpg" class="img-fluid gallery-img" alt="Gallery image 4">
+      </div>
+      <div class="col-md-4 mb-4 d-none gallery-extra">
+        <img src="img/gallery/2.jpg" class="img-fluid gallery-img" alt="Gallery image 5">
+      </div>
+      <div class="col-md-4 mb-4 d-none gallery-extra">
+        <img src="img/gallery/1.jpg" class="img-fluid gallery-img" alt="Gallery image 6">
+      </div>
+    </div>
+
+    <!-- 더 보기 버튼 -->
+    <div class="text-center mt-3">
+      <button id="toggleGalleryBtn" class="btn btn-outline-dark">More</button>
+    </div>
+    <div class="text-end mt-3">
+      <a href="https://sooamo.github.io/portfolio/Mo_Portfolio/public_html/" target="_blank" class="btn btn-outline-dark">
+        Check Previous Portfolio →
+      </a>
+    </div>
+  </div>
+
+  
+</section>
+
+<!-- Modal for Zoomed Image -->
+<div class="modal fade" id="imageModal" tabindex="-1" aria-hidden="true">
+  <div class="modal-dialog modal-xl modal-dialog-centered">
+    <div class="modal-content bg-transparent border-0">
+      <div class="modal-body p-0">
+        <img id="modalImage" src="" class="img-fluid w-100" alt="Zoomed Image">
+      </div>
+    </div>
+  </div>
+</div>
+
+
+
+    
+
+  
+  
+  <!-- Contact Section -->
+<section class="bg-light py-5  py-5" id="contact">
+  <div class="container">
+  <h2 class="mb-4">Contact Me!</h2>
+  <p>
+    <b>Email:</b>
+    <span class="email-tooltip-wrapper">
+      <span id="email" class="copy-email">sooa24@gmail.com</span>
+      <span id="tooltip" class="email-tooltip">Copied!</span>
+    </span>
+  </p>
+  
+  <p>
+    <a href="https://www.youtube.com/channel/UCD7aft2uzSnMPiwY_x1r5sg" target="_blank" class="social-icon">
+      <i class="fab fa-youtube"></i>
+    </a>
+    <a href="https://www.linkedin.com/in/sooamo/" target="_blank" class="social-icon">
+      <i class="fab fa-linkedin"></i>
+    </a>
+    <a href="pdf/SooaMo_Resume.pdf" target="_blank" class="social-icon me-3">
+      <i class="fas fa-id-badge"></i>
+    </a>
+    
+  </p>
+</div>
+</section>
+
+
+  <!-- Footer -->
+  <div data-include="partials/footer.html"></div>
+  <div data-include="partials/topButton.html"></div>
+
+  <!-- Bootstrap JS -->
+  <script src="https://cdn.jsdelivr.net/npm/bootstrap@5.3.2/dist/js/bootstrap.bundle.min.js"></script>
+
+   <!-- custom JS -->
+  <script src="js/include.js"></script>
+  <script src="js/script.js"></script>
+</body>
+
+</html>
