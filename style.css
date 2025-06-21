@@ -49,6 +49,10 @@
   border: 1.5px solid #658D7F; /* make sure border stays visible */
 }
 
+.btn-outline-dark:hover{
+  background-color: #658D7F;
+}
+
 
 
 /* Contact icon */
@@ -142,4 +146,25 @@
 .modal-content {
   border-radius: 12px;
   overflow: hidden;
+}
+
+/*project filter */
+.filter-btn {
+  background-color: white;
+  color: black;
+  border: 1.5px solid #658D7F;
+  transition: background-color 0.3s ease, color 0.3s ease, border 0.3s ease;
+}
+
+.filter-btn:hover {
+  background-color: #889b94;
+  color: black;
+  border: 1.5px solid #658D7F;
+  transition: background-color 0.3s ease, color 0.3s ease, border 0.3s ease;
+}
+
+.filter-btn.active {
+  background-color: #658D7F;
+  color: white;
+  border-color: #658D7F;
 }

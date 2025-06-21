@@ -1,5 +1,5 @@
 document.addEventListener("DOMContentLoaded", () => {
-  // 1. Project card filtering
+  // 1. Project card filtering + active button highlighting
   const filterButtons = document.querySelectorAll('.filter-btn');
   const cards = document.querySelectorAll('.project-card');
 
@@ -7,12 +7,20 @@ document.addEventListener("DOMContentLoaded", () => {
     button.addEventListener('click', () => {
       const filter = button.getAttribute('data-filter');
 
+      // Remove "active" class from all buttons
+      filterButtons.forEach(btn => btn.classList.remove('active'));
+
+      // Add "active" class to the clicked button
+      button.classList.add('active');
+
+      // Filter the project cards based on the selected type
       cards.forEach(card => {
         const type = card.getAttribute('data-type');
         card.style.display = (filter === 'all' || filter === type) ? 'block' : 'none';
       });
     });
   });
+
 
   // 2. Email copy functionality
   const email = document.getElementById("email");
