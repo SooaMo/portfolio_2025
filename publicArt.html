@@ -1,0 +1,153 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8" />
+  <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+  <title>Public Art | Sooa Mo</title>
+  <link rel="icon" href="img/logo.png" type="image/png">
+
+  <!-- Bootstrap -->
+  <link href="https://cdn.jsdelivr.net/npm/bootstrap@5.3.2/dist/css/bootstrap.min.css" rel="stylesheet" />
+  <!-- Font Awesome -->
+  <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.5.0/css/all.min.css">
+  <!-- Custom CSS -->
+  <link rel="stylesheet" href="style.css" />
+</head>
+<body>
+
+  <!-- Navbar -->
+  <div data-include="partials/navbar.html"></div>
+
+  <!-- Project Detail Section -->
+  <section class="container py-5 mt-5">
+    <h1 class="mb-3">Public Art</h1>
+    <p class="text-muted">Academic • Nov - Dec 2022</p>
+    <p class="text-muted">Team: Sooa Mo, Gabriela F.</p>
+
+    <!-- Tags -->
+    <div class="mb-4">
+      <span class="text-muted"> Project Type: </span>
+      <span class="badge tag-skill me-1">• Back-End Focused Web Project</span>
+      <span class="badge tag-skill me-1">• Database-Driven Application</span>
+      <!-- Add more if needed -->
+    </div>
+
+    <!-- Main Image -->
+    <img src="img/publicArt/pa-cover.jpg" alt="[Project Title] Cover" class="img-fluid rounded mb-4" />
+
+    <!-- Overview -->
+    <h3 class="mt-5">0. Overview</h3>
+    <p class="ps-3">
+      Public Art is a web-based system that allows users to explore a public art database through filter-based search. This project focused on building full-stack functionality using PHP and phpMyAdmin while incorporating clean UI design and practical data interactions.
+    </p>
+
+    <!-- My Role -->
+    <h3 class="mt-5">1. My Role</h3>
+    <p><b>Back-End Developer · UI Contributor · Database Integration</b></p>
+    <p class="ps-3">
+      I was responsible for building database interactions using PHP, including storing user registration data and enabling real-time profile edits. I also contributed to the overall interface design and page structure using Figma and Visual Studio.
+    </p>
+
+    <!-- Design Decision -->
+    <h3 class="mt-5">2. Design Decision</h3>
+    <p class="ps-3">
+      To improve usability, we built a dual-filter system that allows users to search by Artwork Type and Artwork Neighbourhood. I implemented this using PHP to dynamically query the database based on selected criteria. I also designed the ER diagram to map out relationships between tables and ensure smooth data handling throughout the interface.
+    </p>
+
+    <div class="text-center">
+      <img src="img/publicArt/pa-one.jpg"
+      alt="Example"
+      class="img-fluid rounded shadow-sm mt-3"
+      style="max-width: 600px;">
+      <small class="text-muted d-block mt-2">Fig.1: Initial wireframe sketch showing page layout </small>
+      </div>
+  
+      <div class="text-center">
+        <hr>
+      </div>
+    
+      <div class="text-center">
+      <img src="img/publicArt/pa-two.jpg"
+      alt="more illustration image"
+      class="img-fluid rounded shadow-sm mt-3 "
+      style="max-width: 600px; ">
+      <small class="text-muted d-block mt-2">Fig. 2: ER diagram outlining the database structure </small>
+      </div>
+  
+      <div class="text-center">
+        <hr>
+      </div>
+    
+      <div class="text-center">
+      <img src="img/publicArt/pa-three.jpg"
+      alt="more illustration image"
+      class="img-fluid rounded shadow-sm mt-3 "
+      style="max-width: 600px; ">
+      <small class="text-muted d-block mt-2">Fig. 3: Search page with filter options for type and neighbourhood</small>
+      </div>
+  
+      <div class="text-center">
+        <hr>
+      </div>
+    
+      <div class="text-center">
+      <img src="img/publicArt/pa-four.jpg"
+      alt="more illustration image"
+      class="img-fluid rounded shadow-sm mt-3 "
+      style="max-width: 600px; ">
+      <small class="text-muted d-block mt-2">Fig. 4: Profile page allowing user info editing</small>
+      </div>
+
+
+    <!-- Notable Result -->
+    <h3 class="mt-5">3. Result</h3>
+    <p class="ps-3">
+      We successfully created a fully functional prototype that allows users to:
+      <ul>
+        <li>Sign up and store profile information in the database</li>
+        <li>Search artworks using two filters: Artwork Type and Artwork Neighbourhood</li>
+        <li>Edit their profile with real-time updates reflected in the database
+          These features demonstrated successful integration between the UI, database structure, and PHP-based backend logic.</li>
+      </ul>
+      
+    </p>
+      <!-- Embed -->
+      <section class="container py-5">
+        <h3 class="mb-4">Video</h3>
+        <div class="ratio ratio-16x9 my-4">
+          <iframe 
+            src="https://www.youtube.com/embed/-_hat6B_nEI" 
+            title="YouTube video"
+            allowfullscreen
+          ></iframe>
+        </div>
+      </section>
+
+    <!-- Takeaway -->
+    <h3 class="mt-5">4. Takeaway</h3>
+    <p class="ps-3">
+      This project helped me better understand the role of data in web development—how to organize, manage, and connect databases effectively. It also reinforced the importance of balancing front-end usability with back-end structure, allowing me to strengthen both my technical skills and my grasp of the overall development process.
+    </p>
+
+
+
+    <!-- Links -->
+    <div class="mt-4">
+      <a href="index.html#projects" class="btn btn-outline-secondary">← Back to Projects</a>
+    </div>
+  </section>
+
+  <!-- Back to Top Button -->
+<button id="backToTopBtn" class="btn btn-outline-custom rounded-circle" title="Go to top">
+  <i class="fas fa-arrow-up"></i>
+</button>
+
+
+  <!-- Footer + Top Button -->
+  <div data-include="partials/footer.html"></div>
+
+  <!-- Scripts -->
+  <script src="js/include.js"></script>
+  <script src="js/script.js"></script>
+</body>
+</html>
