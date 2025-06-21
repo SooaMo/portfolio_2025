@@ -55,17 +55,17 @@ document.addEventListener("DOMContentLoaded", () => {
   }
 
   // 4. Gallery toggle "More"/"Less"
-  const toggleBtn = document.getElementById("toggleGalleryBtn");
-  const extraItems = document.querySelectorAll(".gallery-extra");
-  let isExpanded = false;
+  //const toggleBtn = document.getElementById("toggleGalleryBtn");
+  //const extraItems = document.querySelectorAll(".gallery-extra");
+ // let isExpanded = false;
 
-  if (toggleBtn) {
-    toggleBtn.addEventListener("click", () => {
-      isExpanded = !isExpanded;
-      extraItems.forEach(item => item.classList.toggle("d-none"));
-      toggleBtn.textContent = isExpanded ? "Less" : "More";
-    });
-  }
+ // if (toggleBtn) {
+ //   toggleBtn.addEventListener("click", () => {
+ //     isExpanded = !isExpanded;
+ //     extraItems.forEach(item => item.classList.toggle("d-none"));
+ //     toggleBtn.textContent = isExpanded ? "Less" : "More";
+ //   });
+ // }
 
   // 5. Image modal (zoom)
   const galleryImages = document.querySelectorAll(".gallery-img");
