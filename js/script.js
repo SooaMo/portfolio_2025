@@ -43,6 +43,7 @@ document.addEventListener("DOMContentLoaded", () => {
     backToTopBtn.addEventListener("click", () => {
       window.scrollTo({ top: 0, behavior: "smooth" });
     });
+
   }
 
   // 4. Gallery toggle "More"/"Less"
