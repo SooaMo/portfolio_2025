@@ -67,20 +67,26 @@ document.addEventListener("DOMContentLoaded", () => {
  //   });
  // }
 
-  // 5. Image modal (zoom)
-  const galleryImages = document.querySelectorAll(".gallery-img");
+ // Image modal (zoom)
+const galleryImages = document.querySelectorAll(".gallery-img");
 
-  galleryImages.forEach((img) => {
-    img.addEventListener("click", () => {
-      const src = img.src;
-      const modalImage = document.getElementById("modalImage");
-      const modalEl = document.getElementById("imageModal");
+galleryImages.forEach((img) => {
+  img.addEventListener("click", () => {
+    // Check if the screen is wide enough (e.g., >768px for tablets/desktops)
+    if (window.innerWidth <= 767) {
+      return; // On mobile: do nothing (prevent modal)
+    }
 
-      if (modalImage && modalEl) {
-        modalImage.src = src;
-        const modal = new bootstrap.Modal(modalEl);
-        modal.show();
-      }
-    });
+    const src = img.src;
+    const modalImage = document.getElementById("modalImage");
+    const modalEl = document.getElementById("imageModal");
+
+    if (modalImage && modalEl) {
+      modalImage.src = src;
+      const modal = new bootstrap.Modal(modalEl);
+      modal.show();
+    }
   });
+});
+
 });
