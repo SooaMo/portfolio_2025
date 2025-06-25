@@ -133,9 +133,10 @@
   justify-content: center;
   align-items: center;
   display: flex;
+  cursor: pointer;
 }
 
-/*gallery */
+
 #gallery .carousel-item img {
   cursor: pointer;
   border-radius: 12px;
@@ -167,4 +168,34 @@
   background-color: #658D7F;
   color: white;
   border-color: #658D7F;
+}
+
+
+#cursor-effect {
+  position: fixed;
+  top: 0;
+  left: 0;
+  width: 60px; /* increased size */
+  height: 60px;
+  background: radial-gradient(
+    circle,
+    rgba(101, 141, 127, 0.5) 0%,   /* darker center */
+    rgba(101, 141, 127, 0.3) 40%,  /* mid fade */
+    rgba(101, 141, 127, 0) 80%     /* smooth transparent edge */
+  );
+  border-radius: 50%;
+  pointer-events: none;
+  transform: translate(0px, 0px);
+  z-index: 999;
+  filter: blur(6px); /* slightly softened edge */
+  transition: width 0.2s ease, height 0.2s ease, opacity 0.2s ease;
+}
+
+#cursor-effect.sharp {
+  width: 20px;
+  height: 20px;
+  background: transparent;
+  border: 2px solid #658D7F;
+  filter: none;
+  border-radius: 50%;
 }

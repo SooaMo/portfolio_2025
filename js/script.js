@@ -7,20 +7,15 @@ document.addEventListener("DOMContentLoaded", () => {
     button.addEventListener('click', () => {
       const filter = button.getAttribute('data-filter');
 
-      // Remove "active" class from all buttons
       filterButtons.forEach(btn => btn.classList.remove('active'));
-
-      // Add "active" class to the clicked button
       button.classList.add('active');
 
-      // Filter the project cards based on the selected type
       cards.forEach(card => {
         const type = card.getAttribute('data-type');
         card.style.display = (filter === 'all' || filter === type) ? 'block' : 'none';
       });
     });
   });
-
 
   // 2. Email copy functionality
   const email = document.getElementById("email");
@@ -47,46 +42,71 @@ document.addEventListener("DOMContentLoaded", () => {
       backToTopBtn.style.display = shouldShow ? "flex" : "none";
     });
 
-    // Scroll to top
     backToTopBtn.addEventListener("click", () => {
       window.scrollTo({ top: 0, behavior: "smooth" });
     });
-
   }
 
-  // 4. Gallery toggle "More"/"Less"
-  //const toggleBtn = document.getElementById("toggleGalleryBtn");
-  //const extraItems = document.querySelectorAll(".gallery-extra");
- // let isExpanded = false;
+  // 4. Image modal (zoom, desktop only)
+  const galleryImages = document.querySelectorAll(".gallery-img");
 
- // if (toggleBtn) {
- //   toggleBtn.addEventListener("click", () => {
- //     isExpanded = !isExpanded;
- //     extraItems.forEach(item => item.classList.toggle("d-none"));
- //     toggleBtn.textContent = isExpanded ? "Less" : "More";
- //   });
- // }
+  galleryImages.forEach((img) => {
+    img.addEventListener("click", () => {
+      if (window.innerWidth <= 767) return;
 
- // Image modal (zoom)
-const galleryImages = document.querySelectorAll(".gallery-img");
+      const src = img.src;
+      const modalImage = document.getElementById("modalImage");
+      const modalEl = document.getElementById("imageModal");
 
-galleryImages.forEach((img) => {
-  img.addEventListener("click", () => {
-    // Check if the screen is wide enough (e.g., >768px for tablets/desktops)
-    if (window.innerWidth <= 767) {
-      return; // On mobile: do nothing (prevent modal)
-    }
-
-    const src = img.src;
-    const modalImage = document.getElementById("modalImage");
-    const modalEl = document.getElementById("imageModal");
-
-    if (modalImage && modalEl) {
-      modalImage.src = src;
-      const modal = new bootstrap.Modal(modalEl);
-      modal.show();
-    }
+      if (modalImage && modalEl) {
+        modalImage.src = src;
+        const modal = new bootstrap.Modal(modalEl);
+        modal.show();
+      }
+    });
   });
+
+  // 5. Cursor effect (glow + sharp on links)
+  const cursorEffect = document.getElementById("cursor-effect");
+
+  if (cursorEffect && window.innerWidth >= 768) {
+    let mouseX = 0, mouseY = 0;
+    let currentX = 0, currentY = 0;
+
+    document.addEventListener("mousemove", (e) => {
+      mouseX = e.clientX;
+      mouseY = e.clientY;
+    });
+
+    function animate() {
+      currentX += (mouseX - currentX) * 0.1;
+      currentY += (mouseY - currentY) * 0.1;
+
+      const offset = cursorEffect.classList.contains("sharp") ? 10 : 35;
+cursorEffect.style.transform = `translate(${currentX - offset}px, ${currentY - offset}px)`;
+
+      requestAnimationFrame(animate);
+    }
+
+    animate();
+
+    // Apply .sharp on all elements with rendered cursor: pointer
+    const allElements = document.querySelectorAll("*");
+
+allElements.forEach(el => {
+  const computed = window.getComputedStyle(el);
+  const isPointer = computed.cursor === "pointer";
+  const isGalleryImg = el.classList.contains("gallery-img");
+
+  if (isPointer || isGalleryImg) {
+    el.addEventListener("mouseenter", () => {
+      cursorEffect.classList.add("sharp");
+    });
+    el.addEventListener("mouseleave", () => {
+      cursorEffect.classList.remove("sharp");
+    });
+  }
 });
 
+  }
 });
