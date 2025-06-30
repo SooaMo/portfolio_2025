@@ -158,8 +158,8 @@
 }
 
 .filter-btn:hover {
-  background-color: #889b94;
-  color: black;
+  background-color: #658D7F;
+  color: rgb(0, 0, 0);
   border: 1.5px solid #658D7F;
   transition: background-color 0.3s ease, color 0.3s ease, border 0.3s ease;
 }
