@@ -89,8 +89,8 @@ if (cursorDot && cursorEffect && window.innerWidth >= 768) {
       ? `${transformBase} rotate(${rotation}deg)`
       : transformBase;
 
-    currentX += (mouseX - currentX) * 0.25;
-    currentY += (mouseY - currentY) * 0.25;
+    currentX += (mouseX - currentX) * 0.4;
+    currentY += (mouseY - currentY) * 0.4;
     cursorEffect.style.transform = `translate(${currentX - 25}px, ${currentY - 25}px)`;
 
     if (isRotating) {
