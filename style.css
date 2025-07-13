@@ -199,3 +199,34 @@
   filter: none;
   border-radius: 50%;
 }
+
+/*img size*/
+.project-img {
+  width: 100%;
+  height: auto;
+  display: block;
+  margin: 1rem auto;
+  max-width: 100%;
+}
+
+/* PC  */
+@media (min-width: 992px) {
+  .project-img {
+    max-width: 800px;
+  }
+}
+
+/* mid */
+@media (min-width: 768px) and (max-width: 991px) {
+  .project-img {
+    max-width: 600px;
+  }
+}
+
+/* mobile */
+@media (max-width: 767px) {
+  .project-img {
+    max-width: 100%;
+    padding: 0 1rem;
+  }
+}
