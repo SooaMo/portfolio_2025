@@ -66,47 +66,77 @@ document.addEventListener("DOMContentLoaded", () => {
     });
   });
 
-  // 5. Cursor effect (glow + sharp on links)
-  const cursorEffect = document.getElementById("cursor-effect");
 
-  if (cursorEffect && window.innerWidth >= 768) {
-    let mouseX = 0, mouseY = 0;
-    let currentX = 0, currentY = 0;
+// 5. Cursor effect (dot + blur following glow + spin)
+const cursorDot = document.getElementById("cursor-dot");
+const cursorEffect = document.getElementById("cursor-effect");
 
-    document.addEventListener("mousemove", (e) => {
-      mouseX = e.clientX;
-      mouseY = e.clientY;
-    });
+let rotation = 0;
+let isRotating = false;
 
-    function animate() {
-      currentX += (mouseX - currentX) * 0.1;
-      currentY += (mouseY - currentY) * 0.1;
+if (cursorDot && cursorEffect && window.innerWidth >= 768) {
+  let mouseX = 0, mouseY = 0;
+  let currentX = 0, currentY = 0;
 
-      const offset = cursorEffect.classList.contains("sharp") ? 10 : 35;
-cursorEffect.style.transform = `translate(${currentX - offset}px, ${currentY - offset}px)`;
+  document.addEventListener("mousemove", (e) => {
+    mouseX = e.clientX;
+    mouseY = e.clientY;
+  });
 
-      requestAnimationFrame(animate);
+  function animateCursor() {
+    const transformBase = `translate(${mouseX - 5}px, ${mouseY - 5}px)`;
+    cursorDot.style.transform = isRotating
+      ? `${transformBase} rotate(${rotation}deg)`
+      : transformBase;
+
+    currentX += (mouseX - currentX) * 0.25;
+    currentY += (mouseY - currentY) * 0.25;
+    cursorEffect.style.transform = `translate(${currentX - 25}px, ${currentY - 25}px)`;
+
+    if (isRotating) {
+      rotation += 4;
+      if (rotation >= 360) rotation -= 360;
     }
 
-    animate();
-
-    // Apply .sharp on all elements with rendered cursor: pointer
-    const allElements = document.querySelectorAll("*");
-
-allElements.forEach(el => {
-  const computed = window.getComputedStyle(el);
-  const isPointer = computed.cursor === "pointer";
-  const isGalleryImg = el.classList.contains("gallery-img");
-
-  if (isPointer || isGalleryImg) {
-    el.addEventListener("mouseenter", () => {
-      cursorEffect.classList.add("sharp");
-    });
-    el.addEventListener("mouseleave", () => {
-      cursorEffect.classList.remove("sharp");
-    });
+    requestAnimationFrame(animateCursor);
   }
+
+  animateCursor();
+
+  // Elements to trigger hover effect
+  const hoverableElements = document.querySelectorAll('a, button, [role="button"], .gallery-img, .filter-btn, .copy-email ');
+
+  hoverableElements.forEach((el) => {
+    el.addEventListener("mouseenter", () => {
+      cursorDot.classList.add("sharp");
+      cursorEffect.classList.add("sharp");
+      isRotating = true;
+    });
+
+    el.addEventListener("mouseleave", () => {
+      cursorDot.classList.remove("sharp");
+      cursorEffect.classList.remove("sharp");
+      isRotating = false;
+      rotation = 0;
+      cursorDot.style.transform = `translate(${mouseX - 5}px, ${mouseY - 5}px)`;
+    });
+  });
+}
+
+const iframes = document.querySelectorAll(".no-cursor");
+
+iframes.forEach((iframe) => {
+  iframe.addEventListener("mouseenter", () => {
+    cursorDot.style.opacity = "0";
+    cursorEffect.style.opacity = "0";
+  });
+
+  iframe.addEventListener("mouseleave", () => {
+    cursorDot.style.opacity = "1";
+    cursorEffect.style.opacity = "1";
+  });
 });
 
-  }
+
+
 });
