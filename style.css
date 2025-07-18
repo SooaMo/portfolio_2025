@@ -9,6 +9,24 @@
 }
 
 /* Project Card */
+.project-card a{
+  text-decoration: none;
+}
+
+.card-title{
+  color:black;
+}
+
+
+.card-hover .card {
+  transition: all 0.3s ease;
+}
+
+.card-hover:hover .card {
+  transform: scale(1.02);
+  box-shadow: 0 0.75rem 1.25rem rgba(0, 0, 0, 0.2);
+}
+
 .card .badge {
   font-size: 0.78rem;
   padding: 0.5em 0.7em;
@@ -217,7 +235,9 @@
   opacity: 0;
 }
 
-
+.text-center{
+  margin:2rem 0 2rem 0;
+}
 
 /*img size*/
 .project-img {
