@@ -166,6 +166,16 @@
   object-fit: cover;
 }
 
+.gallery-img{
+  cursor: pointer;
+  margin-top: 1rem;
+}
+
+.gallery-img:hover{
+  transform: scale(1.02);
+  box-shadow: 0 0.75rem 1.25rem rgba(0, 0, 0, 0.2);
+}
+
 .modal-content {
   border-radius: 12px;
   overflow: hidden;
