@@ -48,7 +48,7 @@ document.addEventListener("DOMContentLoaded", () => {
   }
 
   // 4. Image modal (zoom, desktop only)
-  const galleryImages = document.querySelectorAll(".gallery-img");
+  const galleryImages = document.querySelectorAll(".project-img");
 
   galleryImages.forEach((img) => {
     img.addEventListener("click", () => {
@@ -104,7 +104,7 @@ if (cursorDot && cursorEffect && window.innerWidth >= 768) {
   animateCursor();
 
   // Elements to trigger hover effect
-  const hoverableElements = document.querySelectorAll('a, button, [role="button"], .gallery-img, .filter-btn, .copy-email ');
+  const hoverableElements = document.querySelectorAll('a, button, [role="button"], .project-img, .filter-btn, .copy-email ');
 
   hoverableElements.forEach((el) => {
     el.addEventListener("mouseenter", () => {
