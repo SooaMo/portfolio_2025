@@ -292,3 +292,35 @@
     padding: 0 1rem;
   }
 }
+
+/*img size*/
+.main-img {
+  width: 100%;
+  height: auto;
+  display: block;
+  margin: 1rem auto;
+  max-width: 100%;
+  cursor:default;
+}
+
+/* PC  */
+@media (min-width: 992px) {
+  .main-img {
+    max-width: 800px;
+  }
+}
+
+/* mid */
+@media (min-width: 768px) and (max-width: 991px) {
+  .main-img {
+    max-width: 600px;
+  }
+}
+
+/* mobile */
+@media (max-width: 767px) {
+  .main-img {
+    max-width: 100%;
+    padding: 0 1rem;
+  }
+}
