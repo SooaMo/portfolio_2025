@@ -215,45 +215,79 @@
 
 /*cursor*/
 
-
+/* 중심 dot */
 #cursor-dot {
   position: fixed;
   top: 0;
   left: 0;
-  width: 10px;
-  height: 10px;
-  background-color: #3e6658;
+  width: 5px;
+  height: 5px;
+  background-color: #658D7F;
   border-radius: 50%;
-  z-index: 1000;
+  z-index: 1001;
   pointer-events: none;
-  transition: background-color 0.05s ease, border-radius 0.05s ease;
+  transform: translate(-50%, -50%);
+  transition: opacity 0.15s ease, transform 0.15s ease;
 }
 
-#cursor-effect {
+/* 기본 상태: 회전하는 사각형 */
+#cursor-box {
   position: fixed;
   top: 0;
   left: 0;
-  width: 50px;
-  height: 50px;
-  background-color: rgba(101, 141, 127, 0.25);
-  border-radius: 50%;
+  width: 22px;
+  height: 22px;
+  border: 1.5px solid #658D7F;
+  border-radius: 5px;
   pointer-events: none;
-  transform: translate(0px, 0px);
-  z-index: 999;
-  transition: background-color 0.05s ease, transform 0.1s ease, opacity 0.05s ease;
+  z-index: 1000;
+  transform: translate(-50%, -50%) rotate(0deg);
+  transition: opacity 0.2s ease;
+  opacity: 1;
 }
 
-#cursor-dot.sharp {
-  width: 15px;
-  height: 15px;
-  background-color: white;
-  border: 2px solid #658D7F;
-  border-radius: 0;
-}
-
-
-#cursor-effect.sharp {
+/* hover 상태: 4개 모서리 획 */
+#cursor-corners {
+  position: fixed;
+  top: 0;
+  left: 0;
+  width: 36px;
+  height: 36px;
+  pointer-events: none;
+  z-index: 1000;
+  transform: translate(-50%, -50%);
   opacity: 0;
+  transition: opacity 0.18s ease, width 0.2s cubic-bezier(.34,1.56,.64,1), height 0.2s cubic-bezier(.34,1.56,.64,1);
+}
+
+#cursor-corners .c-corner {
+  position: absolute;
+  width: 9px;
+  height: 9px;
+  border-color: #3e6658;
+  border-style: solid;
+  border-width: 0;
+  transition: all 0.2s cubic-bezier(.34,1.56,.64,1);
+}
+#cursor-corners .c-tl { top: 0; left: 0; border-top-width: 2px; border-left-width: 2px; }
+#cursor-corners .c-tr { top: 0; right: 0; border-top-width: 2px; border-right-width: 2px; }
+#cursor-corners .c-bl { bottom: 0; left: 0; border-bottom-width: 2px; border-left-width: 2px; }
+#cursor-corners .c-br { bottom: 0; right: 0; border-bottom-width: 2px; border-right-width: 2px; }
+
+/* hover 활성화 시 */
+#cursor-box.is-hovering {
+  opacity: 0;
+}
+
+#cursor-corners.is-hovering {
+  opacity: 1;
+  width: 42px;
+  height: 42px;
+}
+
+#cursor-dot.is-hovering {
+  transform: translate(-50%, -50%) scale(2);
+  background-color: #3e6658;
 }
 
 .text-center{

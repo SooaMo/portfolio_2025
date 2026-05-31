@@ -67,16 +67,15 @@ document.addEventListener("DOMContentLoaded", () => {
   });
 
 
-// 5. Cursor effect (dot + blur following glow + spin)
-const cursorDot = document.getElementById("cursor-dot");
-const cursorEffect = document.getElementById("cursor-effect");
+// 5. Cursor effect — rotating box + split corners on hover
+const cursorDot     = document.getElementById("cursor-dot");
+const cursorBox     = document.getElementById("cursor-box");
+const cursorCorners = document.getElementById("cursor-corners");
 
-let rotation = 0;
-let isRotating = false;
-
-if (cursorDot && cursorEffect && window.innerWidth >= 768) {
+if (cursorDot && cursorBox && cursorCorners && window.innerWidth >= 768) {
   let mouseX = 0, mouseY = 0;
-  let currentX = 0, currentY = 0;
+  let rotation = 0;
+  let isHovering = false;
 
   document.addEventListener("mousemove", (e) => {
     mouseX = e.clientX;
@@ -84,58 +83,59 @@ if (cursorDot && cursorEffect && window.innerWidth >= 768) {
   });
 
   function animateCursor() {
-    const transformBase = `translate(${mouseX - 5}px, ${mouseY - 5}px)`;
-    cursorDot.style.transform = isRotating
-      ? `${transformBase} rotate(${rotation}deg)`
-      : transformBase;
+    // dot — 항상 정확히 따라옴
+    cursorDot.style.left = mouseX + "px";
+    cursorDot.style.top  = mouseY + "px";
 
-    currentX += (mouseX - currentX) * 0.4;
-    currentY += (mouseY - currentY) * 0.4;
-    cursorEffect.style.transform = `translate(${currentX - 25}px, ${currentY - 25}px)`;
-
-    if (isRotating) {
-      rotation += 4;
-      if (rotation >= 360) rotation -= 360;
+    // box — hover 아닐 때 회전
+    cursorBox.style.left = mouseX + "px";
+    cursorBox.style.top  = mouseY + "px";
+    if (!isHovering) {
+      rotation = (rotation + 1.2) % 360;
+      cursorBox.style.transform = `translate(-50%, -50%) rotate(${rotation}deg)`;
     }
+
+    // corners — hover 시 위치
+    cursorCorners.style.left = mouseX + "px";
+    cursorCorners.style.top  = mouseY + "px";
 
     requestAnimationFrame(animateCursor);
   }
 
   animateCursor();
 
-  // Elements to trigger hover effect
-  const hoverableElements = document.querySelectorAll('a, button, [role="button"], .project-img, .filter-btn, .copy-email ');
+  const hoverableElements = document.querySelectorAll('a, button, [role="button"], .project-img, .filter-btn, .copy-email');
 
   hoverableElements.forEach((el) => {
     el.addEventListener("mouseenter", () => {
-      cursorDot.classList.add("sharp");
-      cursorEffect.classList.add("sharp");
-      isRotating = true;
+      isHovering = true;
+      cursorBox.classList.add("is-hovering");
+      cursorCorners.classList.add("is-hovering");
+      cursorDot.classList.add("is-hovering");
     });
 
     el.addEventListener("mouseleave", () => {
-      cursorDot.classList.remove("sharp");
-      cursorEffect.classList.remove("sharp");
-      isRotating = false;
-      rotation = 0;
-      cursorDot.style.transform = `translate(${mouseX - 5}px, ${mouseY - 5}px)`;
+      isHovering = false;
+      cursorBox.classList.remove("is-hovering");
+      cursorCorners.classList.remove("is-hovering");
+      cursorDot.classList.remove("is-hovering");
+    });
+  });
+
+  // iframe 위에서 커서 숨김
+  document.querySelectorAll(".no-cursor").forEach((iframe) => {
+    iframe.addEventListener("mouseenter", () => {
+      cursorDot.style.opacity = "0";
+      cursorBox.style.opacity = "0";
+      cursorCorners.style.opacity = "0";
+    });
+    iframe.addEventListener("mouseleave", () => {
+      cursorDot.style.opacity = "1";
+      cursorBox.style.opacity = "";
+      cursorCorners.style.opacity = "";
     });
   });
 }
-
-const iframes = document.querySelectorAll(".no-cursor");
-
-iframes.forEach((iframe) => {
-  iframe.addEventListener("mouseenter", () => {
-    cursorDot.style.opacity = "0";
-    cursorEffect.style.opacity = "0";
-  });
-
-  iframe.addEventListener("mouseleave", () => {
-    cursorDot.style.opacity = "1";
-    cursorEffect.style.opacity = "1";
-  });
-});
 
 
 
