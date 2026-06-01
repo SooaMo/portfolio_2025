@@ -5,391 +5,257 @@
   <meta name="viewport" content="width=device-width, initial-scale=1.0" />
   <title>Sooa Mo | Portfolio</title>
   <link rel="icon" href="img/logo.png" type="image/png">
-  
-  <!-- Bootstrap CSS -->
   <link href="https://cdn.jsdelivr.net/npm/bootstrap@5.3.2/dist/css/bootstrap.min.css" rel="stylesheet">
-  <!-- Google Fonts or Material Icons (Optional) -->
-  <link href="https://fonts.googleapis.com/icon?family=Material+Icons" rel="stylesheet">
-  <!-- Custom CSS -->
-  <link rel="stylesheet" href="style.css">
-  <!-- Icon-font-awesome -->
   <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.5.0/css/all.min.css">
-
+  <link rel="stylesheet" href="style.css">
 </head>
-
-
 <body>
 
   <!-- Navbar -->
   <div data-include="partials/navbar.html"></div>
 
-  <!-- Hero Section -->
-  <section class="vh-100 d-flex align-items-center justify-content-center bg-light" id="home">
-    <div class="text-center">
-      <div style="text-align: center; margin-bottom: 10px;">
-        <img src="img/hi.svg" alt="sd-drawing" class="main-img" >
+  <!-- Hero -->
+  <section id="hero">
+    <div>
+      <div class="hero-eyebrow">Portfolio</div>
+      <h1 class="hero-name">Sooa Mo</h1>
+      <p class="hero-role">UX/UI Designer &amp; Graphic Designer · Vancouver</p>
+      <div class="hero-tags">
+        <span class="hero-tag">Figma</span>
+        <span class="hero-tag">Visual Design</span>
+        <span class="hero-tag">Branding</span>
+        <span class="hero-tag">Web</span>
+        <span class="hero-tag">Storytelling</span>
       </div>
-      <h1 class="display-4 fw-bold">Hi I'm Sooa Mo!</h1>
-      <p class="lead">A UX/UI Designer & Graphic Designer</p>
-      <a href="#projects" class="btn btn-dark mt-3">View My Work</a>
+      <a href="#projects" class="hero-cta">View My Work ↓</a>
     </div>
   </section>
 
-  <!-- About Section -->
-  <section class="container py-5" id="about">
-    <h2 class="mb-4 text-center">About Me</h2>
-    <div class="row align-items-center">
-      
-      <!-- Profile Image -->
-      <div class="col-md-4 text-center mb-4 mb-md-0">
-        <img src="img/profile.jpg" alt="Sooa Mo Profile Photo" class="img-fluid rounded-circle" style="max-width: 250px;">
-      </div>
-      
-      <!-- About Text -->
-      <div class="col-md-8 ps-md-5">
-        <p>
-          Graduated from Simon Fraser University (SFU)’s Interactive Arts & Technology major, I design intuitive, engaging digital experiences rooted in storytelling and prototyping. I’m especially drawn to work that connects people or addresses real-world challenges. This portfolio was hand-coded in HTML, CSS, and Bootstrap with light JavaScript, and deployed via GitHub Pages, showcasing my ability to translate design into functional, responsive web experiences.
-        </p>
+  <!-- Projects -->
+  <section id="projects">
+    <div class="container">
+      <div class="section-label">Selected Work</div>
 
-        <p><strong>Languages:</strong> Korean, English</p>
-        <a href="pdf/Resume.pdf" class="btn btn-outline-dark mt-2" target="_blank">Check Resume</a>
-      </div>
-  
-    </div>
-  </section>
-  
-
-
-
-
-      <!-- Project Cards -->
-      <section class="bg-light py-5" id="projects">
-        <div class="container">
-          <h2 class="mb-4 text-center">Projects</h2>
-      
-          <!-- Filter Buttons -->
-          <div class="mb-4 text-center">
-            <button class="btn filter-btn active" data-filter="all">All</button>
-            <button class="btn filter-btn" data-filter="academic">Academic</button>
-            <button class="btn filter-btn" data-filter="work">Work</button>
+      <!-- 01 SFU -->
+      <a href="sfu-gs.html" class="proj-item">
+        <div class="proj-img-wrap">
+          <img src="img/sfugrad/sfu-thumb.jpg" alt="SFU Graduate Studies">
+          <img src="img/sfugrad/sfu-hover.png" class="png-overlay" alt="">
+        </div>
+        <div class="proj-text">
+          <div class="proj-idx">01 · Work</div>
+          <div class="proj-title">SFU Graduate Studies</div>
+          <div class="proj-desc">Full-time co-op managing the graduate website, redesigning digital materials, and creating visual content — serving thousands of students and staff.</div>
+          <div class="proj-tags">
+            <span class="proj-tag-type">Work</span>
+            <span class="proj-tag">Web Management</span>
+            <span class="proj-tag">Visual Design</span>
+            <span class="proj-tag">Video Editing</span>
           </div>
-      
-          <!-- Project Cards -->
-          <div class="row g-4">
+          <div class="proj-cta">View Case Study →</div>
+        </div>
+      </a>
 
-            <!-- Work Project Card START -->
-            <div class="col-md-4 project-card card-hover" data-type="work">
-              <a href="sfu-gs.html">
-              <div class="card h-100 d-flex flex-column">
-                <img src="img/sfugrad/sfu-thumb.jpg" class="card-img-top" alt="Project Thumbnail">
-                <div class="card-body d-flex flex-column">
-                  <h5 class="card-title">SFU Graduate Studies</h5>
-                  <p></p>
-                  <div class="mb-3">
-                    <span class="badge tag-type me-1">Work</span>
-                    <span class="badge tag-skill me-1">Web Management</span>
-                    <span class="badge tag-skill me-1">Visual Design</span>
-                    <span class="badge tag-skill me-1">Video Editing</span>
-                  </div>
-                </div>
-              </div>
-            </a>
-            </div>
-            <!-- Work Project Card END -->
+      <!-- 02 FLUI -->
+      <a href="flui-banana.html" class="proj-item reverse">
+        <div class="proj-img-wrap">
+          <img src="img/flui/flui-thumb.jpg" alt="FLUI Hackathon — Banana Art Lab">
+          <img src="img/flui/flui-hover.png" class="png-overlay" alt="">
+        </div>
+        <div class="proj-text">
+          <div class="proj-idx">02 · Work</div>
+          <div class="proj-title">FLUI Design Hackathon — Banana Art Lab</div>
+          <div class="proj-desc">Redesigned a tufting studio's website in a 3-day hackathon — rebuilt the booking flow, developed a new brand identity, and created custom illustrations.</div>
+          <div class="proj-tags">
+            <span class="proj-tag-type">Work</span>
+            <span class="proj-tag">Website Redesign</span>
+            <span class="proj-tag">Branding</span>
+            <span class="proj-tag">Figma</span>
+          </div>
+          <div class="proj-cta">View Case Study →</div>
+        </div>
+      </a>
 
-            <!-- Work Project Card START -->
-            <div class="col-md-4 project-card card-hover" data-type="work">
-              <a href="flui-banana.html">
-              <div class="card h-100 d-flex flex-column">
-                <img src="img/flui/flui-thumb.jpg" class="card-img-top" alt="Project Thumbnail">
-                <div class="card-body d-flex flex-column">
-                  <h5 class="card-title">FLUI Design Hackathon - Banana Art Lab</h5>
-                  <p></p>
-                  <div class="mb-3">
-                    <span class="badge tag-type me-1">Work</span>
-                    <span class="badge tag-skill me-1">Website Redesign</span>
-                    <span class="badge tag-skill me-1">Figma</span>
-                    <span class="badge tag-skill me-1">Branding</span>
-                  </div>
-                </div>
-              </div>
-            </a>
-            </div>
-            <!-- Work Project Card END -->   
-            
-            <!-- Academic Project Card START -->
-            <div class="col-md-4 project-card card-hover" data-type="academic">
-              <a href="jadeco.html">
-              <div class="card h-100 d-flex flex-column">
-                <img src="img/jadeco/jadeco-thumb.jpg" class="card-img-top" alt="Project Thumbnail">
-                <div class="card-body d-flex flex-column">
-                  <h5 class="card-title">Jadeco</h5>
-                  <p></p>
-                  <div class="mb-3">
-                    <span class="badge tag-type me-1">Academic</span>
-                    <span class="badge tag-skill me-1">UX Research</span>
-                    <span class="badge tag-skill me-1">Video</span>
-                    <span class="badge tag-skill me-1">Storyboard</span>
-                  </div>
-                </div>
-              </div>
-            </a>
-            </div>
-            <!-- Academic Project Card END-->     
+      <!-- 03 Jadeco -->
+      <a href="jadeco.html" class="proj-item">
+        <div class="proj-img-wrap">
+          <img src="img/jadeco/jadeco-thumb.jpg" alt="Jadeco">
+          <img src="img/jadeco/jadeco-hover.png" class="png-overlay" alt="">
+        </div>
+        <div class="proj-text">
+          <div class="proj-idx">03 · Academic</div>
+          <div class="proj-title">Jadeco</div>
+          <div class="proj-desc">Conducted retail field research and developed visual storyboards for a Chinese home decor brand expanding into the Vancouver market.</div>
+          <div class="proj-tags">
+            <span class="proj-tag-type">Academic</span>
+            <span class="proj-tag">UX Research</span>
+            <span class="proj-tag">Storyboard</span>
+            <span class="proj-tag">Video</span>
+          </div>
+          <div class="proj-cta">View Case Study →</div>
+        </div>
+      </a>
 
-            <div class="col-md-4 project-card card-hover" data-type="academic">
-              <a href="tatreez.html">
-              <div class="card h-100 d-flex flex-column">
-                <img src="img/tatreez/tatreez-thumb.jpg" class="card-img-top" alt="Project Thumbnail">
-                <div class="card-body d-flex flex-column">
-                  <h5 class="card-title">Tatreez</h5>
-                  <p></p>
-                  <div class="mb-3">
-                    <span class="badge tag-type me-1">Academic</span>
-                    <span class="badge tag-skill me-1">UX/UI Design</span>
-                    <span class="badge tag-skill me-1">Figma Prototype</span>
-                  </div>
-                </div>
-              </div>
-            </a>
+      <!-- Archive -->
+      <div id="archive-toggle" onclick="toggleArchive()">
+        <span class="archive-toggle-label">More Projects — Tatreez, The Diary, Caring Connections, Public Art</span>
+        <span class="archive-toggle-icon"><i class="fas fa-plus"></i></span>
+      </div>
+      <div id="archive-list">
+        <a href="tatreez.html" class="archive-item">
+          <div class="archive-item-left">
+            <span class="archive-item-num">04</span>
+            <span class="archive-item-title">Tatreez</span>
+            <div class="archive-item-tags">
+              <span class="archive-item-tag">UX/UI Design</span>
+              <span class="archive-item-tag">Figma</span>
             </div>
-            
-                        <!-- Academic Project Card START -->
-            <div class="col-md-4 project-card card-hover" data-type="academic">
-              <a href="TheDiary.html">
-              <div class="card h-100 d-flex flex-column">
-                <img src="img/TheDiary/thediary-thumb.jpg" class="card-img-top" alt="Project TheDiary Thumbnail">
-                <div class="card-body d-flex flex-column">
-                  <h5 class="card-title">The Diary</h5>
-                  <p></p>
-                  <div class="mb-3">
-                    <span class="badge tag-type me-1">Academic</span>
-                    <span class="badge tag-skill me-1">Speculative Design</span>
-                    <span class="badge tag-skill me-1">Installation</span>
-                    <span class="badge tag-skill me-1">Physical Interaction</span>
-                  </div>
-                </div>
-              </div>
-              </a>
+          </div>
+          <span class="archive-arrow">→</span>
+        </a>
+        <a href="thediary.html" class="archive-item">
+          <div class="archive-item-left">
+            <span class="archive-item-num">05</span>
+            <span class="archive-item-title">The Diary</span>
+            <div class="archive-item-tags">
+              <span class="archive-item-tag">Speculative Design</span>
+              <span class="archive-item-tag">Installation</span>
             </div>
-            <!-- Academic Project Card END-->
+          </div>
+          <span class="archive-arrow">→</span>
+        </a>
+        <a href="caringConnections.html" class="archive-item">
+          <div class="archive-item-left">
+            <span class="archive-item-num">06</span>
+            <span class="archive-item-title">Caring Connections</span>
+            <div class="archive-item-tags">
+              <span class="archive-item-tag">Board Game Design</span>
+              <span class="archive-item-tag">Visual Design</span>
+            </div>
+          </div>
+          <span class="archive-arrow">→</span>
+        </a>
+        <a href="publicArt.html" class="archive-item">
+          <div class="archive-item-left">
+            <span class="archive-item-num">07</span>
+            <span class="archive-item-title">Public Art</span>
+            <div class="archive-item-tags">
+              <span class="archive-item-tag">PHP</span>
+              <span class="archive-item-tag">Back-End</span>
+            </div>
+          </div>
+          <span class="archive-arrow">→</span>
+        </a>
+      </div>
+    </div>
+  </section>
 
-            <!-- Academic Project Card START -->
-            <div class="col-md-4 project-card card-hover" data-type="academic">
-              <a href="caringConnections.html">
-              <div class="card h-100 d-flex flex-column">
-                <img src="img/caringconnections/cc-thumb.jpg" class="card-img-top" alt="Project cc Thumbnail">
-                <div class="card-body d-flex flex-column">
-                  <h5 class="card-title">Caring Connections</h5>
-                  <p></p>
-                  <div class="mb-3">
-                    <span class="badge tag-type me-1">Academic</span>
-                    <span class="badge tag-skill me-1">Board Game Design</span>
-                    <span class="badge tag-skill me-1">Tabletop Simulator Prototype</span>
-                  </div>
-                </div>
-              </div>
-            </a>
-            </div>
-            <!-- Academic Project Card END-->
-
-            <!-- IGSS -closed
-            <div class="col-md-4 project-card card-hover" data-type="work">
-              <div class="card h-100 d-flex flex-column">
-                <img src="img/igss/sfu-thumb.jpg" class="card-img-top" alt="Project Thumbnail">
-                <div class="card-body d-flex flex-column">
-                  <h5 class="card-title">IGSS - Graphic Design</h5>
-                  <p></p>
-                  <div class="mb-3">
-                    <span class="badge tag-type me-1">Work</span>
-                    <span class="badge tag-skill me-1">Graphic Design</span>
-                    <span class="badge tag-skill me-1">Event Collateral Design</span>
-                  </div>
-                </div>
-              </div>
-            </div>
-               -->
-
-            
-            <div class="col-md-4 project-card card-hover" data-type="academic">
-              <a href="publicArt.html">
-              <div class="card h-100 d-flex flex-column">
-                <img src="img/publicArt/pa-thumb.jpg" class="card-img-top" alt="Project Thumbnail">
-                <div class="card-body d-flex flex-column">
-                  <h5 class="card-title">Public Art</h5>
-                  <p></p>
-                  <div class="mb-3">
-                    <span class="badge tag-type me-1">Academic</span>
-                    <span class="badge tag-skill me-1">Back-End Focused Project</span>
-                    <span class="badge tag-skill me-1">PHP</span>
-                  </div>
-                </div>
-              </div>
-            </a>
-            </div>
-
-
-            <!-- Academic Project Card Template 
-           
-            <div class="col-md-4 project-card card-hover" data-type="academic">
-              <div class="card h-100 d-flex flex-column">
-                <img src="img/Main/project-thumb.jpg" class="card-img-top" alt="Project Thumbnail">
-                <div class="card-body d-flex flex-column">
-                  <h5 class="card-title">Academic Project</h5>
-                  <div class="mb-3">
-                    <span class="badge tag-type me-1">Academic</span>
-                    <span class="badge tag-skill me-1">UX/UI Design</span>
-                    <span class="badge tag-skill me-1">Figma Prototype</span>
-                  </div>
-                  <div class="mt-auto d-flex justify-content-end">
-                    <a href="academicProject.html" class="btn btn-outline-custom">View Details</a>
-                  </div>
-                </div>
-              </div>
-            </div>
-            -->
-      
-            <!-- Work Project Card Template 
-            <div class="col-md-4 project-card card-hover" data-type="work">
-              <div class="card h-100 d-flex flex-column">
-                <img src="img/Main/project-thumb.jpg" class="card-img-top" alt="Project Thumbnail">
-                <div class="card-body d-flex flex-column">
-                  <h5 class="card-title">Work Project</h5>
-                  <div class="mb-3">
-                    <span class="badge tag-type me-1">Work</span>
-                    <span class="badge tag-skill me-1">HTML/CSS</span>
-                    <span class="badge tag-skill me-1">Video</span>
-                  </div>
-                  <div class="mt-auto d-flex justify-content-end">
-                    <a href="workProject.html" class="btn btn-outline-custom">View Details</a>
-
-                  </div>
-                </div>
-              </div>
-            </div>
-            
-          -->
-      
+  <!-- About -->
+  <section id="about">
+    <div class="container">
+      <div class="section-label">About</div>
+      <div class="about-grid">
+        <img src="img/profile.jpg" alt="Sooa Mo" class="about-photo">
+        <div>
+          <div class="about-name">Sooa Mo</div>
+          <p class="about-desc">Graduated from Simon Fraser University's Interactive Arts &amp; Technology program, I design intuitive, engaging digital experiences rooted in storytelling and prototyping. I'm drawn to work that connects people or addresses real-world challenges.<br><br>This portfolio was originally hand-coded in HTML, CSS, and JavaScript — later updated and maintained with the help of Claude AI. Deployed via GitHub Pages.<br><br>I also run <a href="https://sooamo.github.io/momo_note/scrapbook.html" target="_blank" class="about-link">MomoNote</a> — a personal blog where I document English learning and everyday thoughts, built and maintained with AI tools.</p>
+          <p class="about-lang"><strong>Languages:</strong> Korean, English</p>
+          <div class="about-btns">
+            <a href="pdf/Resume.pdf" class="about-btn-dark" target="_blank">Resume</a>
+            <a href="https://www.linkedin.com/in/sooamo/" class="about-btn-outline" target="_blank">LinkedIn</a>
           </div>
         </div>
-      </section>
-      
-
-<!-- Gallery Section 
-<section class="py-5" id="Archive">
-  <div class="container">
-    <h2 class="mb-4 text-center">Gallery</h2>
-   -->
- <!--
-    <div class="row" id="galleryGrid">
-      
-      <div class="col-md-4 mb-4">
-        <img src="img/gallery/1.jpg" class="img-fluid gallery-img" alt="sfu work">
-      </div>
-
-      <div class="col-md-4 mb-4">
-        <img src="img/gallery/2.jpg" class="img-fluid gallery-img" alt="sfu work">
-      </div>
--->
-      <!-- if I use more/less button
-      <div class="col-md-4 mb-4 d-none gallery-extra">
-        <img src="img/gallery/3.jpg" class="img-fluid gallery-img" alt="Gallery image 4">
-      </div>
-      <div class="col-md-4 mb-4 d-none gallery-extra">
-        <img src="img/gallery/2.jpg" class="img-fluid gallery-img" alt="Gallery image 5">
-      </div>
-      <div class="col-md-4 mb-4 d-none gallery-extra">
-        <img src="img/gallery/1.jpg" class="img-fluid gallery-img" alt="Gallery image 6">
-      </div>
-    
-    </div>
-  -->
-
-    <!-- more/less button
-    <div class="text-center mt-3">
-      <button id="toggleGalleryBtn" class="btn btn-outline-dark">More</button>
-    </div>
-    <div class="text-end mt-3">
-      <a href="https://sooamo.github.io/portfolio/Mo_Portfolio/public_html/" target="_blank" class="btn btn-outline-dark">
-        Check Previous Portfolio →
-      </a>
-    </div>
-     
-  </div>
-
-  
-</section>-->
-
-<!-- Modal for Zoomed Image -->
-<div class="modal fade" id="imageModal" tabindex="-1" aria-hidden="true">
-  <div class="modal-dialog modal-xl modal-dialog-centered">
-    <div class="modal-content bg-transparent border-0">
-      <div class="modal-body p-0">
-        <img id="modalImage" src="" class="img-fluid w-100" alt="Zoomed Image">
       </div>
     </div>
-  </div>
-</div>
+  </section>
 
+  <!-- Contact -->
+  <section id="contact">
+    <div class="container">
+      <div class="section-label">Contact</div>
+      <div class="contact-list">
+        <span class="contact-row" onclick="copyEmail()">
+          <div class="contact-icon"><i class="fas fa-envelope"></i></div>
+          <div>
+            <div class="contact-info-label">Email</div>
+            <div class="contact-info-val">sooa24@gmail.com <span class="contact-copy-hint" id="copy-hint">click to copy</span></div>
+          </div>
+        </span>
+        <a href="https://www.linkedin.com/in/sooamo/" class="contact-row" target="_blank">
+          <div class="contact-icon"><i class="fab fa-linkedin"></i></div>
+          <div>
+            <div class="contact-info-label">LinkedIn</div>
+            <div class="contact-info-val">linkedin.com/in/sooamo</div>
+          </div>
+        </a>
+        <a href="https://www.youtube.com/channel/UCD7aft2uzSnMPiwY_x1r5sg" class="contact-row" target="_blank">
+          <div class="contact-icon"><i class="fab fa-youtube"></i></div>
+          <div>
+            <div class="contact-info-label">YouTube</div>
+            <div class="contact-info-val">Sooa Mo</div>
+          </div>
+        </a>
+        <a href="pdf/Resume.pdf" class="contact-row" target="_blank">
+          <div class="contact-icon"><i class="fas fa-id-badge"></i></div>
+          <div>
+            <div class="contact-info-label">Resume</div>
+            <div class="contact-info-val">Download PDF</div>
+          </div>
+        </a>
+        <a href="https://sooamo.github.io/momo_note/scrapbook.html" class="contact-row" target="_blank">
+          <div class="contact-icon"><i class="fas fa-pen-nib"></i></div>
+          <div>
+            <div class="contact-info-label">Personal Blog</div>
+            <div class="contact-info-val">MomoNote</div>
+          </div>
+        </a>
+      </div>
+    </div>
+  </section>
 
-
-    
-
-  
-  
-  <!-- Contact Section -->
-<section class=" py-5  py-5" id="contact">
-  <div class="container">
-  <h2 class="mb-4">Contact Me!</h2>
-  <p>
-    <b>Email:</b>
-    <span class="email-tooltip-wrapper">
-      <span id="email" class="copy-email">sooa24@gmail.com</span>
-      <span id="tooltip" class="email-tooltip">Copied!</span>
-    </span>
-  </p>
-  
-  <p>
-    <a href="https://www.youtube.com/channel/UCD7aft2uzSnMPiwY_x1r5sg" target="_blank" class="social-icon">
-      <i class="fab fa-youtube"></i>
-    </a>
-    <a href="https://www.linkedin.com/in/sooamo/" target="_blank" class="social-icon">
-      <i class="fab fa-linkedin"></i>
-    </a>
-    <a href="pdf/Resume.pdf" target="_blank" class="social-icon me-3">
-      <i class="fas fa-id-badge"></i>
-    </a>
-    
-  </p>
-</div>
-</section>
-
-<!-- Back to Top Button -->
-<button id="backToTopBtn" class="btn btn-outline-custom rounded-circle" title="Go to top">
-  <i class="fas fa-arrow-up"></i>
-</button>
-
+  <!-- Back to Top -->
+  <button id="backToTopBtn" class="btn btn-outline-custom rounded-circle" title="Go to top">
+    <i class="fas fa-arrow-up"></i>
+  </button>
 
   <!-- Footer -->
   <div data-include="partials/footer.html"></div>
 
-  <!-- Bootstrap JS -->
+  <!-- Scripts -->
   <script src="https://cdn.jsdelivr.net/npm/bootstrap@5.3.2/dist/js/bootstrap.bundle.min.js"></script>
-
-   <!-- custom JS -->
   <script src="js/include.js"></script>
   <script src="js/script.js"></script>
+  <script>
+    window.addEventListener('load', () => {
+      setTimeout(() => document.getElementById('hero').classList.add('visible'), 100);
+    });
 
+    const observer = new IntersectionObserver((entries) => {
+      entries.forEach(e => {
+        if (e.isIntersecting) { e.target.classList.add('visible'); observer.unobserve(e.target); }
+      });
+    }, { threshold: 0.12 });
+    document.querySelectorAll('.proj-item').forEach(el => observer.observe(el));
 
-<!-- Cursor -->
-<div id="cursor-dot"></div>
-<div id="cursor-box"></div>
-<div id="cursor-fill"></div>
+    function toggleArchive() {
+      document.getElementById('archive-toggle').classList.toggle('open');
+      document.getElementById('archive-list').classList.toggle('open');
+    }
 
+    function copyEmail() {
+      navigator.clipboard.writeText('sooa24@gmail.com').then(() => {
+        const hint = document.getElementById('copy-hint');
+        hint.textContent = 'Copied!';
+        hint.style.color = '#3e6658';
+        setTimeout(() => { hint.textContent = 'click to copy'; hint.style.color = ''; }, 2000);
+      });
+    }
+  </script>
 
-
-
+  <!-- Cursor -->
+  <div id="cursor-dot"></div>
+  <div id="cursor-box"></div>
+  <div id="cursor-fill"></div>
 
 </body>
-
 </html>
