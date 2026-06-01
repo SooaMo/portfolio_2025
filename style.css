@@ -699,3 +699,9 @@ body { cursor: none; }
   color: #3e6658;
   border-color: #3e6658;
 }
+/* Index 컨테이너 너비 제한 */
+#projects .container,
+#about .container,
+#contact .container {
+  max-width: 1050px;
+}
