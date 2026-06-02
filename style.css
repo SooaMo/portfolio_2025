@@ -345,6 +345,13 @@
 
 body { cursor: none; }
 
+/* Index 컨테이너 너비 제한 */
+#projects .container,
+#about .container,
+#contact .container {
+  max-width: 1050px;
+}
+
 /* Hero */
 #hero {
   min-height: 100vh;
@@ -581,16 +588,24 @@ body { cursor: none; }
 #about { padding: 5rem 0; border-top: 0.5px solid #e8e8e8; }
 .about-grid {
   display: grid;
-  grid-template-columns: 160px 1fr;
+  grid-template-columns: 200px 1fr;
   gap: 2.5rem;
   align-items: start;
 }
 .about-photo {
-  width: 160px;
-  height: 160px;
-  border-radius: 50%;
+  width: 200px;
+  height: 260px;
+  border-radius: 0.75rem;
   object-fit: cover;
+  object-position: center top;
   border: 0.5px solid #e8e8e8;
+}
+
+/* Hero hi.svg */
+.hero-hi-img {
+  width: 9rem;
+  margin-bottom: 1rem;
+  opacity: 0.9;
 }
 .about-name { font-size: 18px; font-weight: 500; color: #111; margin-bottom: 6px; }
 .about-desc { font-size: 14px; color: #555; line-height: 1.8; margin-bottom: 18px; }
@@ -621,35 +636,78 @@ body { cursor: none; }
 
 /* Contact */
 #contact { padding: 5rem 0; border-top: 0.5px solid #e8e8e8; }
-.contact-list { display: flex; flex-direction: column; gap: 12px; max-width: 420px; }
-.contact-row {
+
+.contact-tagline {
+  font-size: 0.9375rem;
+  font-weight: 500;
+  color: #333;
+  margin-bottom: 0.375rem;
+}
+.contact-tagline-sub {
+  font-size: 0.875rem;
+  color: #888;
+  margin-bottom: 1.5rem;
+  line-height: 1.6;
+}
+
+.contact-grid {
+  display: grid;
+  grid-template-columns: 1fr 1fr;
+  gap: 3rem;
+  align-items: center;
+}
+.contact-right {
+  display: flex;
+  flex-direction: column;
+  gap: 0.5rem;
+}
+
+.contact-email-big {
   display: flex;
   align-items: center;
-  gap: 14px;
+  gap: 0.875rem;
+  padding: 1rem 1.25rem;
+  border: 0.5px solid #eee;
+  border-radius: 0.625rem;
   text-decoration: none;
   color: inherit;
-  padding: 10px 14px;
-  border-radius: 10px;
-  border: 0.5px solid #eee;
+  width: 100%;
+  margin-bottom: 0;
   transition: border-color 0.2s, background 0.2s;
-  cursor: pointer;
 }
-.contact-row:hover { border-color: #658D7F; background: #f8fbfa; }
-.contact-icon {
-  width: 36px;
-  height: 36px;
-  border-radius: 8px;
-  border: 0.5px solid #e8e8e8;
-  display: flex;
-  align-items: center;
-  justify-content: center;
-  font-size: 15px;
-  color: #555;
+.contact-email-big:hover { border-color: #658D7F; background: #f8fbfa; }
+.contact-email-big i {
+  font-size: 1.25rem;
+  color: #658D7F;
   flex-shrink: 0;
 }
-.contact-info-label { font-size: 11px; color: #aaa; margin-bottom: 1px; }
-.contact-info-val { font-size: 13px; color: #333; font-weight: 500; }
-.contact-copy-hint { font-size: 11px; color: #658D7F; margin-left: 4px; }
+.contact-email-val {
+  font-size: 1rem;
+  font-weight: 500;
+  color: #333;
+}
+
+.contact-btn-row {
+  display: grid;
+  grid-template-columns: repeat(4, 1fr);
+  gap: 0.5rem;
+}
+.contact-btn {
+  display: inline-flex;
+  align-items: center;
+  justify-content: center;
+  gap: 0.375rem;
+  padding: 0.5rem 0.5rem;
+  border: 0.5px solid #e0e0e0;
+  border-radius: 0.5rem;
+  font-size: 0.8125rem;
+  color: #555;
+  text-decoration: none;
+  transition: border-color 0.2s, color 0.2s, background 0.2s;
+}
+.contact-btn:hover { border-color: #658D7F; color: #3e6658; background: #f8fbfa; }
+.contact-btn i { font-size: 0.9375rem; color: #888; transition: color 0.2s; }
+.contact-btn:hover i { color: #658D7F; }
 
 /* Index responsive */
 @media (max-width: 767px) {
@@ -662,7 +720,9 @@ body { cursor: none; }
   .proj-item.reverse .proj-text { text-align: left; }
   .proj-item.reverse .proj-tags { justify-content: flex-start; }
   .about-grid { grid-template-columns: 1fr; }
-  .about-photo { width: 100px; height: 100px; }
+  .about-photo { width: 140px; height: 180px; }
+  .contact-grid { grid-template-columns: 1fr; gap: 1.5rem; }
+  .contact-btn-row { grid-template-columns: repeat(2, 1fr); }
 }
 @media (min-width: 768px) and (max-width: 991px) {
   .proj-item { gap: 2rem; }
@@ -686,22 +746,373 @@ body { cursor: none; }
 }
 /* View Case Study 버튼 */
 .proj-cta {
-  display: inline-block;
-  margin-top: 16px;
-  font-size: 12px;
+  display: inline-flex;
+  align-items: center;
+  gap: 0.375rem;
+  margin-top: 1rem;
+  font-size: 0.8125rem;
   font-weight: 500;
+  color: #555;
+  text-decoration: none;
+  transition: color 0.2s;
+}
+.proj-cta-arrow {
+  display: inline-flex;
+  align-items: center;
+  justify-content: center;
+  width: 1.125rem;
+  height: 1.125rem;
+  border-radius: 0.25rem;
+  background: transparent;
+  border: 1px solid #658D7F;
   color: #658D7F;
-  border-bottom: 1px solid #658D7F;
-  padding-bottom: 1px;
-  transition: color 0.2s, border-color 0.2s;
+  font-size: 0.625rem;
+  transition: background 0.2s, color 0.2s, border-color 0.2s;
+  flex-shrink: 0;
 }
 .proj-item:hover .proj-cta {
   color: #3e6658;
-  border-color: #3e6658;
+  text-decoration: underline;
+  text-underline-offset: 3px;
 }
-/* Index 컨테이너 너비 제한 */
-#projects .container,
-#about .container,
-#contact .container {
-  max-width: 1050px;
+.proj-item:hover .proj-cta-arrow {
+  background: #3e6658;
+  border-color: #3e6658;
+  color: #fff;
+}
+
+/* Archive 2x2 카드 그리드 */
+.archive-grid {
+  display: grid;
+  grid-template-columns: 1fr 1fr;
+  gap: 0.625rem;
+  padding: 1rem 0 0.5rem;
+}
+.archive-card {
+  display: block;
+  padding: 0.875rem 1rem;
+  border: 0.5px solid #f0f0f0;
+  border-radius: 0.5rem;
+  text-decoration: none;
+  color: inherit;
+  transition: border-color 0.2s, background 0.2s;
+}
+.archive-card:hover { border-color: #658D7F; background: #f8fbfa; }
+.archive-card-top {
+  display: flex;
+  align-items: center;
+  justify-content: space-between;
+  margin-bottom: 0.375rem;
+}
+.archive-card-num { font-size: 0.6875rem; color: #bbb; }
+.archive-card-arrow {
+  font-size: 0.75rem;
+  color: #ccc;
+  transition: color 0.2s;
+}
+.archive-card:hover .archive-card-arrow { color: #658D7F; }
+.archive-card-title {
+  font-size: 0.875rem;
+  font-weight: 500;
+  color: #333;
+  margin-bottom: 0.5rem;
+  transition: color 0.2s;
+}
+.archive-card:hover .archive-card-title { color: #3e6658; }
+.archive-card-tags { display: flex; gap: 0.25rem; flex-wrap: wrap; }
+.archive-card-tag {
+  font-size: 0.625rem;
+  padding: 0.125rem 0.4375rem;
+  border-radius: 0.375rem;
+  border: 0.5px solid #e0e0e0;
+  color: #999;
+}
+
+@media (max-width: 767px) {
+  .archive-grid { grid-template-columns: 1fr; }
+}
+
+
+/* ═══════════════════════════════════
+   PROJECT PAGE (sfu-gs, flui, jadeco 등)
+═══════════════════════════════════ */
+
+.proj-page {
+  max-width: 860px;
+  margin: 0 auto;
+  padding: 6rem 1.5rem 5rem;
+}
+
+/* Cover */
+.proj-cover {
+  width: 100%;
+  aspect-ratio: 16/7;
+  object-fit: cover;
+  border-radius: 0.75rem;
+  display: block;
+  margin-bottom: 2rem;
+  border: 0.5px solid #e8e8e8;
+}
+
+/* Header */
+.proj-header { margin-bottom: 1.5rem; }
+.proj-header-name {
+  font-size: clamp(1.6rem, 4vw, 2.2rem);
+  font-weight: 500;
+  color: #111;
+  margin-bottom: 0.375rem;
+  line-height: 1.2;
+}
+.proj-header-sub {
+  font-size: 0.9rem;
+  color: #888;
+  margin-bottom: 0.875rem;
+  line-height: 1.7;
+}
+.proj-chips { display: flex; gap: 0.375rem; flex-wrap: wrap; }
+.proj-chip {
+  font-size: 0.75rem;
+  padding: 0.2rem 0.65rem;
+  border-radius: 0.65rem;
+  border: 0.5px solid #658D7F;
+  color: #658D7F;
+}
+.proj-chip.type {
+  background: #e1f5ee;
+  border-color: #e1f5ee;
+  color: #0f6e56;
+}
+
+.proj-divider {
+  border: none;
+  border-top: 0.5px solid #f0f0f0;
+  margin: 1.75rem 0;
+}
+
+/* Stat cards (Work 프로젝트용) */
+.proj-stats {
+  display: grid;
+  grid-template-columns: repeat(3, 1fr);
+  gap: 0.625rem;
+  margin-bottom: 2rem;
+}
+.proj-stat {
+  background: #f8faf9;
+  border-radius: 0.5rem;
+  padding: 0.875rem 1rem;
+  border: 0.5px solid #eef2f0;
+}
+.proj-stat-num {
+  font-size: 1.5rem;
+  font-weight: 500;
+  color: #3e6658;
+  margin-bottom: 0.2rem;
+}
+.proj-stat-label {
+  font-size: 0.75rem;
+  color: #888;
+  line-height: 1.5;
+}
+
+/* Meta cards (Academic 프로젝트용) */
+.proj-meta-cards {
+  display: grid;
+  grid-template-columns: repeat(4, 1fr);
+  gap: 0.625rem;
+  margin-bottom: 2rem;
+}
+.proj-meta-card {
+  background: #f8faf9;
+  border-radius: 0.5rem;
+  padding: 0.75rem 0.875rem;
+  border: 0.5px solid #eef2f0;
+}
+.proj-meta-card-label {
+  font-size: 0.65rem;
+  letter-spacing: 0.08em;
+  text-transform: uppercase;
+  color: #aaa;
+  margin-bottom: 0.3rem;
+}
+.proj-meta-card-val {
+  font-size: 0.875rem;
+  font-weight: 500;
+  color: #333;
+  line-height: 1.4;
+}
+
+/* Overview */
+.proj-overview {
+  font-size: 1rem;
+  color: #555;
+  line-height: 1.9;
+}
+
+/* Timeline */
+.proj-timeline {
+  position: relative;
+  padding-left: 1.75rem;
+  margin-top: 3.5rem;
+}
+.proj-timeline::before {
+  content: '';
+  position: absolute;
+  left: 0.4375rem;
+  top: 0.5rem;
+  bottom: 0.5rem;
+  width: 1px;
+  background: #e8e8e8;
+}
+
+.tl-item {
+  position: relative;
+  margin-bottom: 3.5rem;
+}
+.tl-item::before {
+  content: '';
+  position: absolute;
+  left: -1.375rem;
+  top: 0.375rem;
+  width: 0.5rem;
+  height: 0.5rem;
+  border-radius: 50%;
+  background: #658D7F;
+  border: 2px solid #fff;
+  outline: 1px solid #658D7F;
+}
+
+.tl-eyebrow {
+  font-size: 0.65rem;
+  letter-spacing: 0.1em;
+  text-transform: uppercase;
+  color: #aaa;
+  margin-bottom: 0.3rem;
+}
+.tl-title {
+  font-size: 1.05rem;
+  font-weight: 500;
+  color: #111;
+  margin-bottom: 0.875rem;
+}
+
+/* 이미지 1개 → 텍스트 + 이미지 2컬럼 */
+.tl-2col {
+  display: grid;
+  grid-template-columns: 1fr 1fr;
+  gap: 1.5rem;
+  align-items: start;
+}
+.tl-2col p {
+  font-size: 0.9375rem;
+  color: #555;
+  line-height: 1.85;
+}
+
+/* 이미지 2개 → 텍스트 전체 + 이미지 나란히 */
+.tl-full-2img p {
+  font-size: 0.9375rem;
+  color: #555;
+  line-height: 1.85;
+  margin-bottom: 0.875rem;
+}
+.tl-img-row2 {
+  display: grid;
+  grid-template-columns: 1fr 1fr;
+  gap: 0.625rem;
+}
+
+/* 텍스트 전체 + 이미지 1개 전체 너비 */
+.tl-full p {
+  font-size: 0.9375rem;
+  color: #555;
+  line-height: 1.85;
+  margin-bottom: 0.875rem;
+}
+
+/* 이미지 공통 */
+.tl-img {
+  width: 100%;
+  display: block;
+  border-radius: 0.5rem;
+  border: 0.5px solid #e8e8e8;
+  cursor: pointer;
+  transition: transform 0.3s ease;
+}
+.tl-img:hover { transform: scale(1.01); }
+
+.tl-caption {
+  font-size: 0.75rem;
+  color: #aaa;
+  text-align: center;
+  margin-top: 0.375rem;
+}
+
+/* 보조 설명 노트 */
+.tl-note {
+  font-size: 0.8125rem;
+  color: #777;
+  line-height: 1.8;
+  margin-top: 0.75rem;
+  padding: 0.625rem 0.875rem;
+  border-left: 2px solid #c8ddd7;
+  background: #f8fbfa;
+  border-radius: 0 0.375rem 0.375rem 0;
+}
+
+/* 외부 링크 버튼 */
+.tl-btn {
+  display: inline-block;
+  margin-top: 0.75rem;
+  margin-right: 0.5rem;
+  padding: 0.4375rem 1rem;
+  font-size: 0.8125rem;
+  border: 0.5px solid #ccc;
+  border-radius: 0.4375rem;
+  color: #555;
+  text-decoration: none;
+  transition: border-color 0.2s, color 0.2s;
+}
+.tl-btn:hover { border-color: #658D7F; color: #3e6658; }
+
+/* Takeaway */
+.proj-takeaway {
+  margin-top: 4rem;
+  padding-top: 2rem;
+  border-top: 0.5px solid #f0f0f0;
+}
+.proj-takeaway-label {
+  font-size: 0.65rem;
+  letter-spacing: 0.1em;
+  text-transform: uppercase;
+  color: #aaa;
+  margin-bottom: 0.625rem;
+}
+.proj-takeaway p {
+  font-size: 1rem;
+  color: #555;
+  line-height: 1.9;
+}
+
+/* Back */
+.proj-back {
+  margin-top: 3rem;
+  padding-top: 2rem;
+  border-top: 0.5px solid #f0f0f0;
+}
+.proj-back a {
+  font-size: 0.875rem;
+  color: #888;
+  text-decoration: none;
+  transition: color 0.2s;
+}
+.proj-back a:hover { color: #3e6658; }
+
+/* Project page responsive */
+@media (max-width: 767px) {
+  .proj-page { padding: 5rem 1rem 4rem; }
+  .proj-stats { grid-template-columns: repeat(3, 1fr); }
+  .proj-meta-cards { grid-template-columns: repeat(2, 1fr); }
+  .proj-timeline { padding-left: 1.125rem; }
+  .tl-2col { grid-template-columns: 1fr; }
+  .tl-img-row2 { grid-template-columns: 1fr; }
 }

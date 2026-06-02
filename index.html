@@ -17,6 +17,7 @@
   <!-- Hero -->
   <section id="hero">
     <div>
+      <img src="img/hi.svg" alt="" class="hero-hi-img">
       <div class="hero-eyebrow">Portfolio</div>
       <h1 class="hero-name">Sooa Mo</h1>
       <p class="hero-role">UX/UI Designer &amp; Graphic Designer · Vancouver</p>
@@ -52,7 +53,7 @@
             <span class="proj-tag">Visual Design</span>
             <span class="proj-tag">Video Editing</span>
           </div>
-          <div class="proj-cta">View Case Study →</div>
+          <div class="proj-cta">View Case Study <span class="proj-cta-arrow">></span></div>
         </div>
       </a>
 
@@ -72,7 +73,7 @@
             <span class="proj-tag">Branding</span>
             <span class="proj-tag">Figma</span>
           </div>
-          <div class="proj-cta">View Case Study →</div>
+          <div class="proj-cta">View Case Study <span class="proj-cta-arrow">></span></div>
         </div>
       </a>
 
@@ -92,7 +93,7 @@
             <span class="proj-tag">Storyboard</span>
             <span class="proj-tag">Video</span>
           </div>
-          <div class="proj-cta">View Case Study →</div>
+          <div class="proj-cta">View Case Study <span class="proj-cta-arrow">></span></div>
         </div>
       </a>
 
@@ -102,50 +103,52 @@
         <span class="archive-toggle-icon"><i class="fas fa-plus"></i></span>
       </div>
       <div id="archive-list">
-        <a href="tatreez.html" class="archive-item">
-          <div class="archive-item-left">
-            <span class="archive-item-num">04</span>
-            <span class="archive-item-title">Tatreez</span>
-            <div class="archive-item-tags">
-              <span class="archive-item-tag">UX/UI Design</span>
-              <span class="archive-item-tag">Figma</span>
+        <div class="archive-grid">
+          <a href="tatreez.html" class="archive-card">
+            <div class="archive-card-top">
+              <span class="archive-card-num">04</span>
+              <span class="archive-card-arrow">></span>
             </div>
-          </div>
-          <span class="archive-arrow">→</span>
-        </a>
-        <a href="thediary.html" class="archive-item">
-          <div class="archive-item-left">
-            <span class="archive-item-num">05</span>
-            <span class="archive-item-title">The Diary</span>
-            <div class="archive-item-tags">
-              <span class="archive-item-tag">Speculative Design</span>
-              <span class="archive-item-tag">Installation</span>
+            <div class="archive-card-title">Tatreez</div>
+            <div class="archive-card-tags">
+              <span class="archive-card-tag">UX/UI Design</span>
+              <span class="archive-card-tag">Figma</span>
             </div>
-          </div>
-          <span class="archive-arrow">→</span>
-        </a>
-        <a href="caringConnections.html" class="archive-item">
-          <div class="archive-item-left">
-            <span class="archive-item-num">06</span>
-            <span class="archive-item-title">Caring Connections</span>
-            <div class="archive-item-tags">
-              <span class="archive-item-tag">Board Game Design</span>
-              <span class="archive-item-tag">Visual Design</span>
+          </a>
+          <a href="thediary.html" class="archive-card">
+            <div class="archive-card-top">
+              <span class="archive-card-num">05</span>
+              <span class="archive-card-arrow">></span>
             </div>
-          </div>
-          <span class="archive-arrow">→</span>
-        </a>
-        <a href="publicArt.html" class="archive-item">
-          <div class="archive-item-left">
-            <span class="archive-item-num">07</span>
-            <span class="archive-item-title">Public Art</span>
-            <div class="archive-item-tags">
-              <span class="archive-item-tag">PHP</span>
-              <span class="archive-item-tag">Back-End</span>
+            <div class="archive-card-title">The Diary</div>
+            <div class="archive-card-tags">
+              <span class="archive-card-tag">Speculative Design</span>
+              <span class="archive-card-tag">Installation</span>
             </div>
-          </div>
-          <span class="archive-arrow">→</span>
-        </a>
+          </a>
+          <a href="caringConnections.html" class="archive-card">
+            <div class="archive-card-top">
+              <span class="archive-card-num">06</span>
+              <span class="archive-card-arrow">></span>
+            </div>
+            <div class="archive-card-title">Caring Connections</div>
+            <div class="archive-card-tags">
+              <span class="archive-card-tag">Board Game Design</span>
+              <span class="archive-card-tag">Visual Design</span>
+            </div>
+          </a>
+          <a href="publicArt.html" class="archive-card">
+            <div class="archive-card-top">
+              <span class="archive-card-num">07</span>
+              <span class="archive-card-arrow">></span>
+            </div>
+            <div class="archive-card-title">Public Art</div>
+            <div class="archive-card-tags">
+              <span class="archive-card-tag">PHP</span>
+              <span class="archive-card-tag">Back-End</span>
+            </div>
+          </a>
+        </div>
       </div>
     </div>
   </section>
@@ -173,42 +176,34 @@
   <section id="contact">
     <div class="container">
       <div class="section-label">Contact</div>
-      <div class="contact-list">
-        <span class="contact-row" onclick="copyEmail()">
-          <div class="contact-icon"><i class="fas fa-envelope"></i></div>
-          <div>
-            <div class="contact-info-label">Email</div>
-            <div class="contact-info-val">sooa24@gmail.com <span class="contact-copy-hint" id="copy-hint">click to copy</span></div>
+      <div class="contact-grid">
+        <div class="contact-left">
+          <p class="contact-tagline">Based in Vancouver, BC · Authorized to work in Canada (PGWP)</p>
+          <p class="contact-tagline-sub">Always happy to connect — whether it's a job opportunity, a collaboration, or just a hello.</p>
+        </div>
+        <div class="contact-right">
+          <a href="mailto:sooa24@gmail.com" class="contact-email-big">
+            <i class="fas fa-envelope"></i>
+            <div>
+              <div class="contact-info-label">Email</div>
+              <div class="contact-email-val">sooa24@gmail.com</div>
+            </div>
+          </a>
+          <div class="contact-btn-row">
+            <a href="https://www.linkedin.com/in/sooamo/" class="contact-btn" target="_blank">
+              <i class="fab fa-linkedin"></i> LinkedIn
+            </a>
+            <a href="https://www.youtube.com/channel/UCD7aft2uzSnMPiwY_x1r5sg" class="contact-btn" target="_blank">
+              <i class="fab fa-youtube"></i> YouTube
+            </a>
+            <a href="pdf/Resume.pdf" class="contact-btn" target="_blank">
+              <i class="fas fa-id-badge"></i> Resume
+            </a>
+            <a href="https://sooamo.github.io/momo_note/scrapbook.html" class="contact-btn" target="_blank">
+              <i class="fas fa-pen-nib"></i> MomoNote
+            </a>
           </div>
-        </span>
-        <a href="https://www.linkedin.com/in/sooamo/" class="contact-row" target="_blank">
-          <div class="contact-icon"><i class="fab fa-linkedin"></i></div>
-          <div>
-            <div class="contact-info-label">LinkedIn</div>
-            <div class="contact-info-val">linkedin.com/in/sooamo</div>
-          </div>
-        </a>
-        <a href="https://www.youtube.com/channel/UCD7aft2uzSnMPiwY_x1r5sg" class="contact-row" target="_blank">
-          <div class="contact-icon"><i class="fab fa-youtube"></i></div>
-          <div>
-            <div class="contact-info-label">YouTube</div>
-            <div class="contact-info-val">Sooa Mo</div>
-          </div>
-        </a>
-        <a href="pdf/Resume.pdf" class="contact-row" target="_blank">
-          <div class="contact-icon"><i class="fas fa-id-badge"></i></div>
-          <div>
-            <div class="contact-info-label">Resume</div>
-            <div class="contact-info-val">Download PDF</div>
-          </div>
-        </a>
-        <a href="https://sooamo.github.io/momo_note/scrapbook.html" class="contact-row" target="_blank">
-          <div class="contact-icon"><i class="fas fa-pen-nib"></i></div>
-          <div>
-            <div class="contact-info-label">Personal Blog</div>
-            <div class="contact-info-val">MomoNote</div>
-          </div>
-        </a>
+        </div>
       </div>
     </div>
   </section>
@@ -242,14 +237,6 @@
       document.getElementById('archive-list').classList.toggle('open');
     }
 
-    function copyEmail() {
-      navigator.clipboard.writeText('sooa24@gmail.com').then(() => {
-        const hint = document.getElementById('copy-hint');
-        hint.textContent = 'Copied!';
-        hint.style.color = '#3e6658';
-        setTimeout(() => { hint.textContent = 'click to copy'; hint.style.color = ''; }, 2000);
-      });
-    }
   </script>
 
   <!-- Cursor -->

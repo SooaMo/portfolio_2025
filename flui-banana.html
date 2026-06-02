@@ -3,155 +3,218 @@
 <head>
   <meta charset="UTF-8" />
   <meta name="viewport" content="width=device-width, initial-scale=1.0" />
-  <title>FLUI Design Hackathon - Banana Art Lab | Sooa Mo</title>
+  <title>FLUI Design Hackathon — Banana Art Lab | Sooa Mo</title>
   <link rel="icon" href="img/logo.png" type="image/png">
-
-  <!-- Bootstrap -->
   <link href="https://cdn.jsdelivr.net/npm/bootstrap@5.3.2/dist/css/bootstrap.min.css" rel="stylesheet" />
-  <!-- Font Awesome -->
   <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.5.0/css/all.min.css">
-  <!-- Custom CSS -->
   <link rel="stylesheet" href="style.css" />
 </head>
 <body>
 
-  <!-- Navbar -->
   <div data-include="partials/navbar.html"></div>
 
-  <!-- Project Detail Section -->
-  <section class="container py-5 mt-5">
-    <h1 class="mb-3">FLUI Design Hackathon - Banana Art Lab</h1>
-    <p class="text-muted"> Hackathon • Feb 2025</p>
-    <p class="text-muted">Team: Sooa Mo, Khushy B., Mary G., Irena O. </p>
+  <div class="proj-page">
 
-    <!-- Tags -->
-    <div class="mb-4">
-      <span class="text-muted"> Project Type: </span>
-      <span class="badge tag-skill me-1">• Website Redesign</span>
-      <span class="badge tag-skill me-1">• Figma</span>
-      <span class="badge tag-skill me-1">• Branding</span>
-      <!-- Add more if needed -->
+    <!-- Cover -->
+    <img src="img/flui/flui-cover.jpg" alt="FLUI Design Hackathon — Banana Art Lab" class="proj-cover">
+
+    <!-- Header -->
+    <div class="proj-header">
+      <h1 class="proj-header-name">FLUI Design Hackathon — Banana Art Lab</h1>
+      <div class="proj-header-sub">
+        Hackathon &nbsp;·&nbsp; Feb 2025 &nbsp;·&nbsp; Team: Sooa Mo, Khushy B., Mary G., Irena O.
+      </div>
+      <div class="proj-chips">
+        <span class="proj-chip type">Work</span>
+        <span class="proj-chip">Website Redesign</span>
+        <span class="proj-chip">Branding</span>
+        <span class="proj-chip">Figma</span>
+        <span class="proj-chip">Illustration</span>
+      </div>
     </div>
 
-    <!-- Main Image -->
-    <img src="img/flui/flui-cover.jpg" alt="flui Cover" class="project-img img-fluid rounded mb-4" />
+    <hr class="proj-divider">
+
+    <!-- Meta Cards -->
+    <div class="proj-meta-cards">
+      <div class="proj-meta-card">
+        <div class="proj-meta-card-label">My Role</div>
+        <div class="proj-meta-card-val">User Flow Design, Illustration</div>
+      </div>
+      <div class="proj-meta-card">
+        <div class="proj-meta-card-label">Methods</div>
+        <div class="proj-meta-card-val">UX Research, Prototyping, Branding</div>
+      </div>
+      <div class="proj-meta-card">
+        <div class="proj-meta-card-label">Tools</div>
+        <div class="proj-meta-card-val">Figma, Illustrator</div>
+      </div>
+      <div class="proj-meta-card">
+        <div class="proj-meta-card-label">Duration</div>
+        <div class="proj-meta-card-val">3 days</div>
+      </div>
+    </div>
 
     <!-- Overview -->
-    <h3 class="mt-5">0. Overview</h3>
-    <p class="ps-3">
-      In February 2025, I participated in the FLUI Design Hackathon—an external, week-long event where teams were given just three days to complete a full design challenge. Our team collaborated with Banana Art Lab, a creative studio offering tufting and DIY workshops, to redesign their website. Within this tight timeframe, we focused on creating a user-friendly and visually cohesive experience tailored to the client’s needs.
+    <p class="proj-overview">
+      In February 2025, our team of four participated in the FLUI Design Hackathon — a 3-day design challenge where we partnered with Banana Art Lab, a Vancouver-based creative studio offering tufting, decoden, and DIY workshops. The existing site had no clear booking flow, inconsistent branding, and a confusing navigation — making it hard for first-time visitors to understand what the studio even offered, let alone book a session. We were tasked with redesigning it from the ground up: clearer booking flow, stronger brand identity, and a more cohesive visual experience — all within 72 hours.
     </p>
 
-    <!-- My Role -->
-    <h3 class="mt-5">1. My Role</h3>
-    <p><b> User Flow Design · Illustrator</b></p>
-    <p class="ps-3">
-      I focused on redesigning the booking system. I mapped out the user flow and restructured how five different services could be presented in a cohesive, intuitive way. I also created several custom illustrations used throughout the prototype to enhance brand personality.
-    </p>
+    <!-- Timeline -->
+    <div class="proj-timeline">
 
-    <!-- Design Decision -->
-    <h3 class="mt-5">2. Design Highlights</h3>
+      <!-- 01: Problem Analysis -->
+      <div class="tl-item">
+        <div class="tl-eyebrow">Research · 01</div>
+        <div class="tl-title">What Was Wrong with the Original Site</div>
+        <div class="tl-full">
+          <p>Before diving into design, we audited the existing Banana Art Lab website and identified 8 core issues that were creating friction for users — especially first-time visitors trying to book a service.</p>
+          <img src="img/flui/flui-before.jpg" alt="Original Banana Art Lab website" class="tl-img project-img">
+          <div class="tl-caption">Original Banana Art Lab website — before redesign</div>
+          <div class="tl-note">
+            <strong>1. Multiple booking entry points</strong> on the landing page caused confusion — users didn't know where to start.<br>
+            <strong>2. Long scrollable list</strong> mixed tufting and decoden sessions without clear separation. Inconsistent text formatting (e.g. "70X70CM" vs "100 x 100CM").<br>
+            <strong>3. Information overload</strong> on the party booking page — dense text, no contact form, key details buried at the bottom.<br>
+            <strong>4. Misleading "Book Now" button</strong> led to a pre-made rug shop instead of a booking flow — frustrating for new users.<br>
+            <strong>5. No clear brand identity</strong> — the logo and visual elements lacked cohesion; the site didn't communicate what Banana Art Lab is at a glance.<br>
+            <strong>6. Product listing issues</strong> — price shown twice, vague descriptions with no clear call to action.<br>
+            <strong>7. No professional map or directions</strong> — location guidance was just a photo with a hand-drawn red line marking the 2nd floor entrance.<br>
+            <strong>8. Instagram photos used as gallery</strong> — no curated visual showcase of the studio's work.
+          </div>
+        </div>
+      </div>
 
-    <h5 class="mt-2">• Booking System Redesign</h5>
-    <p class="ps-3">
-      The original website offered five distinct services, but each had a different booking method scattered across separate pages, making it hard for users to understand or take action. I redesigned the system to present each service clearly while maintaining a consistent structure across all booking flows. The new design introduced a step-by-step format that helps users navigate easily and compare services without confusion.
-    </p>
+      <!-- 02: My Role -->
+      <div class="tl-item">
+        <div class="tl-eyebrow">Role · 02</div>
+        <div class="tl-title">What I Focused On</div>
+        <div class="tl-2col">
+          <div>
+            <p>Within the team, I owned two main areas: the booking system user flow and visual illustration work.</p>
+            <p style="margin-top: 0.75rem;">For the booking system, I mapped out how five distinct services — tufting, decoden, workshops, groups & parties, and space rental — could each have a consistent, step-by-step booking structure without feeling repetitive. The goal was to make each flow feel familiar while clearly reflecting the differences between services.</p>
+            <p style="margin-top: 0.75rem;">For illustration, I created custom visuals including a canvas size comparison graphic that the original site completely lacked, giving users a clearer sense of what each service involved before booking.</p>
+          </div>
+          <div>
+            <img src="img/flui/flui-one.jpg" alt="Booking system user flow" class="tl-img project-img">
+            <div class="tl-caption">Fig.1: Booking system user flow — mapping 5 services into a consistent structure</div>
+          </div>
+        </div>
+      </div>
 
-    <div class="text-center">
-    <img src="img/flui/flui-one.jpg"
-    alt="userflow img"
-    class="project-img img-fluid rounded shadow-sm mt-3 "
-    style="max-width: 600px; ">
-    <small class="text-muted d-block mt-2">Fig. 1: Booking System User flow </small>
-  </div>
+      <!-- 03: Branding & Illustration -->
+      <div class="tl-item">
+        <div class="tl-eyebrow">Branding · 03</div>
+        <div class="tl-title">Visual Identity & Illustration</div>
+        <div class="tl-full">
+          <p>To reflect the client's request for a bubbly, playful aesthetic, we developed a full style guide — new logo, color palette, typography, and custom illustrations. I designed the new logo and created original illustrations used across the site, including decorative elements and service-specific visuals.</p>
+          <img src="img/flui/flui-branding.jpg" alt="Style guide — color, typography, logo" class="tl-img project-img">
+          <div class="tl-caption">Fig.2: Style guide — primary logo, color palette (#FFBFCB, #CAE7AA, #FDEEA2, #C3B2D4), and typography (Lexend + Arco)</div>
+        </div>
+        <div style="margin-top: 1.25rem;">
+          <img src="img/flui/flui-three.jpg" alt="Custom illustrations" class="tl-img project-img">
+          <div class="tl-caption">Fig.3: Custom illustrations by Sooa Mo — used throughout the prototype</div>
+        </div>
+      </div>
 
-  <h5 class="mt-2">•  Visual Tone & Illustration</h5>
-  <p class="ps-3">
-    To reflect the client’s request for a bubbly, yellow-toned aesthetic, I created a moodboard using visual references and contributed original illustrations to match the playful identity. I also designed the new logo and produced image assets used across the site. One key illustration compared tufting canvas sizes—something the original site lacked—ensuring users could understand service options more clearly.
-  </p>
+      <!-- 04: Key Screens -->
+      <div class="tl-item">
+        <div class="tl-eyebrow">Design · 04</div>
+        <div class="tl-title">Key Screens</div>
+        <div class="tl-full-2img">
+          <p>The redesigned site introduced a clear service selection page, a step-by-step booking flow for each of the five services, a gift card feature, and an FAQ page — all consistent in layout and visual tone.</p>
+          <div class="tl-img-row2">
+            <div>
+              <img src="img/flui/flui-screen-home.jpg" alt="Redesigned home page" class="tl-img project-img">
+              <div class="tl-caption">Fig.4: Redesigned home page — clear hero, service overview, and reviews</div>
+            </div>
+            <div>
+              <img src="img/flui/flui-screen-booking.jpg" alt="Booking flow screens" class="tl-img project-img">
+              <div class="tl-caption">Fig.5: Booking flow — step-by-step structure across all 5 services</div>
+            </div>
+          </div>
+          <div style="margin-top: 0.625rem;">
+            <img src="img/flui/flui-screen-service.jpg" alt="Service detail, gift card, and FAQ pages" class="tl-img project-img">
+            <div class="tl-caption">Fig.6: Service detail page, gift card feature, and FAQ page</div>
+          </div>
+        </div>
+      </div>
 
-  <div class="text-center">
-  <img src="img/flui/flui-two.jpg"
-  alt="Logo redesign"
-  class="project-img img-fluid rounded shadow-sm mt-3 "
-  style="max-width: 600px; ">
-  <small class="text-muted d-block mt-2">Fig. 2: Logo Redesign </small>
-  </div>  
+      <!-- 05: Hackathon Workflow -->
+      <div class="tl-item">
+        <div class="tl-eyebrow">Process · 05</div>
+        <div class="tl-title">3-Day Hackathon Workflow</div>
+        <div class="tl-2col">
+          <div>
+            <p>We had one client meeting, a short brief, and 72 hours. Here's how we divided it:</p>
+            <div class="tl-note" style="margin-top: 0.75rem;">
+              <strong>Day 1 — Research & Define</strong><br>
+              Audited the existing site, identified pain points, held a team alignment session, and mapped out the scope of the redesign.<br><br>
+              <strong>Day 2 — Design & Build</strong><br>
+              Divided tasks: I owned the booking user flow and illustrations while teammates worked on the home page, service pages, and style guide. Constant check-ins to keep components consistent.<br><br>
+              <strong>Day 3 — Refine & Present</strong><br>
+              Iterated based on mentor feedback, connected all screens into a functional prototype, and prepared the final presentation.
+            </div>
+          </div>
+          <div>
+            <img src="img/flui/flui-two.jpg" alt="Logo redesign process" class="tl-img project-img">
+            <div class="tl-caption">Fig.7: Logo redesign — from original to new brand mark</div>
+          </div>
+        </div>
+      </div>
 
-  <div class="text-center">
-    <hr>
-  </div>
+    </div>
+    <!-- end timeline -->
 
-  <div class="text-center">
-  <img src="img/flui/flui-three.jpg"
-  alt="more illustration image"
-  class="project-img img-fluid rounded shadow-sm mt-3 "
-  style="max-width: 600px; ">
-  <small class="text-muted d-block mt-2">Fig. 3: More Illustrations drawing by Sooa M.    </small>
-  </div>
-
-
-  <h5 class="mt-2">• Hackathon Workflow(3 days)</h5>
-    <p class="ps-3">
-      We had only one client meeting and a short project brief to work from, and just three days to research, design, and prototype a full website. Working under intense time pressure, I collaborated closely with teammates to divide tasks efficiently and communicate constantly. Despite the challenge, we iterated quickly based on mentor feedback and completed a fully functional Figma prototype on time.
-    </p>
+    <!-- Figma Prototype -->
+    <div class="proj-takeaway" style="border-top: 0.5px solid #f0f0f0;">
+      <div class="proj-takeaway-label">Figma Prototype</div>
+      <p style="margin-bottom: 1.25rem; font-size: 0.9375rem; color: #555;">Interact with the full prototype below — explore the home page, service selection, and booking flows.</p>
+      <div class="ratio ratio-16x9">
+        <iframe class="no-cursor"
+          style="border: 0.5px solid #e8e8e8; border-radius: 0.5rem;"
+          allowfullscreen
+          src="https://www.figma.com/embed?embed_host=share&url=https%3A%2F%2Fwww.figma.com%2Fproto%2FtIJQjIdFpvtvvmbUFx15vU%2FSooa-Portfolio%3Fpage-id%3D260%253A521%26node-id%3D260-4430%26viewport%3D547%252C564%252C0.04%26t%3Dik4mH5R8rn1lQoI6-1%26scaling%3Dmin-zoom%26content-scaling%3Dfixed%26starting-point-node-id%3D260%253A4430">
+        </iframe>
+      </div>
+    </div>
 
     <!-- Takeaway -->
-    <h3 class="mt-5">3. Takeaway</h3>
-    <p class="ps-3">
-      This project pushed me to design quickly and thoughtfully under real constraints. I learned how to prioritize essential features, communicate clearly within a team, and turn scattered client needs into a structured user experience. It showed me that even within just three days, a clear visual direction, focused collaboration, and responsive iteration can lead to meaningful design outcomes.
-    </p>
-
-    <!-- Figma Embed -->
-  <section class="container py-5">
-    <h3 class="mt-2">Figma Prototype</h3>
-    <div class="ratio ratio-16x9">
-      <iframe class="no-cursor"
-        style="border: none;"
-        allowfullscreen
-        src="https://www.figma.com/embed?embed_host=share&url=https%3A%2F%2Fwww.figma.com%2Fproto%2FtIJQjIdFpvtvvmbUFx15vU%2FSooa-Portfolio%3Fpage-id%3D260%253A521%26node-id%3D260-4430%26viewport%3D547%252C564%252C0.04%26t%3Dik4mH5R8rn1lQoI6-1%26scaling%3Dmin-zoom%26content-scaling%3Dfixed%26starting-point-node-id%3D260%253A4430">
-      </iframe>
+    <div class="proj-takeaway">
+      <div class="proj-takeaway-label">Takeaway</div>
+      <p>Three days is short enough to feel the pressure, but long enough to learn what actually matters. I came away with a clearer sense of how to prioritize fast — not everything can be perfect, so you focus on what users will actually touch. Working in a team under a real client brief also showed me that alignment early saves time later: the 30 minutes we spent mapping the booking flow on Day 1 prevented a lot of confusion on Day 2. That realization — that 30 minutes of alignment saves hours of rework — changed how I approach any collaborative project.</p>
     </div>
-    
-  </section>
 
-          <!-- Modal for Zoomed Image -->
-<div class="modal fade" id="imageModal" tabindex="-1" aria-hidden="true">
-  <div class="modal-dialog modal-xl modal-dialog-centered">
-    <div class="modal-content bg-transparent border-0">
-      <div class="modal-body p-0">
-        <img id="modalImage" src="" class="img-fluid w-100" alt="Zoomed Image">
+    <!-- Back -->
+    <div class="proj-back">
+      <a href="index.html#projects">← Back to Projects</a>
+    </div>
+
+  </div>
+
+  <!-- Image Modal -->
+  <div class="modal fade" id="imageModal" tabindex="-1" aria-hidden="true">
+    <div class="modal-dialog modal-xl modal-dialog-centered">
+      <div class="modal-content bg-transparent border-0">
+        <div class="modal-body p-0">
+          <img id="modalImage" src="" class="img-fluid w-100" alt="Zoomed Image">
+        </div>
       </div>
     </div>
   </div>
-</div>
 
-    <!-- Links -->
-    <div class="mt-4">
-      <a href="index.html#projects" class="btn btn-outline-secondary">← Back to Projects</a>
-    </div>
-  </section>
+  <button id="backToTopBtn" class="btn btn-outline-custom rounded-circle" title="Go to top">
+    <i class="fas fa-arrow-up"></i>
+  </button>
 
-  <!-- Back to Top Button -->
-<button id="backToTopBtn" class="btn btn-outline-custom rounded-circle" title="Go to top">
-  <i class="fas fa-arrow-up"></i>
-</button>
-
-
-  <!-- Footer + Top Button  -->
   <div data-include="partials/footer.html"></div>
 
-
-  <!-- Scripts -->
   <script src="https://cdn.jsdelivr.net/npm/bootstrap@5.3.2/dist/js/bootstrap.bundle.min.js"></script>
   <script src="js/include.js"></script>
   <script src="js/script.js"></script>
 
-  <!-- Cursor -->
-<div id="cursor-dot"></div>
-<div id="cursor-box"></div>
-<div id="cursor-fill"></div>
-
+  <div id="cursor-dot"></div>
+  <div id="cursor-box"></div>
+  <div id="cursor-fill"></div>
 
 </body>
 </html>
