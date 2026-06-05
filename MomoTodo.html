@@ -1,0 +1,250 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8" />
+  <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+  <title>Momo Todo | Sooa Mo</title>
+  <link rel="icon" href="img/logo.png" type="image/png">
+  <link href="https://cdn.jsdelivr.net/npm/bootstrap@5.3.2/dist/css/bootstrap.min.css" rel="stylesheet" />
+  <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.5.0/css/all.min.css">
+  <link rel="stylesheet" href="style.css" />
+</head>
+<body>
+
+  <div data-include="partials/navbar.html"></div>
+
+  <div class="proj-page">
+
+    <!-- Cover -->
+    <img src="img/momotodo/momotodo-cover.jpg" alt="Momo Todo" class="proj-cover">
+
+    <!-- Header -->
+    <div class="proj-header">
+      <h1 class="proj-header-name">Momo Todo</h1>
+      <div class="proj-header-sub">
+        Personal Project &nbsp;·&nbsp; May – Jun 2026 &nbsp;·&nbsp; v1.0.3
+      </div>
+      <div class="proj-chips">
+        <span class="proj-chip type">Personal</span>
+        <span class="proj-chip">Electron + React</span>
+        <span class="proj-chip">UX Design</span>
+        <span class="proj-chip">AI-Assisted Development</span>
+        <span class="proj-chip">User Testing</span>
+      </div>
+    </div>
+
+    <hr class="proj-divider">
+
+    <!-- Meta Cards -->
+    <div class="proj-meta-cards">
+      <div class="proj-meta-card">
+        <div class="proj-meta-card-label">My Role</div>
+        <div class="proj-meta-card-val">Solo — Design & Development</div>
+      </div>
+      <div class="proj-meta-card">
+        <div class="proj-meta-card-label">Stack</div>
+        <div class="proj-meta-card-val">Electron, React (Vite), dnd-kit, localStorage</div>
+      </div>
+      <div class="proj-meta-card">
+        <div class="proj-meta-card-label">Tools</div>
+        <div class="proj-meta-card-val">Claude AI, Figma, GitHub</div>
+      </div>
+      <div class="proj-meta-card">
+        <div class="proj-meta-card-label">Status</div>
+        <div class="proj-meta-card-val">Live · v1.0.3 (Notification update planned)</div>
+      </div>
+    </div>
+
+    <!-- Overview -->
+    <p class="proj-overview">
+      Momo Todo is a cross-platform desktop app built with Electron and React — designed to handle daily routines, recurring tasks, and deadlines all in one place. What started as a personal need grew into a fully featured app that has been tested by over 10 real users, iterated through multiple versions, and is still actively maintained. The entire development process was driven by Claude AI as a coding collaborator, making this project an exploration of what a designer with no formal engineering background can build when AI becomes part of the workflow.
+    </p>
+
+    <!-- Timeline -->
+    <div class="proj-timeline">
+
+      <!-- 01: Background -->
+      <div class="tl-item">
+        <div class="tl-eyebrow">Background · 01</div>
+        <div class="tl-title">Why I Built This</div>
+        <div class="tl-2col">
+          <div>
+            <p>Most todo apps feel functional but impersonal — they're designed to be efficient, not to feel like yours. I wanted something that handled the complexity of different task types (daily habits, deadlines, one-off tasks) while also feeling like a space I actually wanted to open every day.</p>
+            <p style="margin-top: 0.75rem;">As a designer who wanted to move closer to implementation, I used Claude AI as a development partner throughout — describing what I wanted to build, iterating on the code, and learning as I went. The result is a fully working desktop app that I use daily and that others have now tested and given feedback on.</p>
+            <a href="https://github.com/SooaMo/momo-todo" target="_blank" class="tl-btn">View on GitHub ↗</a>
+          </div>
+          <div>
+            <img src="img/momotodo/momotodo-sketch.jpg" alt="Initial layout sketch" class="tl-img project-img">
+            <div class="tl-caption">Fig.1: Early layout sketch — mapping out the structure before writing any code</div>
+          </div>
+        </div>
+      </div>
+
+      <!-- 02: Design Process -->
+      <div class="tl-item">
+        <div class="tl-eyebrow">Design · 02</div>
+        <div class="tl-title">From Sketch to Interface</div>
+        <div class="tl-full-2img">
+          <p>Before writing any code, I sketched the layout by hand to figure out information hierarchy and navigation structure. One of the earliest decisions was the icon — I explored multiple candidates before landing on the final mark, wanting something that felt personal rather than generic.</p>
+          <div class="tl-img-row2">
+            <div>
+              <img src="img/momotodo/momotodo-icon.jpg" alt="Icon selection process" class="tl-img project-img">
+              <div class="tl-caption">Fig.2: Icon candidates — exploring different directions before choosing the final mark</div>
+            </div>
+            <div>
+              <img src="img/momotodo/momotodo-home.jpg" alt="Home screen" class="tl-img project-img">
+              <div class="tl-caption">Fig.3: Home screen — today view with urgency borders, folder structure, and quick-add</div>
+            </div>
+          </div>
+        </div>
+      </div>
+
+      <!-- 03: Key Features -->
+      <div class="tl-item">
+        <div class="tl-eyebrow">Features · 03</div>
+        <div class="tl-title">Key Features</div>
+
+        <!-- 4 Todo types -->
+        <div class="tl-2col" style="margin-bottom: 1.5rem;">
+          <div>
+            <p><strong>4 Task Types</strong></p>
+            <p style="margin-top: 0.5rem;">Rather than a flat checklist, I designed four distinct task types to match how people actually manage their time. Each type has its own recurrence logic and completion tracking — stored per-date so history is never lost.</p>
+            <div class="tl-note" style="margin-top: 0.75rem;">
+              <strong>Daily</strong> — repeats every day<br>
+              <strong>Weekly</strong> — repeats on selected days of the week<br>
+              <strong>Date</strong> — active between a start and end date<br>
+              <strong>One-time</strong> — single deadline task
+            </div>
+          </div>
+          <div>
+            <img src="img/momotodo/momotodo-types.jpg" alt="4 task types" class="tl-img project-img">
+            <div class="tl-caption">Fig.4: Four task types — each with its own creation flow and display logic</div>
+          </div>
+        </div>
+
+        <!-- Urgency + Themes -->
+        <div class="tl-full-2img">
+          <div class="tl-img-row2">
+            <div>
+              <img src="img/momotodo/momotodo-urgency.jpg" alt="Urgency border visualization" class="tl-img project-img">
+              <div class="tl-caption">Fig.5: Urgency borders — yellow (3 days), orange (24hrs), red (1hr or overdue)</div>
+            </div>
+            <div>
+              <img src="img/momotodo/momotodo-themes.jpg" alt="6 themes" class="tl-img project-img">
+              <div class="tl-caption">Fig.6: 6 themes including dark mode — switchable instantly via CSS Variables, with click-to-preview before applying</div>
+            </div>
+          </div>
+        </div>
+
+        <!-- Additional features -->
+        <div style="margin-top: 1.25rem;">
+          <img src="img/momotodo/momotodo-features.jpg" alt="Stickers, banner, memo features" class="tl-img project-img">
+          <div class="tl-caption">Fig.7: Custom banner upload, sticker layer (draggable, resizable, per-page state), and memo with auto-linked URLs</div>
+        </div>
+      </div>
+
+      <!-- 04: UX Decisions -->
+      <div class="tl-item">
+        <div class="tl-eyebrow">UX · 04</div>
+        <div class="tl-title">Design Decisions</div>
+        <div class="tl-full">
+          <p>Several decisions in Momo Todo came from a deliberate design philosophy rather than technical defaults. Each one addresses a specific frustration with how most todo apps work.</p>
+          <div class="tl-note">
+            <strong>"What you don't open is still information" — Urgency Border</strong><br>
+            The colored top border on each task card communicates deadline urgency without requiring the user to open anything. Color alone signals priority — so even a quick glance at the list tells you what needs attention today.<br><br>
+            <strong>Archive instead of delete</strong><br>
+            Completed tasks move to an archive rather than disappearing. Users can recover anything at any time — removing the anxiety of accidentally deleting something important.<br><br>
+            <strong>The app as a personal space</strong><br>
+            Custom banner images, stickers, and 6 themes exist because a todo app that feels generic gets abandoned. The goal was to make the app feel like something the user has made their own — not just a utility.<br><br>
+            <strong>Memos as a resource layer</strong><br>
+            URLs in memos are automatically converted to clickable links and open in an external browser. This turns the memo field into a lightweight reference space rather than just a text box.<br><br>
+            <strong>Theme preview before committing</strong><br>
+            An earlier version used hover to preview themes, which caused accidental switches. Changing it to click-to-preview eliminated the frustration while keeping the feature intuitive.
+          </div>
+        </div>
+      </div>
+
+      <!-- 05: User Testing & Iteration -->
+      <div class="tl-item">
+        <div class="tl-eyebrow">Testing · 05</div>
+        <div class="tl-title">User Testing & Iteration</div>
+        <div class="tl-2col">
+          <div>
+            <p>After the initial release, I shared the app with 10+ users and collected feedback through real usage — not a formal test, but actual day-to-day use by people with different habits and workflows. Bugs surfaced, edge cases appeared, and missing features became obvious quickly.</p>
+            <p style="margin-top: 0.75rem;">Each version addressed a specific round of feedback. The app is currently at v1.0.3, with a notification system update as the next planned milestone.</p>
+            <div class="tl-note" style="margin-top: 0.75rem;">
+              <strong>Bugs fixed</strong><br>
+              Sticker drag-and-drop inconsistencies · Calendar date span overlap · Sticker page-sharing bug<br><br>
+              <strong>UX improvements from feedback</strong><br>
+              Banner edit button now jumps directly to the relevant settings section · Sticker handles (delete/rotate/resize) given distinct colors for visibility · Multiple memos can now be open simultaneously · Calendar now supports completion filters and year/month selection UI<br><br>
+              <strong>Data management added</strong><br>
+              Export/Import backup for cross-device transfers · Folder and memo open-state persistence via localStorage · Alarm dismiss deduplication logic
+            </div>
+          </div>
+          <div>
+            <img src="img/momotodo/momotodo-versions.jpg" alt="Version history and changes" class="tl-img project-img">
+            <div class="tl-caption">Fig.8: Version changes from initial release to v1.0.3 — issues found and resolved through real user testing</div>
+          </div>
+        </div>
+      </div>
+
+      <!-- 06: What's Next -->
+      <div class="tl-item">
+        <div class="tl-eyebrow">Next · 06</div>
+        <div class="tl-title">What's Next</div>
+        <div class="tl-full">
+          <p>v1.0.3 has been in use for a short period and is still being observed. The plan is to collect feedback from real users over 1–2 weeks before deciding on the next update — combining known improvements with anything new that surfaces from daily use.</p>
+          <div class="tl-note">
+            <strong>Urgency visibility improvement</strong><br>
+            The current urgency border is a subtle signal that some users miss entirely. Exploring more visible alternatives — such as a background color shift on the task card, or a small urgency label in the bottom-right corner — to make deadline pressure impossible to overlook without opening the task.<br><br>
+            <strong>Notification system</strong><br>
+            A smarter alarm system using Electron's native notification API — with per-type defaults (daily → 23:30, date-based → 3 days / 1 day / day-of) and custom user-defined times. Includes deduplication logic so the same alarm doesn't fire twice in one day.<br><br>
+            <strong>Additional user feedback</strong><br>
+            Any bugs or friction points reported by the 10+ testers during the v1.0.3 observation period will be incorporated into the next release alongside the above improvements.
+          </div>
+        </div>
+      </div>
+
+    </div>
+    <!-- end timeline -->
+
+    <!-- Takeaway -->
+    <div class="proj-takeaway">
+      <div class="proj-takeaway-label">Takeaway</div>
+      <p>Momo Todo changed how I think about the boundary between design and development. Using Claude AI as a coding collaborator, I was able to build something technically complex — drag-and-drop, native notifications, runtime theming, cross-platform packaging — without a formal engineering background. What mattered most wasn't knowing every API, but knowing what I wanted to build and being able to communicate it precisely. That clarity came from design thinking. Watching 10+ people actually use the app — and finding things I hadn't anticipated — also reminded me that no amount of solo iteration replaces real-world use. The next version will be better because of the people who used this one.</p>
+    </div>
+
+    <!-- Back -->
+    <div class="proj-back">
+      <a href="index.html#projects">← Back to Projects</a>
+    </div>
+
+  </div>
+
+  <!-- Image Modal -->
+  <div class="modal fade" id="imageModal" tabindex="-1" aria-hidden="true">
+    <div class="modal-dialog modal-xl modal-dialog-centered">
+      <div class="modal-content bg-transparent border-0">
+        <div class="modal-body p-0">
+          <img id="modalImage" src="" class="img-fluid w-100" alt="Zoomed Image">
+        </div>
+      </div>
+    </div>
+  </div>
+
+  <button id="backToTopBtn" class="btn btn-outline-custom rounded-circle" title="Go to top">
+    <i class="fas fa-arrow-up"></i>
+  </button>
+
+  <div data-include="partials/footer.html"></div>
+
+  <script src="https://cdn.jsdelivr.net/npm/bootstrap@5.3.2/dist/js/bootstrap.bundle.min.js"></script>
+  <script src="js/include.js"></script>
+  <script src="js/script.js"></script>
+
+  <div id="cursor-dot"></div>
+  <div id="cursor-box"></div>
+  <div id="cursor-fill"></div>
+
+</body>
+</html>
