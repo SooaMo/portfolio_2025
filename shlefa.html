@@ -1,0 +1,229 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8" />
+  <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+  <title>SHLEFA | Sooa Mo</title>
+  <link rel="icon" href="img/logo.png" type="image/png">
+  <link href="https://cdn.jsdelivr.net/npm/bootstrap@5.3.2/dist/css/bootstrap.min.css" rel="stylesheet" />
+  <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.5.0/css/all.min.css">
+  <link rel="stylesheet" href="style.css" />
+</head>
+<body>
+
+  <div data-include="partials/navbar.html"></div>
+
+  <div class="proj-page">
+
+    <!-- Cover -->
+    <img src="img/shlefa/shlefa-cover.jpg" alt="SHLEFA" class="proj-cover">
+
+    <!-- Header -->
+    <div class="proj-header">
+      <h1 class="proj-header-name">SHLEFA</h1>
+      <div class="proj-header-sub">
+        Volunteer &nbsp;·&nbsp; 2025 &nbsp;·&nbsp; Team: 4 members (robotics, AI, back-end) + Sooa Mo (design support)
+      </div>
+      <div class="proj-chips">
+        <span class="proj-chip type">Volunteer</span>
+        <span class="proj-chip">UX/UI Design</span>
+        <span class="proj-chip">Figma</span>
+        <span class="proj-chip">User Flow</span>
+        <span class="proj-chip">Component Design</span>
+      </div>
+    </div>
+
+    <hr class="proj-divider">
+
+    <!-- Meta Cards -->
+    <div class="proj-meta-cards">
+      <div class="proj-meta-card">
+        <div class="proj-meta-card-label">My Role</div>
+        <div class="proj-meta-card-val">Volunteer Design Contributor (external)</div>
+      </div>
+      <div class="proj-meta-card">
+        <div class="proj-meta-card-label">Methods</div>
+        <div class="proj-meta-card-val">User Flow Design, Component Design, UX Feedback</div>
+      </div>
+      <div class="proj-meta-card">
+        <div class="proj-meta-card-label">Tools</div>
+        <div class="proj-meta-card-val">Figma</div>
+      </div>
+      <div class="proj-meta-card">
+        <div class="proj-meta-card-label">Context</div>
+        <div class="proj-meta-card-val">Government & Corporate-Sponsored Project</div>
+      </div>
+    </div>
+
+    <!-- Overview -->
+    <p class="proj-overview">
+      A government and corporate-sponsored team of four was developing a smart library system that uses a robotic arm, AI, and a database to allow book borrowing outside of regular operating hours. Users reserve a book through a mobile app, the robotic arm retrieves it and moves it to a locker, and users can pick it up unattended — making late-night or early-morning borrowing possible. The concept was shaped around Korea's study culture, where students frequently study through the night at 24-hour study rooms (독서실) and may need to borrow textbooks in the early hours of the morning. None of the four team members had a design or front-end background, so I stepped in as a volunteer design contributor to build the app's UI from scratch.
+    </p>
+
+    <!-- Timeline -->
+    <div class="proj-timeline">
+
+      <!-- 01: Starting Point -->
+      <div class="tl-item">
+        <div class="tl-eyebrow">Starting Point · 01</div>
+        <div class="tl-title">What the Team Had</div>
+        <div class="tl-full">
+          <p>The team's initial draft focused entirely on getting the required features down — there was no consideration of user flow, information hierarchy, or visual consistency. Screens were mapped out as a flat list of functions without grouping or structure, and the same categories appeared scattered across multiple separate pages.</p>
+          <img src="img/shlefa/shlefa-draft.jpg" alt="Initial wireframe draft" class="tl-img project-img">
+          <div class="tl-caption">Initial draft shared by the team — feature-first, without UX consideration</div>
+          <div class="tl-note">
+            <strong>No user flow structure</strong> — screens were listed as independent functions with no sense of how a user would navigate between them.<br>
+            <strong>Scattered categories</strong> — related content (e.g. borrowed books, reservations, wishlist) existed as separate pages with no unifying structure.<br>
+            <strong>No component system</strong> — no reusable navigation, cards, or layout patterns; each screen was designed in isolation.<br>
+            <strong>Unclear hierarchy</strong> — buttons, labels, and copy were inconsistent, making it hard to understand what actions were available at a glance.
+          </div>
+        </div>
+      </div>
+
+      <!-- 02: My Role -->
+      <div class="tl-item">
+        <div class="tl-eyebrow">Role · 02</div>
+        <div class="tl-title">How I Got Involved</div>
+        <div class="tl-2col">
+          <div>
+            <p>I'm not an official member of the team — I joined as a volunteer design contributor at the request of my sibling, who is one of the four developers on the project. Since the team had no one with a design or front-end background, I was brought in to translate their feature list into a structured, usable interface.</p>
+            <p style="margin-top: 0.75rem;">My scope covered two things: building the UI in Figma (components and screens), and providing UX feedback as the team iterated. I worked independently — the team would share what they needed, and I'd return with designs and suggestions.</p>
+          </div>
+          <div>
+            <img src="img/shlefa/shlefa-role.jpg" alt="My contribution overview" class="tl-img project-img">
+            <div class="tl-caption">Fig.1: Overview of my design contributions</div>
+          </div>
+        </div>
+      </div>
+
+      <!-- 03: User Flow -->
+      <div class="tl-item">
+        <div class="tl-eyebrow">UX · 03</div>
+        <div class="tl-title">Restructuring the User Flow</div>
+        <div class="tl-full">
+          <p>Before designing any screens, I reorganized the app's structure. The original draft had too many disconnected pages — my first step was to group related content together so the navigation felt logical and minimal.</p>
+          <img src="img/shlefa/shlefa-userflow.jpg" alt="User flow diagram" class="tl-img project-img">
+          <div class="tl-caption">Fig.2: Restructured user flow — from login to book pick-up</div>
+          <div class="tl-note">
+            <strong>Login → Home</strong> as the entry point, with notices and a quick summary of the user's current borrowing status visible immediately on the home screen.<br>
+            <strong>Bottom nav with 4 tabs</strong> — Home, My Collection (내서재), Search, and More — keeping the most-used actions one tap away.<br>
+            <strong>My Collection as the second tab</strong> — since the core purpose of the app is borrowing and reserving books, this was the most important section after home.<br>
+            <strong>Tabbed navigation within My Collection</strong> — Borrowed Books, Wishlist, and Reservations/Locker grouped under one section instead of three separate pages.
+          </div>
+        </div>
+      </div>
+
+      <!-- 04: Components -->
+      <div class="tl-item">
+        <div class="tl-eyebrow">Design · 04</div>
+        <div class="tl-title">Component System</div>
+        <div class="tl-full-2img">
+          <p>I built a reusable component library in Figma before designing the screens — ensuring consistency across the app and making it easier for the team to understand and implement the design.</p>
+          <div class="tl-img-row2">
+            <div>
+              <img src="img/shlefa/shlefa-nav.jpg" alt="Navigation components" class="tl-img project-img">
+              <div class="tl-caption">Fig.3: Top nav bar, bottom nav bar — active and inactive states</div>
+            </div>
+            <div>
+              <img src="img/shlefa/shlefa-cards.jpg" alt="Card components" class="tl-img project-img">
+              <div class="tl-caption">Fig.4: Book cards for borrowed books, wishlist, and reservations — with status tags</div>
+            </div>
+          </div>
+          <div style="margin-top: 0.625rem;">
+            <img src="img/shlefa/shlefa-components.jpg" alt="Login and auth components" class="tl-img project-img">
+            <div class="tl-caption">Fig.5: Login, sign-up, and tabbed navigation components</div>
+          </div>
+        </div>
+      </div>
+
+      <!-- 05: Key Screens -->
+      <div class="tl-item">
+        <div class="tl-eyebrow">Design · 05</div>
+        <div class="tl-title">Key Screens</div>
+        <div class="tl-full">
+          <p>Using the component system, I designed the full set of app screens — covering the core user journey from login to book pick-up, as well as supporting screens like search and the mobile library card.</p>
+          <img src="img/shlefa/shlefa-screens.jpg" alt="All key screens" class="tl-img project-img">
+          <div class="tl-caption">Fig.6: Key screens — Login, Sign-up, Home, My Collection (Borrowed / Wishlist / Reservations), Search, Mobile Library Card</div>
+          <div class="tl-note">
+            <strong>Home</strong> — Notice board at the top, followed by a quick My Collection summary so users can see their borrowing status without navigating away.<br>
+            <strong>My Collection</strong> — Three tabs (Borrowed, Wishlist, Reservations &amp; Locker) consolidating what was originally scattered across multiple pages.<br>
+            <strong>Search</strong> — Book search with recent queries and recommended titles; results show availability status and reservation button inline.<br>
+            <strong>Mobile Library Card</strong> — QR code-based digital card integrated into the user profile, eliminating the need for a physical card at the locker.
+          </div>
+        </div>
+      </div>
+
+      <!-- 06: UX Feedback -->
+      <div class="tl-item">
+        <div class="tl-eyebrow">UX · 06</div>
+        <div class="tl-title">UX Feedback & Iterations</div>
+        <div class="tl-2col">
+          <div>
+            <p>After the team iterated on my initial designs, I provided a round of UX feedback — focusing on clarity and reducing unnecessary friction. Most issues came from the team's developer mindset: screens were technically correct but had copy, buttons, or layout choices that would confuse a first-time user.</p>
+            <div class="tl-note" style="margin-top: 0.75rem;">
+              <strong>Copy</strong> — Replaced technical labels and placeholder text with language that reflects how users actually think about borrowing books.<br>
+              <strong>Button cleanup</strong> — Removed actions that weren't relevant to the current screen state; kept only the primary action visible at each step.<br>
+              <strong>Layout adjustments</strong> — Tightened spacing and visual grouping so related information reads as a unit rather than a list of independent items.
+            </div>
+          </div>
+          <div>
+            <img src="img/shlefa/shlefa-ux.jpg" alt="UX feedback iterations" class="tl-img project-img">
+            <div class="tl-caption">Fig.7: Before and after — UX feedback applied to key screens</div>
+          </div>
+        </div>
+      </div>
+
+      <!-- 07: Style Guide (optional) -->
+      <div class="tl-item">
+        <div class="tl-eyebrow">Design · 07</div>
+        <div class="tl-title">Style Guide</div>
+        <div class="tl-full">
+          <p>To support the team's implementation and ensure visual consistency, I documented the app's core design tokens — color, typography, and spacing — as a lightweight style guide.</p>
+          <img src="img/shlefa/shlefa-styleguide.jpg" alt="Style guide" class="tl-img project-img">
+          <div class="tl-caption">Fig.8: Style guide — color palette, typography scale, and key UI states</div>
+        </div>
+      </div>
+
+    </div>
+    <!-- end timeline -->
+
+    <!-- Takeaway -->
+    <div class="proj-takeaway">
+      <div class="proj-takeaway-label">Takeaway</div>
+      <p>This was the first time I designed for a team that had no shared design language — no prior UI conventions, no visual references, and no one to review decisions with. That constraint pushed me to be more deliberate about documentation: every component needed to be self-explanatory, and every UX decision needed a rationale the developers could act on without asking follow-up questions. I also came away with a clearer sense of the gap between "technically functional" and "actually usable" — a gap that only shows up when someone without a design background builds a screen. Bridging that gap, quietly and without friction, is something I want to keep getting better at.</p>
+    </div>
+
+    <!-- Back -->
+    <div class="proj-back">
+      <a href="index.html#projects">← Back to Projects</a>
+    </div>
+
+  </div>
+
+  <!-- Image Modal -->
+  <div class="modal fade" id="imageModal" tabindex="-1" aria-hidden="true">
+    <div class="modal-dialog modal-xl modal-dialog-centered">
+      <div class="modal-content bg-transparent border-0">
+        <div class="modal-body p-0">
+          <img id="modalImage" src="" class="img-fluid w-100" alt="Zoomed Image">
+        </div>
+      </div>
+    </div>
+  </div>
+
+  <button id="backToTopBtn" class="btn btn-outline-custom rounded-circle" title="Go to top">
+    <i class="fas fa-arrow-up"></i>
+  </button>
+
+  <div data-include="partials/footer.html"></div>
+
+  <script src="https://cdn.jsdelivr.net/npm/bootstrap@5.3.2/dist/js/bootstrap.bundle.min.js"></script>
+  <script src="js/include.js"></script>
+  <script src="js/script.js"></script>
+
+  <div id="cursor-dot"></div>
+  <div id="cursor-box"></div>
+  <div id="cursor-fill"></div>
+
+</body>
+</html>
