@@ -22,7 +22,7 @@
     <div class="proj-header">
       <h1 class="proj-header-name">Momo Todo</h1>
       <div class="proj-header-sub">
-        Personal Project &nbsp;·&nbsp; May – Jun 2026 &nbsp;·&nbsp; v1.0.3
+        Personal Project &nbsp;·&nbsp; May – Jun 2026 &nbsp;·&nbsp; v1.0.4
       </div>
       <div class="proj-chips">
         <span class="proj-chip type">Personal</span>
@@ -51,7 +51,7 @@
       </div>
       <div class="proj-meta-card">
         <div class="proj-meta-card-label">Status</div>
-        <div class="proj-meta-card-val">Live · v1.0.3 (Notification update planned)</div>
+        <div class="proj-meta-card-val">Live · v1.0.4 · Windows & macOS</div>
       </div>
     </div>
 
@@ -75,7 +75,7 @@
           </div>
           <div>
             <img src="img/momotodo/momotodo-sketch.jpg" alt="Initial layout sketch" class="tl-img project-img">
-            <div class="tl-caption">Fig.1: Early layout sketch — mapping out the structure before writing any code</div>
+            <div class="tl-caption">Fig.1: First sketch (feature list + flow notes) and second sketch (layout wireframe) — before writing any code</div>
           </div>
         </div>
       </div>
@@ -93,7 +93,7 @@
             </div>
             <div>
               <img src="img/momotodo/momotodo-home.jpg" alt="Home screen" class="tl-img project-img">
-              <div class="tl-caption">Fig.3: Home screen — today view with urgency borders, folder structure, and quick-add</div>
+              <div class="tl-caption">Fig.3: Today view, Calendar Month, and Calendar Week — the three main navigation states</div>
             </div>
           </div>
         </div>
@@ -127,11 +127,11 @@
           <div class="tl-img-row2">
             <div>
               <img src="img/momotodo/momotodo-urgency.jpg" alt="Urgency border visualization" class="tl-img project-img">
-              <div class="tl-caption">Fig.5: Urgency borders — yellow (3 days), orange (24hrs), red (1hr or overdue)</div>
+              <div class="tl-caption">Fig.5: Urgency visualization — 6 stages from D-4 (no indicator) through D-3, D-2, D-1, D-day, and Overdue — each with a distinct border color, badge, and background tint</div>
             </div>
             <div>
               <img src="img/momotodo/momotodo-themes.jpg" alt="6 themes" class="tl-img project-img">
-              <div class="tl-caption">Fig.6: 6 themes including dark mode — switchable instantly via CSS Variables, with click-to-preview before applying</div>
+              <div class="tl-caption">Fig.6: 8 themes including dark mode — switchable instantly via CSS Variables, with click-to-preview before applying</div>
             </div>
           </div>
         </div>
@@ -150,8 +150,8 @@
         <div class="tl-full">
           <p>Several decisions in Momo Todo came from a deliberate design philosophy rather than technical defaults. Each one addresses a specific frustration with how most todo apps work.</p>
           <div class="tl-note">
-            <strong>"What you don't open is still information" — Urgency Border</strong><br>
-            The colored top border on each task card communicates deadline urgency without requiring the user to open anything. Color alone signals priority — so even a quick glance at the list tells you what needs attention today.<br><br>
+            <strong>"What you don't open is still information" — Urgency Visualization</strong><br>
+            The colored top border on each task card communicates deadline urgency at a glance. Six distinct stages — from D-4 (no indicator) through D-3, D-2, D-1, D-day, and Overdue — each with a progressively stronger border color, badge, and background tint. Deadline pressure is visible without opening a single task.<br><br>
             <strong>Archive instead of delete</strong><br>
             Completed tasks move to an archive rather than disappearing. Users can recover anything at any time — removing the anxiety of accidentally deleting something important.<br><br>
             <strong>The app as a personal space</strong><br>
@@ -168,22 +168,28 @@
       <div class="tl-item">
         <div class="tl-eyebrow">Testing · 05</div>
         <div class="tl-title">User Testing & Iteration</div>
-        <div class="tl-2col">
-          <div>
-            <p>After the initial release, I shared the app with 10+ users and collected feedback through real usage — not a formal test, but actual day-to-day use by people with different habits and workflows. Bugs surfaced, edge cases appeared, and missing features became obvious quickly.</p>
-            <p style="margin-top: 0.75rem;">Each version addressed a specific round of feedback. The app is currently at v1.0.3, with a notification system update as the next planned milestone.</p>
-            <div class="tl-note" style="margin-top: 0.75rem;">
-              <strong>Bugs fixed</strong><br>
-              Sticker drag-and-drop inconsistencies · Calendar date span overlap · Sticker page-sharing bug<br><br>
-              <strong>UX improvements from feedback</strong><br>
-              Banner edit button now jumps directly to the relevant settings section · Sticker handles (delete/rotate/resize) given distinct colors for visibility · Multiple memos can now be open simultaneously · Calendar now supports completion filters and year/month selection UI<br><br>
-              <strong>Data management added</strong><br>
-              Export/Import backup for cross-device transfers · Folder and memo open-state persistence via localStorage · Alarm dismiss deduplication logic
-            </div>
+        <div class="tl-full">
+          <p>After the initial release, I shared the app with 10+ users and collected feedback through real usage — not a formal test, but actual day-to-day use by people with different habits and workflows. Bugs surfaced, edge cases appeared, and missing features became obvious quickly.</p>
+          <p style="margin-top: 0.75rem;">Each version addressed a specific round of feedback. The app is currently at v1.0.4, with a notification system update as the next planned milestone.</p>
+          <div class="tl-note" style="margin-top: 0.75rem;">
+            <strong>Bugs fixed</strong><br>
+            Sticker drag-and-drop inconsistencies · Calendar date span overlap · Sticker page-sharing bug · Pin (always-on-top) toggle reverting immediately due to double-call<br><br>
+            <strong>UX improvements from feedback</strong><br>
+            Banner edit button now jumps directly to the relevant settings section · Sticker handles (delete/rotate/resize) given distinct colors for visibility · Multiple memos can now be open simultaneously · Calendar now supports completion filters and year/month selection UI · Memo inline editing via double-click with Enter to save and Shift+Enter for line breaks<br><br>
+            <strong>New in v1.0.4</strong><br>
+            Due date urgency strengthened with D-day badges + background color shift · 2 new themes added (Ivory, Sky — now 8 total) · macOS support via GitHub Actions auto-build (.dmg) · AddTodo/Settings modals now responsive to window width · Banner background defaults to theme color · CSS refactored from 2,161 to 1,397 lines<br><br>
+            <strong>Data management</strong><br>
+            Export/Import backup for cross-device transfers · Folder and memo open-state persistence via localStorage · Alarm dismiss deduplication logic
           </div>
-          <div>
-            <img src="img/momotodo/momotodo-versions.jpg" alt="Version history and changes" class="tl-img project-img">
-            <div class="tl-caption">Fig.8: Version changes from initial release to v1.0.3 — issues found and resolved through real user testing</div>
+          <div class="tl-img-row2" style="margin-top: 1.25rem;">
+            <div>
+              <img src="img/momotodo/momotodo-versions1.jpg" alt="Version history v1.0.0–v1.0.3" class="tl-img project-img">
+              <div class="tl-caption">Fig.8: v1.0.0 → v1.0.3 — key visual and functional changes across early releases</div>
+            </div>
+            <div>
+              <img src="img/momotodo/momotodo-versions2.jpg" alt="Current version v1.0.4 all features" class="tl-img project-img">
+              <div class="tl-caption">Fig.9: v1.0.4 — full feature overview including urgency badges, themes, stickers, archive, export/import, and settings</div>
+            </div>
           </div>
         </div>
       </div>
@@ -193,14 +199,14 @@
         <div class="tl-eyebrow">Next · 06</div>
         <div class="tl-title">What's Next</div>
         <div class="tl-full">
-          <p>v1.0.3 has been in use for a short period and is still being observed. The plan is to collect feedback from real users over 1–2 weeks before deciding on the next update — combining known improvements with anything new that surfaces from daily use.</p>
+          <p>v1.0.4 has been released across Windows and macOS. The focus now shifts to cross-platform stability and expanding to mobile — with the longer-term goal of making task lists shareable across devices.</p>
           <div class="tl-note">
-            <strong>Urgency visibility improvement</strong><br>
-            The current urgency border is a subtle signal that some users miss entirely. Exploring more visible alternatives — such as a background color shift on the task card, or a small urgency label in the bottom-right corner — to make deadline pressure impossible to overlook without opening the task.<br><br>
+            <strong>macOS feedback & refinement</strong><br>
+            The developer doesn't own a Mac, so macOS-specific issues can only surface through real user testing. Feedback from macOS users will be actively collected and used to address any platform-specific bugs or UI inconsistencies in the next update.<br><br>
+            <strong>Mobile version</strong><br>
+            A mobile version is planned as a future milestone — with the goal of enabling cross-device task sharing via the existing Export/Import system. Users would be able to manage their todo list on desktop and carry it over to mobile seamlessly.<br><br>
             <strong>Notification system</strong><br>
-            A smarter alarm system using Electron's native notification API — with per-type defaults (daily → 23:30, date-based → 3 days / 1 day / day-of) and custom user-defined times. Includes deduplication logic so the same alarm doesn't fire twice in one day.<br><br>
-            <strong>Additional user feedback</strong><br>
-            Any bugs or friction points reported by the 10+ testers during the v1.0.3 observation period will be incorporated into the next release alongside the above improvements.
+            A smarter alarm system using Electron's native notification API — with per-type defaults (daily → 23:30, date-based → 3 days / 1 day / day-of) and custom user-defined times. Includes deduplication logic so the same alarm doesn't fire twice in one day.
           </div>
         </div>
       </div>
