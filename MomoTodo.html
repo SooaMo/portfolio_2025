@@ -22,7 +22,7 @@
     <div class="proj-header">
       <h1 class="proj-header-name">Momo Todo</h1>
       <div class="proj-header-sub">
-        Personal Project &nbsp;·&nbsp; May – Jun 2026 &nbsp;·&nbsp; v1.0.5
+        Personal Project &nbsp;·&nbsp; May – Jun 2026 &nbsp;·&nbsp; v1.0.6
       </div>
       <div class="proj-chips">
         <span class="proj-chip type">Personal</span>
@@ -51,7 +51,7 @@
       </div>
       <div class="proj-meta-card">
         <div class="proj-meta-card-label">Status</div>
-        <div class="proj-meta-card-val">Live · v1.0.5 · Windows</div>
+        <div class="proj-meta-card-val">Live · v1.0.6 · Windows</div>
       </div>
     </div>
 
@@ -170,20 +170,20 @@
         <div class="tl-title">User Testing & Iteration</div>
         <div class="tl-full">
           <p>After the initial release, I shared the app with 10+ users and collected feedback through real usage — not a formal test, but actual day-to-day use by people with different habits and workflows. Bugs surfaced, edge cases appeared, and missing features became obvious quickly.</p>
-          <p style="margin-top: 0.75rem;">Each version addressed a specific round of feedback. The app is currently at v1.0.5, with a mobile version as the next planned milestone.</p>
+          <p style="margin-top: 0.75rem;">Each version addressed a specific round of feedback. The app is currently at v1.0.6.</p>
           <div class="tl-note" style="margin-top: 0.75rem;">
-            <strong>Bugs fixed</strong><br>
-            Sticker drag-and-drop inconsistencies · Calendar date span overlap · Sticker page-sharing bug · Pin (always-on-top) toggle reverting immediately due to double-call<br><br>
-            <strong>UX improvements from feedback</strong><br>
-            Banner edit button now jumps directly to the relevant settings section · Sticker handles (delete/rotate/resize) given distinct colors for visibility · Multiple memos can now be open simultaneously · Calendar now supports completion filters and year/month selection UI · Memo inline editing via double-click with Enter to save and Shift+Enter for line breaks<br><br>
-            <strong>New in v1.0.4</strong><br>
-            Due date urgency strengthened with D-day badges + background color shift · 2 new themes added (Ivory, Sky — now 8 total) · AddTodo/Settings modals now responsive to window width · Banner background defaults to theme color · CSS refactored from 2,161 to 1,397 lines<br><br>
-            <strong>New in v1.0.5</strong><br>
-            Calendar week view now supports task deletion — daily/weekly tasks offer three options (this day only / this day onward / all, following Google Calendar's pattern), while date/one-time tasks move to archive · Folder order now reorderable via drag-and-drop · Calendar filter settings persist across restarts · ErrorBoundary added — app crash screen with email report and settings reset button · Dismissed alarm auto-cleanup at midnight · Theme code separated into theme.js<br><br>
-            <strong>Bugs fixed (v1.0.5)</strong><br>
-            Alarm on/off toggle not working correctly · Timezone parsing issue — unified to local time · Alarm resetting during edit mode · Duplicate IDs accumulating in archive · Settings banner background color change freezing · Settings ON/OFF toggle text clipping<br><br>
-            <strong>Data management</strong><br>
-            Export/Import backup for cross-device transfers · Folder and memo open-state persistence via localStorage · Alarm dismiss deduplication logic
+            <strong>v1.0.0 — Initial Release</strong><br>
+            Daily, weekly, date, one-time task types · Priority levels · Custom labels · Drag &amp; drop reordering · Calendar (month &amp; week) · Archive &amp; restore · Sticker system · Banner customization · 4 themes · Always on top<br><br>
+            <strong>v1.0.1 – v1.0.2</strong><br>
+            Loading animation · Feedback email button · Sticker page isolation fix · Manual update check + notification dot · Korean/English language support · Calendar type filter · Export/Import data backup · Peach, Rose themes · Banner edit button shortcut · Theme hover preview<br><br>
+            <strong>v1.0.3</strong><br>
+            Folder system with drag &amp; drop · Alarm system (default + custom per task) · Label reuse · Memo URL links · Multi-memo expand · Calendar date span overlap fix · Sticker rotation handle<br><br>
+            <strong>v1.0.4</strong><br>
+            Urgency badge + background color for due dates · Memo inline editing (double-click) · 2 new themes (Ivory, Sky — now 8 total) · Responsive modal width · Banner defaults to theme color · CSS refactored (2,161 → 1,397 lines)<br><br>
+            <strong>v1.0.5</strong><br>
+            Calendar week view task deletion (Google Calendar-style options) · Folder reordering via drag &amp; drop · Calendar filter persistence · ErrorBoundary crash screen · Dismissed alarm auto-cleanup · Alarm/timezone bug fixes<br><br>
+            <strong>v1.0.6</strong><br>
+            Banner customization expanded — height, zoom, drag to reposition, new fonts (Playfair, Caveat, Dancing Script, Noto Serif), text size slider, vertical position · Date type "Repeat daily" option added · Daily/weekly edit with Google Calendar-style options (edit all / edit this and following) · Sticker drag improved — pixel-perfect movement, arrow key fine-tuning · One-time todos without due date now default to today
           </div>
           <div class="tl-img-row2" style="margin-top: 1.25rem;">
             <div>
@@ -192,7 +192,7 @@
             </div>
             <div>
               <img src="img/momotodo/momotodo-versions2.jpg" alt="Current version v1.0.4 all features" class="tl-img project-img">
-              <div class="tl-caption">Fig.9: v1.0.5 — full feature overview including urgency badges, themes, stickers, archive, export/import, and settings</div>
+              <div class="tl-caption">Fig.9: v1.0.6 — full feature overview including urgency badges, themes, stickers, banner customization, archive, export/import, and settings</div>
             </div>
           </div>
         </div>
@@ -203,14 +203,14 @@
         <div class="tl-eyebrow">Next · 06</div>
         <div class="tl-title">What's Next</div>
         <div class="tl-full">
-          <p>v1.0.5 is live on Windows. macOS support was explored but paused — a user with a Mac discovered that without trusted developer status, the app triggers a "file is damaged" warning on macOS, which isn't fixable without an Apple Developer account. The next update will focus on a mobile version instead.</p>
+          <p>v1.0.6 is live on Windows. macOS support was explored but paused — without trusted developer status, the app triggers a "file is damaged" warning on macOS, which requires an Apple Developer account to resolve. The focus going forward is on stability, new features, and eventually a mobile version.</p>
           <div class="tl-note">
-            <strong>Mobile version (next priority)</strong><br>
-            A mobile version is the next planned milestone — enabling cross-device task sharing via the existing Export/Import system so users can manage their list across desktop and mobile seamlessly.<br><br>
-            <strong>v1.0.6 (planned)</strong><br>
-            Google Calendar-style edit options for daily/weekly tasks (this day only / this day onward / all) — deletion already follows this pattern, editing will follow. Custom alarm time for one-time tasks — replacing the relative "X hours before" with direct date + time input.<br><br>
-            <strong>Notification system</strong><br>
-            Core alarm infrastructure is already in place. The next step is a more reliable and polished alarm management experience across all task types.
+            <strong>Stability & bug check</strong><br>
+            Before new features, the priority is reviewing the existing codebase for potential conflicts, unused variables, and edge cases that could cause errors — building on the same mindset that led to the ErrorBoundary in v1.0.5.<br><br>
+            <strong>v1.0.7 (exploring)</strong><br>
+            Alarm customization improvement — one-time tasks to support direct date + time input instead of relative "X hours before" · Today view completion filter (Todo / Done / All) · Simple weekly stats — completion rate and streaks · Widget / mini view — a small always-on-top window for quick task checks<br><br>
+            <strong>Mobile version (longer term)</strong><br>
+            A mobile version is a longer-term goal — enabling cross-device task sharing via the existing Export/Import system so users can carry their list from desktop to mobile seamlessly.
           </div>
         </div>
       </div>
@@ -221,7 +221,7 @@
     <!-- Takeaway -->
     <div class="proj-takeaway">
       <div class="proj-takeaway-label">Takeaway</div>
-      <p>Momo Todo changed how I think about the boundary between design and development. Using Claude AI as a coding collaborator, I was able to build something technically complex — drag-and-drop, native notifications, runtime theming, cross-platform packaging — without a formal engineering background. What mattered most wasn't knowing every API, but knowing what I wanted to build and being able to communicate it precisely. That clarity came from design thinking.</p>
+      <p>Momo Todo changed how I think about the boundary between design and development. Using Claude AI as a coding collaborator, I was able to build something technically complex — drag-and-drop, native notifications, runtime theming, desktop packaging — without a formal engineering background. What mattered most wasn't knowing every API, but knowing what I wanted to build and being able to communicate it precisely. That clarity came from design thinking.</p>
       <p style="margin-top: 0.75rem;">Real-user testing surfaced bugs I never would have caught on my own — edge cases, timing issues, crashes in situations I hadn't imagined. Watching that happen taught me that no matter how well you understand the design, the code has its own logic. To fix things confidently, I had to understand not just what each feature does, but how it flows and how changes in one place ripple through others. Building the ErrorBoundary — a dedicated crash screen with a report button — came directly from that realization: if something goes wrong, users need a way out, not a frozen white screen.</p>
       <p style="margin-top: 0.75rem;">Every version made the app a little better. Seeing that progression — and knowing real people are using something I made — has been the most satisfying part of this project.</p>
     </div>
