@@ -1,0 +1,229 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8" />
+  <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+  <title>Even$ync | Sooa Mo</title>
+  <link rel="icon" href="img/logo.png" type="image/png">
+  <link href="https://cdn.jsdelivr.net/npm/bootstrap@5.3.2/dist/css/bootstrap.min.css" rel="stylesheet" />
+  <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.5.0/css/all.min.css">
+  <link rel="stylesheet" href="style.css" />
+</head>
+<body>
+
+  <div data-include="partials/navbar.html"></div>
+
+  <div class="proj-page">
+
+    <!-- Cover -->
+    <img src="img/evensync/evensync-cover.jpg" alt="Even$ync" class="proj-cover">
+
+    <!-- Header -->
+    <div class="proj-header">
+      <h1 class="proj-header-name">Even$ync</h1>
+      <div class="proj-header-sub">
+        Personal Project &nbsp;·&nbsp; Aug 2026 – In Progress
+      </div>
+      <div class="proj-chips">
+        <span class="proj-chip type">Personal</span>
+        <span class="proj-chip">Mobile App</span>
+        <span class="proj-chip">UX/UI Design</span>
+        <span class="proj-chip">Figma</span>
+      </div>
+    </div>
+
+    <hr class="proj-divider">
+
+    <!-- Meta Cards -->
+    <div class="proj-meta-cards">
+      <div class="proj-meta-card">
+        <div class="proj-meta-card-label">My Role</div>
+        <div class="proj-meta-card-val">UX/UI Design</div>
+      </div>
+      <div class="proj-meta-card">
+        <div class="proj-meta-card-label">Team</div>
+        <div class="proj-meta-card-val">Sooa (Design), Jasmine &amp; Guo (Development)</div>
+      </div>
+      <div class="proj-meta-card">
+        <div class="proj-meta-card-label">Tools</div>
+        <div class="proj-meta-card-val">Figma, Claude Design</div>
+      </div>
+      <div class="proj-meta-card">
+        <div class="proj-meta-card-label">Status</div>
+        <div class="proj-meta-card-val">Design Complete · Backend in Progress</div>
+      </div>
+    </div>
+
+    <!-- Overview -->
+    <p class="proj-overview">
+      Even$ync is a mobile expense-splitting app — not a budgeting app, at least not yet. It answers one question: who owes whom, how much, and has it been paid? I led product definition and UX/UI design for the full app, designing close to 70 screens in user-flow order and handing them off to two developers, Jasmine and Guo, who are now building the backend.
+    </p>
+
+    <!-- Timeline -->
+    <div class="proj-timeline">
+
+      <!-- 01: Background -->
+      <div class="tl-item">
+        <div class="tl-eyebrow">Background · 01</div>
+        <div class="tl-title">Splitting, Not Budgeting</div>
+        <div class="tl-full">
+          <p>Most expense-splitting apps default to dividing a bill evenly across everyone on it, and treat anything more granular as an edge case. In practice it isn't — one person covers the drinks, two people split an entrée, someone pays for a single item outright — so the actual starting goal was making that kind of item-by-item, per-person splitting easy enough that getting to a correct number never feels like extra work. Before any screen, I also drew a scope boundary: right now, Even$ync only answers who owes whom, how much, and has it been paid — nothing about spending categories, monthly limits, or financial planning. That's the current scope, not a permanent one; budgeting-style features are a plausible next layer once the splitting core is solid.</p>
+          <p style="margin-top: 0.75rem;">The core object is a <b>Tab</b> — a shared ledger that stays open for as long as it's active, and only gets archived once someone closes it. Each Tab holds expenses; each expense names one payer, a category, and either a single amount or a list of items. Every item is split on its own — Equal, Percent, or Exact — and tagged to whoever shared it.</p>
+        </div>
+      </div>
+
+      <!-- 02: Product Definition -->
+      <div class="tl-item">
+        <div class="tl-eyebrow">Product · 02</div>
+        <div class="tl-title">The Calls That Shaped the Model</div>
+        <div class="tl-full">
+          <p>A handful of early decisions did most of the work of making the rest of the app simple to design and to use:</p>
+          <div class="tl-note" style="margin-top: 0.75rem;">
+            <strong>One Tab type, not trip/recurring modes</strong> — the same object handles a weekend and a year of bills, so users never have to decide which kind of thing they're creating.<br><br>
+            <strong>Item-level split methods, not expense-level</strong> — a single dinner can have one item split Equal and another split Exact, because that's how real receipts work.<br><br>
+            <strong>Settlement as a per-expense checklist, not a net-balance summary</strong> — see below.<br><br>
+            <strong>Guests as first-class participants</strong> — you don't need an account to be added to a Tab.<br><br>
+            <strong>Joining a Tab is an owner-approved request</strong> — because it retroactively changes everyone's shares, so it can't be silent.
+          </div>
+        </div>
+      </div>
+
+      <!-- 03: Screens & Flows -->
+      <div class="tl-item">
+        <div class="tl-eyebrow">Screens · 03</div>
+        <div class="tl-title">~70 Screens, in Flow Order</div>
+        <div class="tl-full">
+          <p>I designed every screen in the order a person actually moves through the app — first launch to a closed Tab — rather than as a disconnected set of mockups. Onboarding and auth set the tone: a light olive palette, Manrope throughout with Inter reserved for arithmetic operators (÷ − + = ×), and a mark that puts an equals sign and a dollar sign in one ring.</p>
+          <img src="img/evensync/evensync-onboarding.jpg" alt="Even$ync onboarding flow" class="tl-img project-img">
+          <div class="tl-caption">Fig.1: First launch through notification permissions — the first four screens a new user sees</div>
+        </div>
+      </div>
+
+      <!-- 04: Design System -->
+      <div class="tl-item">
+        <div class="tl-eyebrow">System · 04</div>
+        <div class="tl-title">Design System &amp; Reference Sheets</div>
+        <div class="tl-full">
+          <p>A light olive palette with a documented text-on-color contrast rule, a 9-icon expense category set on Lucide, and participant avatars with two-letter initials on assigned colors so six people stay visually distinct at a glance. Type is Manrope throughout, with Inter reserved specifically for arithmetic operators (÷ − + = ×) — Manrope's own ÷ and − read poorly at interface sizes, so every calculation borrows Inter for just those characters while amounts, currency symbols, and everything else stay Manrope. The Even$ync mark went through several rounds before landing.</p>
+          <img src="img/evensync/evensync-styleguide.jpg" alt="Even$ync style guide" class="tl-img project-img">
+          <div class="tl-caption">Fig.2: One-page style guide — color, type scale (including the Manrope/Inter split), components, shape and spacing rules</div>
+
+          <p style="margin-top: 1.5rem;">Alongside the screen flow, I built a second set of pages that aren't part of the app at all: reference sheets for whoever's building it. Error and empty states, the 9-category set as a single source of truth, what happens offline or when two people edit the same Tab at once, and every component in each of its build states — buttons, fields, chips, avatars, toggles, loading skeletons — plus a plain-language currency and rounding rule. These aren't in flow order and carry no in/out arrows on purpose; they're meant to be looked up, not walked through.</p>
+          <img src="img/evensync/evensync-components.jpg" alt="Edge case and component reference sheets" class="tl-img project-img">
+          <div class="tl-caption">Fig.3: Reference sheets — edge &amp; error states, empty states, the category set, offline/sync behavior, and every component in its build states</div>
+        </div>
+      </div>
+
+      <!-- 05: Item-level splits -->
+      <div class="tl-item">
+        <div class="tl-eyebrow">Feature · 05</div>
+        <div class="tl-title">Three Ways to Split an Item</div>
+        <div class="tl-full">
+          <p>Every item — not every expense — is split on its own, in whichever of three modes fits it: <b>Equal</b> divides evenly and states the rounding rule up front (leftover cents go to the payer first, then by participant order); <b>Percent</b> shows live running totals and flags an unassigned balance in red until it reaches zero; <b>Exact</b> requires the full amount to be assigned before saving, with the same live-total and error-state treatment.</p>
+          <img src="img/evensync/evensync-splits.jpg" alt="Equal, Percent, and Exact split modes" class="tl-img project-img">
+          <div class="tl-caption">Fig.4: Equal, Percent, and Exact — the same "Add item" sheet, three split methods, including its validation error state</div>
+        </div>
+      </div>
+
+      <!-- 06: Settlement -->
+      <div class="tl-item">
+        <div class="tl-eyebrow">UX · 06</div>
+        <div class="tl-title">A Settlement Checklist, Not a Balance Readout</div>
+        <div class="tl-full">
+          <p>This was the most important UX decision in the app. Most splitting apps show a net number — "you owe Sam $12" — and stop there. Even$ync generates one payment row per person who owes the payer, and a row is ticked only when money actually moves. Recording a payment never changes the calculated split; when the last row is ticked, the app offers to close the Tab, and a later expense simply adds new rows without undoing anything already paid.</p>
+          <img src="img/evensync/evensync-settlement.jpg" alt="Settlement checklist and mark-as-paid flow" class="tl-img project-img">
+          <div class="tl-caption">Fig.5: Per-expense payment rows, and the batch "Mark as paid" sheet</div>
+        </div>
+      </div>
+
+      <!-- 07: Guests & sharing -->
+      <div class="tl-item">
+        <div class="tl-eyebrow">UX · 07</div>
+        <div class="tl-title">Guests, and Five Ways a Shared Link Can Land</div>
+        <div class="tl-full">
+          <p>Participants can be app users or typed-in guests, and Tabs are shared by link with view-only or edit permission. A guest can later claim their name as a real account — but only with owner approval, since taking a name means taking on someone's share of the money. I mapped out every situation a link opener could be in: already a participant, signed in but not listed, no account at all, or asking to be matched to an existing guest name — five distinct entry states in total, each with its own screen.</p>
+          <img src="img/evensync/evensync-guests.jpg" alt="Shared link and guest claim flows" class="tl-img project-img">
+          <div class="tl-caption">Fig.6: A signed-in user matching themselves to a guest name Mango typed in, and the owner-approval gate that follows</div>
+        </div>
+      </div>
+
+      <!-- 08: Export -->
+      <div class="tl-item">
+        <div class="tl-eyebrow">Feature · 08</div>
+        <div class="tl-title">Image Export, Three Layouts</div>
+        <div class="tl-full">
+          <p>Not everyone opens Even$ync to check a balance — plenty of settling-up still happens in a group chat. So the app can save the result as a shareable image, per participant, in three different layout types: a plain summary, a version with every amount traced back to the expense it came from, and a version formatted for sending directly. Every figure on every layout reconciles back to the same underlying dataset.</p>
+          <img src="img/evensync/evensync-export.jpg" alt="Image export preview layouts" class="tl-img project-img">
+          <div class="tl-caption">Fig.7: The three export views — Summary, With detail, and To send</div>
+        </div>
+      </div>
+
+      <!-- 09: Annotating for the Team -->
+      <div class="tl-item">
+        <div class="tl-eyebrow">Team · 09</div>
+        <div class="tl-title">Annotating for the Team</div>
+        <div class="tl-2col">
+          <div>
+            <p>I designed in Figma and used Prototype to walk the team through the user flow, but not everyone found a clickable prototype easy to follow. So I annotated the file as carefully as I designed the screens: in/out arrows naming the exact control that leads to and from each frame, and <b>(TBD)</b> notes in a different color marking engineering-only logic — the equal-split remainder rule, edge cases, what's still undecided — clearly separated from anything that would actually appear in the app.</p>
+            <p style="margin-top: 0.75rem;">One consistent dataset — four expenses, six participants — runs through every one of the ~70 screens, and the numbers reconcile: shares sum to expense totals, nets sum to zero, and every result figure traces to a specific expense. The whole file lives in Figma, shared with Jasmine and Guo, and we've met regularly to walk through it together.</p>
+          </div>
+          <div>
+            <img src="img/evensync/evensync-handoff.jpg" alt="Annotated frame with engineering notes" class="tl-img project-img">
+            <div class="tl-caption">Fig.8: A frame as annotated — screen ID, in/out arrows, and an inline (TBD) engineering note</div>
+          </div>
+        </div>
+      </div>
+
+      <!-- 10: What's Next -->
+      <div class="tl-item">
+        <div class="tl-eyebrow">Next · 10</div>
+        <div class="tl-title">What's Next</div>
+        <div class="tl-full">
+          <p>Design is complete. Jasmine and Guo are now building the backend, starting with the database that will hold Tabs, expenses, and participants. My focus for this phase is staying available to resolve the (TBD) notes as real engineering questions come up, and refining the handful of edge-case screens that only become clear once the data layer exists.</p>
+        </div>
+      </div>
+
+    </div>
+    <!-- end timeline -->
+
+    <!-- Takeaway -->
+    <div class="proj-takeaway">
+      <div class="proj-takeaway-label">Takeaway</div>
+      <p>Being the only designer on the project meant every priority call was mine to make, starting from the user flow itself. When I had more than one layout in mind, I'd bring it to Jasmine or Guo and talk through which one would be better to build and easier for people to actually use. And I wasn't just designing finished screens — for every screen I had to think through what shows up before anything is selected, what has to happen so it never errors out, and what actually takes priority. That habit of thinking past the "done" state is what pushed my UX skills the most on this project.</p>
+      <p style="margin-top: 0.75rem;">Even$ync is a personal project, but I wanted it to hold up to real app quality — so I researched and built a style guide to stay consistent, designed with the full user flow in mind, and left (TBD) notes wherever engineering needed a heads-up. That rigor was for two audiences at once: the developers building it, and the users who'll eventually use it without ever seeing any of this.</p>
+    </div>
+
+    <!-- Back -->
+    <div class="proj-back">
+      <a href="index.html#projects">← Back to Projects</a>
+    </div>
+
+  </div>
+
+  <!-- Image Modal -->
+  <div class="modal fade" id="imageModal" tabindex="-1" aria-hidden="true">
+    <div class="modal-dialog modal-xl modal-dialog-centered">
+      <div class="modal-content bg-transparent border-0">
+        <div class="modal-body p-0">
+          <img id="modalImage" src="" class="img-fluid w-100" alt="Zoomed Image">
+        </div>
+      </div>
+    </div>
+  </div>
+
+  <button id="backToTopBtn" class="btn btn-outline-custom rounded-circle" title="Go to top">
+    <i class="fas fa-arrow-up"></i>
+  </button>
+
+  <div data-include="partials/footer.html"></div>
+
+  <script src="https://cdn.jsdelivr.net/npm/bootstrap@5.3.2/dist/js/bootstrap.bundle.min.js"></script>
+  <script src="js/include.js"></script>
+  <script src="js/script.js"></script>
+
+  <div id="cursor-dot"></div>
+  <div id="cursor-box"></div>
+  <div id="cursor-fill"></div>
+
+</body>
+</html>
