@@ -6,300 +6,178 @@
   <title>Sooa Mo | Portfolio</title>
   <link rel="icon" href="img/logo.png" type="image/png">
   <link href="https://cdn.jsdelivr.net/npm/bootstrap@5.3.2/dist/css/bootstrap.min.css" rel="stylesheet">
-  <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.5.0/css/all.min.css">
   <link rel="stylesheet" href="style.css">
 </head>
 <body>
 
-  <!-- Navbar -->
   <div data-include="partials/navbar.html"></div>
 
-  <!-- Hero -->
-  <section id="hero">
-    <div>
-      <img src="img/hi.svg" alt="" class="hero-hi-img">
-      <div class="hero-eyebrow">Portfolio</div>
-      <h1 class="hero-name">Sooa Mo</h1>
-      <p class="hero-role">UX/UI Designer &amp; Graphic Designer · Vancouver</p>
-      <div class="hero-tags">
-        <span class="hero-tag">Figma</span>
-        <span class="hero-tag">Visual Design</span>
-        <span class="hero-tag">Branding</span>
-        <span class="hero-tag">Web</span>
-        <span class="hero-tag">Storytelling</span>
+  <main class="home">
+
+    <!-- Hero -->
+    <section id="hero">
+      <div class="hero-tile reveal">
+        <div class="hero-top"><span>[ Portfolio ]</span><span>2026</span></div>
+        <div>
+          <h1 class="hero-name">Sooa Mo</h1>
+          <p class="hero-role">UX/UI Designer &amp; Graphic Designer · Vancouver</p>
+          <a href="#projects" class="hero-cta">View My Work ↓</a>
+        </div>
       </div>
-      <a href="#projects" class="hero-cta">View My Work ↓</a>
-    </div>
-  </section>
+      <div class="hero-row">
+        <div class="info-tile base reveal">
+          <span class="mono-label">Based in</span>
+          <span class="info-tile-val">Vancouver, BC</span>
+        </div>
+        <div class="info-tile wide reveal">
+          <span class="mono-label">Toolkit</span>
+          <div class="pill-list">
+            <span class="pill">Figma</span>
+            <span class="pill">Visual Design</span>
+            <span class="pill">Branding</span>
+            <span class="pill">Web</span>
+            <span class="pill">Storytelling</span>
+          </div>
+        </div>
+        <div class="link-tile reveal">
+          <a href="pdf/Resume.pdf" target="_blank">Resume <span>↗</span></a>
+          <a href="https://www.linkedin.com/in/sooamo/" target="_blank">LinkedIn <span>↗</span></a>
+        </div>
+      </div>
+    </section>
 
     <!-- Projects -->
-  <section id="projects">
-    <div class="container">
-      <div class="section-label">Selected Projects</div>
-
-      <!-- 01 SFU -->
-      <a href="sfu-gs.html" class="proj-item">
-        <div class="proj-img-wrap">
-          <img src="img/sfugrad/sfu-thumb.jpg" alt="SFU Graduate Studies">
-          <img src="img/sfugrad/sfu-hover.png" class="png-overlay" alt="">
-        </div>
-        <div class="proj-text">
-          <div class="proj-idx">01 · Work</div>
-          <div class="proj-title">SFU Graduate Studies</div>
-          <div class="proj-desc">Full-time co-op managing the graduate website, redesigning digital materials, and creating visual content — serving thousands of students and staff.</div>
-          <div class="proj-tags">
-            <span class="proj-tag-type">Work</span>
-            <span class="proj-tag">Web Management</span>
-            <span class="proj-tag">Visual Design</span>
-            <span class="proj-tag">Video Editing</span>
-          </div>
-          <div class="proj-cta">View Case Study <span class="proj-cta-arrow">></span></div>
-        </div>
-      </a>
-
-      <!-- 02 Even$ync -->
-      <a href="evensync.html" class="proj-item reverse">
-        <div class="proj-img-wrap">
-          <img src="img/evensync/evensync-thumb.jpg" alt="Even$ync">
-          <img src="img/evensync/evensync-hover.png" class="png-overlay" alt="">
-        </div>
-        <div class="proj-text">
-          <div class="proj-idx">02 · Personal</div>
-          <div class="proj-title">Even$ync</div>
-          <div class="proj-desc">A mobile expense-splitting app — designed ~70 screens in flow order, from the settlement model down to developer-handoff annotations, with two developers now building the backend.</div>
-          <div class="proj-tags">
-            <span class="proj-tag-type">Personal</span>
-            <span class="proj-tag">Mobile App</span>
-            <span class="proj-tag">UX/UI Design</span>
-            <span class="proj-tag">Figma</span>
-          </div>
-          <div class="proj-cta">View Case Study <span class="proj-cta-arrow">></span></div>
-        </div>
-      </a>
-
-      <!-- 03 Jadeco -->
-      <a href="jadeco.html" class="proj-item">
-        <div class="proj-img-wrap">
-          <img src="img/jadeco/jadeco-thumb.jpg" alt="Jadeco">
-          <img src="img/jadeco/jadeco-hover.png" class="png-overlay" alt="">
-        </div>
-        <div class="proj-text">
-          <div class="proj-idx">03 · Academic</div>
-          <div class="proj-title">Jadeco</div>
-          <div class="proj-desc">Conducted retail field research and developed visual storyboards for a Chinese home decor brand expanding into the Vancouver market.</div>
-          <div class="proj-tags">
-            <span class="proj-tag-type">Academic</span>
-            <span class="proj-tag">UX Research</span>
-            <span class="proj-tag">Storyboard</span>
-            <span class="proj-tag">Video</span>
-          </div>
-          <div class="proj-cta">View Case Study <span class="proj-cta-arrow">></span></div>
-        </div>
-      </a>
-
-      <!-- 04 MomoTodo -->
-      <a href="MomoTodo.html" class="proj-item reverse">
-        <div class="proj-img-wrap">
-          <img src="img/momotodo/momotodo-thumb.jpg" alt="Momo Todo">
-          <img src="img/momotodo/momotodo-hover.png" class="png-overlay" alt="">
-        </div>
-        <div class="proj-text">
-          <div class="proj-idx">04 · Personal</div>
-          <div class="proj-title">Momo Todo</div>
-          <div class="proj-desc">A Windows desktop todo app built with Electron and React — designed for daily routines, recurring tasks, and deadlines, developed with Claude AI as a coding collaborator and tested by 10+ real users.</div>
-          <div class="proj-tags">
-            <span class="proj-tag-type">Personal</span>
-            <span class="proj-tag">Electron + React</span>
-            <span class="proj-tag">UX Design</span>
-            <span class="proj-tag">AI-Assisted Dev</span>
-          </div>
-          <div class="proj-cta">View Case Study <span class="proj-cta-arrow">></span></div>
-        </div>
-      </a>
-
-      <!-- 05 FLUI -->
-      <a href="flui-banana.html" class="proj-item">
-        <div class="proj-img-wrap">
-          <img src="img/flui/flui-thumb.jpg" alt="FLUI Hackathon — Banana Art Lab">
-          <img src="img/flui/flui-hover.png" class="png-overlay" alt="">
-        </div>
-        <div class="proj-text">
-          <div class="proj-idx">05 · Work</div>
-          <div class="proj-title">FLUI Design Hackathon — Banana Art Lab</div>
-          <div class="proj-desc">Redesigned a tufting studio's website in a 3-day hackathon — rebuilt the booking flow, developed a new brand identity, and created custom illustrations.</div>
-          <div class="proj-tags">
-            <span class="proj-tag-type">Work</span>
-            <span class="proj-tag">Website Redesign</span>
-            <span class="proj-tag">Branding</span>
-            <span class="proj-tag">Figma</span>
-          </div>
-          <div class="proj-cta">View Case Study <span class="proj-cta-arrow">></span></div>
-        </div>
-      </a>
-
-      <!-- 06 CrackTheLemon -->
-      <a href="crackthelemon.html" class="proj-item reverse">
-        <div class="proj-img-wrap">
-          <img src="img/crackthelemon/crackthelemon-thumb.jpg" alt="CrackTheLemon">
-          <img src="img/crackthelemon/crackthelemon-hover.png" class="png-overlay" alt="">
-        </div>
-        <div class="proj-text">
-          <div class="proj-idx">06 · Personal</div>
-          <div class="proj-title">CrackTheLemon</div>
-          <div class="proj-desc">A custom, category-based memo app built as a birthday gift for a close friend — designed around exactly how they wanted to organize their notes, developed with Claude AI as a coding collaborator.</div>
-          <div class="proj-tags">
-            <span class="proj-tag-type">Personal</span>
-            <span class="proj-tag">Electron + React</span>
-            <span class="proj-tag">Custom Gift</span>
-            <span class="proj-tag">AI-Assisted Dev</span>
-          </div>
-          <div class="proj-cta">View Case Study <span class="proj-cta-arrow">></span></div>
-        </div>
-      </a>
-
-      <!-- Archive -->
-      <div id="archive-toggle" onclick="toggleArchive()">
-        <span class="archive-toggle-label">More Projects — Tatreez, The Diary, Caring Connections, Public Art</span>
-        <span class="archive-toggle-icon"><i class="fas fa-plus"></i></span>
+    <section id="projects" class="home-section">
+      <div class="section-head">
+        <h2 class="section-title">Selected Projects</h2>
+        <span class="section-count">01 — 06</span>
       </div>
-      <div id="archive-list">
-        <div class="archive-grid">
-          <a href="tatreez.html" class="archive-card">
-            <div class="archive-card-top">
-              <span class="archive-card-num">01</span>
-              <span class="archive-card-arrow">></span>
-            </div>
-            <div class="archive-card-title">Tatreez</div>
-            <div class="archive-card-tags">
-              <span class="archive-card-tag">UX/UI Design</span>
-              <span class="archive-card-tag">Figma</span>
-            </div>
-          </a>
-          <a href="thediary.html" class="archive-card">
-            <div class="archive-card-top">
-              <span class="archive-card-num">02</span>
-              <span class="archive-card-arrow">></span>
-            </div>
-            <div class="archive-card-title">The Diary</div>
-            <div class="archive-card-tags">
-              <span class="archive-card-tag">Speculative Design</span>
-              <span class="archive-card-tag">Installation</span>
-            </div>
-          </a>
-          <a href="caringConnections.html" class="archive-card">
-            <div class="archive-card-top">
-              <span class="archive-card-num">03</span>
-              <span class="archive-card-arrow">></span>
-            </div>
-            <div class="archive-card-title">Caring Connections</div>
-            <div class="archive-card-tags">
-              <span class="archive-card-tag">Board Game Design</span>
-              <span class="archive-card-tag">Visual Design</span>
-            </div>
-          </a>
-          <a href="publicArt.html" class="archive-card">
-            <div class="archive-card-top">
-              <span class="archive-card-num">04</span>
-              <span class="archive-card-arrow">></span>
-            </div>
-            <div class="archive-card-title">Public Art</div>
-            <div class="archive-card-tags">
-              <span class="archive-card-tag">PHP</span>
-              <span class="archive-card-tag">Back-End</span>
-            </div>
-          </a>
-        </div>
-      </div>
-    </div>
-  </section>
 
-  <!-- About -->
-  <section id="about">
-    <div class="container">
-      <div class="section-label">About</div>
-      <div class="about-grid">
+      <div class="featured-grid">
+        <a href="sfu-gs.html" class="b-card reveal">
+          <div class="b-thumb">
+            <img src="img/sfugrad/sfu-thumb.jpg" alt="SFU Graduate Studies">
+            <img src="img/sfugrad/sfu-hover.png" class="b-hover" alt="">
+          </div>
+          <div class="b-body">
+            <div class="b-meta"><span class="b-meta-left"><span class="b-idx">01</span><span class="b-type">Work</span></span><span class="b-arrow">→</span></div>
+            <div class="b-title">SFU Graduate Studies</div>
+            <p class="b-desc">Full-time co-op managing the graduate website, redesigning digital materials, and creating visual content — serving thousands of students and staff.</p>
+            <div class="b-tags"><span class="b-tag">Web Management</span><span class="b-tag">Visual Design</span><span class="b-tag">Video Editing</span></div>
+          </div>
+        </a>
+        <a href="evensync.html" class="b-card reveal">
+          <div class="b-thumb">
+            <img src="img/evensync/evensync-thumb.jpg" alt="Even$ync">
+            <img src="img/evensync/evensync-hover.png" class="b-hover" alt="">
+          </div>
+          <div class="b-body">
+            <div class="b-meta"><span class="b-meta-left"><span class="b-idx">02</span><span class="b-type">Personal</span></span><span class="b-arrow">→</span></div>
+            <div class="b-title">Even$ync</div>
+            <p class="b-desc">A mobile expense-splitting app — designed ~70 screens in flow order, from the settlement model down to developer-handoff annotations, with two developers now building the backend.</p>
+            <div class="b-tags"><span class="b-tag">Mobile App</span><span class="b-tag">UX/UI Design</span><span class="b-tag">Figma</span></div>
+          </div>
+        </a>
+      </div>
+
+      <div class="rest-grid">
+        <a href="jadeco.html" class="b-card sm reveal">
+          <div class="b-thumb"><img src="img/jadeco/jadeco-thumb.jpg" alt="Jadeco"><img src="img/jadeco/jadeco-hover.png" class="b-hover" alt=""></div>
+          <div class="b-body">
+            <div class="b-meta"><span class="b-idx">03 · Academic</span><span class="b-arrow-sm">→</span></div>
+            <div class="b-title">Jadeco</div>
+            <p class="b-desc">Conducted retail field research and developed visual storyboards for a Chinese home decor brand expanding into the Vancouver market.</p>
+            <div class="b-tagline">UX Research / Storyboard / Video</div>
+          </div>
+        </a>
+        <a href="MomoTodo.html" class="b-card sm reveal">
+          <div class="b-thumb"><img src="img/momotodo/momotodo-thumb.jpg" alt="Momo Todo"><img src="img/momotodo/momotodo-hover.png" class="b-hover" alt=""></div>
+          <div class="b-body">
+            <div class="b-meta"><span class="b-idx">04 · Personal</span><span class="b-arrow-sm">→</span></div>
+            <div class="b-title">Momo Todo</div>
+            <p class="b-desc">A Windows desktop todo app built with Electron and React — designed for daily routines, recurring tasks, and deadlines, developed with Claude AI as a coding collaborator and tested by 10+ real users.</p>
+            <div class="b-tagline">Electron + React / UX Design / AI-Assisted Dev</div>
+          </div>
+        </a>
+        <a href="flui-banana.html" class="b-card sm reveal">
+          <div class="b-thumb"><img src="img/flui/flui-thumb.jpg" alt="FLUI Hackathon — Banana Art Lab"><img src="img/flui/flui-hover.png" class="b-hover" alt=""></div>
+          <div class="b-body">
+            <div class="b-meta"><span class="b-idx">05 · Work</span><span class="b-arrow-sm">→</span></div>
+            <div class="b-title">FLUI Design Hackathon — Banana Art Lab</div>
+            <p class="b-desc">Redesigned a tufting studio's website in a 3-day hackathon — rebuilt the booking flow, developed a new brand identity, and created custom illustrations.</p>
+            <div class="b-tagline">Website Redesign / Branding / Figma</div>
+          </div>
+        </a>
+        <a href="crackthelemon.html" class="b-card sm reveal">
+          <div class="b-thumb"><img src="img/crackthelemon/crackthelemon-thumb.jpg" alt="CrackTheLemon"><img src="img/crackthelemon/crackthelemon-hover.png" class="b-hover" alt=""></div>
+          <div class="b-body">
+            <div class="b-meta"><span class="b-idx">06 · Personal</span><span class="b-arrow-sm">→</span></div>
+            <div class="b-title">CrackTheLemon</div>
+            <p class="b-desc">A custom, category-based memo app built as a birthday gift for a close friend — designed around exactly how they wanted to organize their notes, developed with Claude AI as a coding collaborator.</p>
+            <div class="b-tagline">Electron + React / Custom Gift / AI-Assisted Dev</div>
+          </div>
+        </a>
+      </div>
+
+      <div class="archive-tile reveal">
+        <div class="archive-head"><span class="mono-label">Archive</span><strong>More Projects</strong></div>
+        <a href="tatreez.html" class="archive-card"><span class="archive-card-top"><span>01</span><span>↗</span></span><span class="archive-card-title">Tatreez</span><span class="archive-card-tags">UX/UI Design / Figma</span></a>
+        <a href="thediary.html" class="archive-card"><span class="archive-card-top"><span>02</span><span>↗</span></span><span class="archive-card-title">The Diary</span><span class="archive-card-tags">Speculative Design / Installation</span></a>
+        <a href="caringConnections.html" class="archive-card"><span class="archive-card-top"><span>03</span><span>↗</span></span><span class="archive-card-title">Caring Connections</span><span class="archive-card-tags">Board Game Design / Visual Design</span></a>
+        <a href="publicArt.html" class="archive-card"><span class="archive-card-top"><span>04</span><span>↗</span></span><span class="archive-card-title">Public Art</span><span class="archive-card-tags">PHP / Back-End</span></a>
+      </div>
+    </section>
+
+    <!-- About + Contact -->
+    <section id="about" class="home-section about-row">
+      <div class="about-tile reveal">
         <img src="img/profile.jpg" alt="Sooa Mo" class="about-photo">
-        <div>
-          <div class="about-name">Sooa Mo</div>
-          <p class="about-desc">Graduated from Simon Fraser University's Interactive Arts &amp; Technology program, I design intuitive, engaging digital experiences rooted in storytelling and prototyping. I'm drawn to work that connects people or addresses real-world challenges.<br><br>This portfolio was originally hand-coded in HTML, CSS, and JavaScript — later updated and maintained with the help of Claude AI. Deployed via GitHub Pages.<br><br>I also run <a href="https://sooamo.github.io/momo_note/scrapbook.html" target="_blank" class="about-link">MomoNote</a> — a personal blog where I document English learning and everyday thoughts, built and maintained with AI tools.</p>
-          <p class="about-lang"><strong>Languages:</strong> Korean, English</p>
-          <div class="about-btns">
-            <a href="pdf/Resume.pdf" class="about-btn-dark" target="_blank">Resume</a>
-            <a href="https://www.linkedin.com/in/sooamo/" class="about-btn-outline" target="_blank">LinkedIn</a>
-          </div>
-        </div>
-      </div>
-    </div>
-  </section>
-
-  <!-- Contact -->
-  <section id="contact">
-    <div class="container">
-      <div class="section-label">Contact</div>
-      <div class="contact-grid">
-        <div class="contact-left">
-          <p class="contact-tagline">Based in Richmond, BC</p>
-          <p class="contact-tagline-sub">Always happy to connect — whether it's a job opportunity, a collaboration, or just a hello.</p>
-        </div>
-        <div class="contact-right">
-          <a href="mailto:sooa24@gmail.com" class="contact-email-big">
-            <i class="fas fa-envelope"></i>
-            <div>
-              <div class="contact-info-label">Email</div>
-              <div class="contact-email-val">sooa24@gmail.com</div>
+        <div class="about-text">
+          <span class="mono-label">About</span>
+          <p class="about-lead">Graduated from Simon Fraser University's Interactive Arts &amp; Technology program, I design intuitive, engaging digital experiences rooted in storytelling and prototyping. I'm drawn to work that connects people or addresses real-world challenges.</p>
+          <p class="about-body">This portfolio was originally hand-coded in HTML, CSS, and JavaScript — later updated and maintained with the help of Claude AI. Deployed via GitHub Pages.</p>
+          <div class="about-foot">
+            <span><span class="mono-key">LANGUAGES</span>Korean, English</span>
+            <div class="about-btns">
+              <a href="pdf/Resume.pdf" target="_blank" class="btn-dark-pill">Resume</a>
+              <a href="https://www.linkedin.com/in/sooamo/" target="_blank" class="btn-line-pill">LinkedIn</a>
             </div>
-          </a>
-          <div class="contact-btn-row">
-            <a href="https://www.linkedin.com/in/sooamo/" class="contact-btn" target="_blank">
-              <i class="fab fa-linkedin"></i> LinkedIn
-            </a>
-            <a href="https://www.youtube.com/channel/UCD7aft2uzSnMPiwY_x1r5sg" class="contact-btn" target="_blank">
-              <i class="fab fa-youtube"></i> YouTube
-            </a>
-            <a href="pdf/Resume.pdf" class="contact-btn" target="_blank">
-              <i class="fas fa-id-badge"></i> Resume
-            </a>
-            <a href="https://sooamo.github.io/momo_note/scrapbook.html" class="contact-btn" target="_blank">
-              <i class="fas fa-pen-nib"></i> MomoNote
-            </a>
           </div>
         </div>
       </div>
-    </div>
-  </section>
 
-  <!-- Back to Top -->
-  <button id="backToTopBtn" class="btn btn-outline-custom rounded-circle" title="Go to top">
-    <i class="fas fa-arrow-up"></i>
-  </button>
+      <div id="contact" class="contact-tile reveal">
+        <div class="contact-group">
+          <span class="mono-label">Contact</span>
+          <span class="contact-city">Based in Richmond, BC</span>
+          <p class="contact-sub">Always happy to connect — whether it's a job opportunity, a collaboration, or just a hello.</p>
+        </div>
+        <div class="contact-group">
+          <span class="mono-label">Email</span>
+          <div class="contact-email-row">
+            <a href="mailto:sooa24@gmail.com" class="contact-email">sooa24@gmail.com</a>
+            <button type="button" class="copy-btn" data-copy="sooa24@gmail.com">Copy</button>
+          </div>
+        </div>
+        <div class="contact-links">
+          <a href="https://www.linkedin.com/in/sooamo/" target="_blank">LinkedIn <span>↗</span></a>
+          <a href="https://www.youtube.com/channel/UCD7aft2uzSnMPiwY_x1r5sg" target="_blank">YouTube <span>↗</span></a>
+          <a href="pdf/Resume.pdf" target="_blank">Resume <span>↗</span></a>
+          <a href="https://sooamo.github.io/momo_note/scrapbook.html" target="_blank">MomoNote <span>↗</span></a>
+        </div>
+      </div>
+    </section>
 
-  <!-- Footer -->
+  </main>
+
+  <button id="backToTopBtn" title="Go to top" aria-label="Go to top">↑</button>
+
   <div data-include="partials/footer.html"></div>
 
-  <!-- Scripts -->
   <script src="https://cdn.jsdelivr.net/npm/bootstrap@5.3.2/dist/js/bootstrap.bundle.min.js"></script>
   <script src="js/include.js"></script>
   <script src="js/script.js"></script>
-  <script>
-    window.addEventListener('load', () => {
-      setTimeout(() => document.getElementById('hero').classList.add('visible'), 100);
-    });
 
-    const observer = new IntersectionObserver((entries) => {
-      entries.forEach(e => {
-        if (e.isIntersecting) { e.target.classList.add('visible'); observer.unobserve(e.target); }
-      });
-    }, { threshold: 0.12 });
-    document.querySelectorAll('.proj-item').forEach(el => observer.observe(el));
-
-    function toggleArchive() {
-      document.getElementById('archive-toggle').classList.toggle('open');
-      document.getElementById('archive-list').classList.toggle('open');
-    }
-
-  </script>
-
-  <!-- Cursor -->
   <div id="cursor-dot"></div>
   <div id="cursor-box"></div>
   <div id="cursor-fill"></div>

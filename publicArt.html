@@ -19,7 +19,8 @@
   <div data-include="partials/navbar.html"></div>
 
   <!-- Project Detail Section -->
-  <section class="container py-5 mt-5">
+  <main class="legacy-page">
+  <section class="legacy-card">
     <h1 class="mb-3">Public Art</h1>
     <p class="text-muted">Academic • Nov - Dec 2022</p>
     <p class="text-muted">Team: Sooa Mo, Gabriela F.</p>
@@ -57,8 +58,7 @@
     <div class="text-center">
       <img src="img/publicArt/pa-one.jpg"
       alt="Example"
-      class="project-img img-fluid rounded shadow-sm mt-3"
-      style="max-width: 600px;">
+      class="project-img img-fluid rounded shadow-sm mt-3">
       <small class="text-muted d-block mt-2">Fig.1: Initial wireframe sketch showing page layout </small>
       </div>
   
@@ -69,8 +69,7 @@
       <div class="text-center">
       <img src="img/publicArt/pa-two.jpg"
       alt="more illustration image"
-      class="project-img img-fluid rounded shadow-sm mt-3 "
-      style="max-width: 600px; ">
+      class="project-img img-fluid rounded shadow-sm mt-3 ">
       <small class="text-muted d-block mt-2">Fig. 2: ER diagram outlining the database structure </small>
       </div>
   
@@ -81,8 +80,7 @@
       <div class="text-center">
       <img src="img/publicArt/pa-three.jpg"
       alt="more illustration image"
-      class="project-img img-fluid rounded shadow-sm mt-3 "
-      style="max-width: 600px; ">
+      class="project-img img-fluid rounded shadow-sm mt-3 ">
       <small class="text-muted d-block mt-2">Fig. 3: Search page with filter options for type and neighbourhood</small>
       </div>
   
@@ -93,8 +91,7 @@
       <div class="text-center">
       <img src="img/publicArt/pa-four.jpg"
       alt="more illustration image"
-      class="project-img img-fluid rounded shadow-sm mt-3 "
-      style="max-width: 600px; ">
+      class="project-img img-fluid rounded shadow-sm mt-3 ">
       <small class="text-muted d-block mt-2">Fig. 4: Profile page allowing user info editing</small>
       </div>
 
@@ -142,15 +139,16 @@
         </div>
 
     <!-- Links -->
-    <div class="mt-4">
-      <a href="index.html#projects" class="btn btn-outline-secondary">← Back to Projects</a>
-    </div>
+    
   </section>
+  <div class="proj-back">
+      <a class="proj-prev" href="caringConnections.html"><small>Prev · More 03</small><span>← Caring Connections</span></a>
+      <a class="proj-next" href="tatreez.html"><small>Next · More 01</small><span>Tatreez →</span></a>
+    </div>
+  </main>
 
   <!-- Back to Top Button -->
-<button id="backToTopBtn" class="btn btn-outline-custom rounded-circle" title="Go to top">
-  <i class="fas fa-arrow-up"></i>
-</button>
+<button id="backToTopBtn" title="Go to top" aria-label="Go to top">↑</button>
 
 
   <!-- Footer + Top Button -->

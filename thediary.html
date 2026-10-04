@@ -19,7 +19,8 @@
   <div data-include="partials/navbar.html"></div>
 
   <!-- Project Detail Section -->
-  <section class="container py-5 mt-5">
+  <main class="legacy-page">
+  <section class="legacy-card">
     <h1 class="mb-3">The Diary</h1>
     <p class="text-muted">Academic • Mar-Apr 2025</p>
     <p class="text-muted">Team: Sooa Mo, Yumi K., Joanne N.</p>
@@ -45,8 +46,7 @@
     <div class="text-center">
     <img src="img/TheDiary/thediary-one.jpg"
      alt="TheDiary-showcaseImg"
-     class="project-img img-fluid rounded shadow-sm mt-3"
-     style="max-width: 600px;">
+     class="project-img img-fluid rounded shadow-sm mt-3">
      <small class="text-muted d-block mt-2">Fig.1: Showcase presentation of The Diary during the final exhibition.</small>
     </div>
 
@@ -62,8 +62,7 @@
     <div class="text-center">
       <img src="img/TheDiary/thediary-two.jpg"
        alt="TheDiary-research"
-       class="project-img img-fluid rounded shadow-sm mt-3"
-       style="max-width: 600px;">
+       class="project-img img-fluid rounded shadow-sm mt-3">
        <small class="text-muted d-block mt-2">Fig.2: Early-stage research that informed the project direction. Additional sources can be found in the full design workbook.</small>
       </div>
 
@@ -74,8 +73,7 @@
       <div class="text-center">
         <img src="img/TheDiary/thediary-three.jpg"
          alt="TheDiary-precedents"
-         class="project-img img-fluid rounded shadow-sm mt-3"
-         style="max-width: 600px;">
+         class="project-img img-fluid rounded shadow-sm mt-3">
          <small class="text-muted d-block mt-2">Fig.3: A selection of speculative precedents explored during concept development.</small>
         </div>
 
@@ -89,8 +87,7 @@
     <div class="text-center">
       <img src="img/TheDiary/thediary-four.jpg"
        alt="TheDiary-strategy"
-       class="project-img img-fluid rounded shadow-sm mt-3"
-       style="max-width: 600px;">
+       class="project-img img-fluid rounded shadow-sm mt-3">
        <small class="text-muted d-block mt-2">Fig.4: Brainstorming sessions mapping how speculative strategies and methods shaped the direction of the project.</small>
       </div>
 
@@ -103,8 +100,7 @@
     <div class="text-center">
       <img src="img/TheDiary/thediary-five.jpg"
        alt="TheDiary-analysis"
-       class="project-img img-fluid rounded shadow-sm mt-3"
-       style="max-width: 600px;">
+       class="project-img img-fluid rounded shadow-sm mt-3">
        <small class="text-muted d-block mt-2">Fig.5: Analysis of critical feedback that guided our project refinement.</small>
       </div>
 
@@ -117,8 +113,7 @@
     <div class="text-center">
       <img src="img/TheDiary/thediary-six.jpg"
        alt="TheDiary-diary"
-       class="project-img img-fluid rounded shadow-sm mt-3"
-       style="max-width: 600px;">
+       class="project-img img-fluid rounded shadow-sm mt-3">
        <small class="text-muted d-block mt-2">Fig.6: Initial drafts of the diary content written to build emotional tone and metaphor.</small>
       </div>
 
@@ -129,8 +124,7 @@
       <div class="text-center">
         <img src="img/TheDiary/thediary-seven.jpg"
          alt="TheDiary-persona"
-         class="project-img img-fluid rounded shadow-sm mt-3"
-         style="max-width: 600px;">
+         class="project-img img-fluid rounded shadow-sm mt-3">
          <small class="text-muted d-block mt-2">Fig.7: Development of persona concepts and worldbuilding through collaborative discussion and iteration.</small>
         </div>
 
@@ -147,7 +141,6 @@
     <div class="ratio ratio-16x9">
       <iframe
       class="no-cursor"
-        style="border: none;"
         src="https://www.figma.com/embed?embed_host=share&url=https://www.figma.com/proto/tIJQjIdFpvtvvmbUFx15vU/Sooa-Portfolio?page-id=231%3A3&node-id=231-24&viewport=572%2C625%2C0.03&scaling=min-zoom&content-scaling=fixed"
         allowfullscreen>
       </iframe>
@@ -173,15 +166,16 @@
         </div>
         
     <!-- Links -->
-    <div class="mt-4">
-      <a href="index.html#projects" class="btn btn-outline-secondary">← Back to Projects</a>
-    </div>
+    
   </section>
+  <div class="proj-back">
+      <a class="proj-prev" href="tatreez.html"><small>Prev · More 01</small><span>← Tatreez</span></a>
+      <a class="proj-next" href="caringConnections.html"><small>Next · More 03</small><span>Caring Connections →</span></a>
+    </div>
+  </main>
 
   <!-- Back to Top Button -->
-<button id="backToTopBtn" class="btn btn-outline-custom rounded-circle" title="Go to top">
-  <i class="fas fa-arrow-up"></i>
-</button>
+<button id="backToTopBtn" title="Go to top" aria-label="Go to top">↑</button>
 
 
   <!-- Footer + Top Button-->

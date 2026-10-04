@@ -19,7 +19,8 @@
   <div data-include="partials/navbar.html"></div>
 
   <!-- Project Detail Section -->
-  <section class="container py-5 mt-5">
+  <main class="legacy-page">
+  <section class="legacy-card">
     <h1 class="mb-3">Caring Connections</h1>
     <p class="text-muted">Academic • Nov-Dec 2024</p>
     <p class="text-muted">Team: Sooa Mo, Hao N., Kellystin N., Vincent S., Winnie S. </p>
@@ -64,8 +65,7 @@
     <div class="text-center">
     <img src="img/caringconnections/cc-one.jpg"
     alt="Board Game's Components"
-    class="project-img img-fluid rounded shadow-sm mt-3 "
-    style="max-width: 600px; ">
+    class="project-img img-fluid rounded shadow-sm mt-3 ">
     <small class="text-muted d-block mt-2">Fig. 1: Final game components including cards, boards, and tokens. </small>
   </div>
 
@@ -77,8 +77,7 @@
   <div class="text-center">
   <img src="img/caringconnections/cc-two.jpg"
   alt="Rulebook (Short Ver.)"
-  class="project-img img-fluid rounded shadow-sm mt-3 "
-  style="max-width: 600px; ">
+  class="project-img img-fluid rounded shadow-sm mt-3 ">
   <small class="text-muted d-block mt-2">Fig. 2: A shortened version of the rulebook designed to explain gameplay with visual aids. </small>
 </div>  
 
@@ -90,8 +89,7 @@
     <div class="text-center">
     <img src="img/caringconnections/cc-three.jpg"
     alt="Screenshot"
-    class="project-img img-fluid rounded shadow-sm mt-3 "
-    style="max-width: 600px; ">
+    class="project-img img-fluid rounded shadow-sm mt-3 ">
     <small class="text-muted d-block mt-2">Fig. 3: Screenshots from gameplay and collaborative playtest documentation. </small>
   </div>
 
@@ -131,15 +129,16 @@
 </div>
 
     <!-- Links -->
-    <div class="mt-5">
-      <a href="index.html#projects" class="btn btn-outline-secondary">← Back to Projects</a>
-    </div>
+    
   </section>
+  <div class="proj-back">
+      <a class="proj-prev" href="thediary.html"><small>Prev · More 02</small><span>← The Diary</span></a>
+      <a class="proj-next" href="publicArt.html"><small>Next · More 04</small><span>Public Art →</span></a>
+    </div>
+  </main>
 
   <!-- Back to Top Button -->
-<button id="backToTopBtn" class="btn btn-outline-custom rounded-circle" title="Go to top">
-  <i class="fas fa-arrow-up"></i>
-</button>
+<button id="backToTopBtn" title="Go to top" aria-label="Go to top">↑</button>
 
 
   <!-- Footer + Top Button  -->

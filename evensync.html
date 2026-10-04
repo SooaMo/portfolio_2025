@@ -6,7 +6,6 @@
   <title>Even$ync | Sooa Mo</title>
   <link rel="icon" href="img/logo.png" type="image/png">
   <link href="https://cdn.jsdelivr.net/npm/bootstrap@5.3.2/dist/css/bootstrap.min.css" rel="stylesheet" />
-  <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.5.0/css/all.min.css">
   <link rel="stylesheet" href="style.css" />
 </head>
 <body>
@@ -71,8 +70,8 @@
           <img src="img/evensync/evensync-onboarding.jpg" alt="Even$ync onboarding flow" class="tl-img project-img">
           <div class="tl-caption">Fig.1: First launch through notification permissions.</div>
 
-          <p style="margin-top: 1.5rem;">From there it opens into Home, open Tabs at a glance, and Friends, where people are added once instead of per Tab.</p>
-          <img src="img/evensync/evensync-home.jpg" alt="Home and Friends screens" class="tl-img project-img" style="margin-top: 0.75rem;">
+          <p>From there it opens into Home, open Tabs at a glance, and Friends, where people are added once instead of per Tab.</p>
+          <img src="img/evensync/evensync-home.jpg" alt="Home and Friends screens" class="tl-img project-img">
           <div class="tl-caption">Fig.2: Home and Friends.</div>
         </div>
       </div>
@@ -83,7 +82,7 @@
         <div class="tl-title">Product Direction</div>
         <div class="tl-full">
           <p>What Even$ync needed to do came out of conversations with Jasmine; how it works on screen was mine to design. Before drawing any screens, I set a few rules that shaped everything after:</p>
-          <div class="tl-note" style="margin-top: 0.75rem;">
+          <div class="tl-note">
             <strong>One Tab structure</strong>: the same object handles a weekend trip or a year of shared bills.<br><br>
             <strong>Item-level splitting</strong>: each item on a bill can use its own split method.<br><br>
             <strong>Guest participants</strong>: people can be added to a Tab without creating an account.<br><br>
@@ -98,12 +97,12 @@
         <div class="tl-title">Item-level Splitting</div>
         <div class="tl-full">
           <p>Different items on the same bill often need different ways to split them. Even$ync supports three methods per item:</p>
-          <div class="tl-note" style="margin-top: 0.75rem;">
+          <div class="tl-note">
             <strong>Equal</strong>: divides the amount evenly across participants.<br><br>
             <strong>Percent</strong>: splits by percentage, with a running total until it reaches 100%.<br><br>
             <strong>Exact</strong>: requires the full amount to be assigned before saving.
           </div>
-          <img src="img/evensync/evensync-splits.jpg" alt="Equal, Percent, and Exact split modes" class="tl-img project-img" style="margin-top: 1.5rem;">
+          <img src="img/evensync/evensync-splits.jpg" alt="Equal, Percent, and Exact split modes" class="tl-img project-img">
           <div class="tl-caption">Fig.3: The same "Add item" sheet across all three split methods, including the validation error state.</div>
         </div>
       </div>
@@ -117,8 +116,8 @@
           <img src="img/evensync/evensync-settlement.jpg" alt="Settlement checklist and mark-as-paid flow" class="tl-img project-img">
           <div class="tl-caption">Fig.4: Per-expense payment rows, and the batch "Mark as paid" sheet.</div>
 
-          <p style="margin-top: 1.5rem;">Once every payment is recorded, the app offers to close the Tab. A closed Tab still shows up in History and can be reopened.</p>
-          <img src="img/evensync/evensync-closeout.jpg" alt="Close Tab confirmation and closed Tab summary" class="tl-img project-img" style="margin-top: 0.75rem;">
+          <p>Once every payment is recorded, the app offers to close the Tab. A closed Tab still shows up in History and can be reopened.</p>
+          <img src="img/evensync/evensync-closeout.jpg" alt="Close Tab confirmation and closed Tab summary" class="tl-img project-img">
           <div class="tl-caption">Fig.5: Closing a fully settled Tab.</div>
         </div>
       </div>
@@ -151,13 +150,13 @@
         <div class="tl-title">Design System</div>
         <div class="tl-full">
           <p>I built a design system to keep close to 70 screens consistent:</p>
-          <div class="tl-note" style="margin-top: 0.75rem;">
+          <div class="tl-note">
             Manrope for UI text, Inter for arithmetic operators (÷ − + = ×) &nbsp;·&nbsp; Lucide icons for the 9 expense categories &nbsp;·&nbsp; consistent avatar colors for participants &nbsp;·&nbsp; one style guide for colors, type, spacing, and components.
           </div>
-          <img src="img/evensync/evensync-styleguide.jpg" alt="Even$ync style guide" class="tl-img project-img" style="margin-top: 1.5rem;">
+          <img src="img/evensync/evensync-styleguide.jpg" alt="Even$ync style guide" class="tl-img project-img">
           <div class="tl-caption">Fig.8: Color, type scale, components, shape and spacing rules.</div>
 
-          <p style="margin-top: 1.5rem;">I also put together reference sheets for error and empty states, and every component in its build states, for the developers to check against. Screens also carry (TBD) notes in a different color, flagging things for engineering to watch for or decide on their own. They're annotations for the file, not part of the actual app.</p>
+          <p>I also put together reference sheets for error and empty states, and every component in its build states, for the developers to check against. Screens also carry (TBD) notes in a different color, flagging things for engineering to watch for or decide on their own. They're annotations for the file, not part of the actual app.</p>
           <img src="img/evensync/evensync-components.jpg" alt="Edge case and component reference sheets" class="tl-img project-img">
           <div class="tl-caption">Fig.9: Edge case and component reference sheets.</div>
         </div>
@@ -183,7 +182,8 @@
 
     <!-- Back -->
     <div class="proj-back">
-      <a href="index.html#projects">← Back to Projects</a>
+      <a class="proj-prev" href="sfu-gs.html"><small>Prev · 01</small><span>← SFU Graduate Studies</span></a>
+      <a class="proj-next" href="jadeco.html"><small>Next · 03</small><span>Jadeco →</span></a>
     </div>
 
   </div>
@@ -199,9 +199,7 @@
     </div>
   </div>
 
-  <button id="backToTopBtn" class="btn btn-outline-custom rounded-circle" title="Go to top">
-    <i class="fas fa-arrow-up"></i>
-  </button>
+  <button id="backToTopBtn" title="Go to top" aria-label="Go to top">↑</button>
 
   <div data-include="partials/footer.html"></div>
 

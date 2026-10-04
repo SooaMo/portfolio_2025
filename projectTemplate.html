@@ -19,7 +19,8 @@
   <div data-include="partials/navbar.html"></div>
 
   <!-- Project Detail Section -->
-  <section class="container py-5 mt-5">
+  <main class="legacy-page">
+  <section class="legacy-card">
     <h1 class="mb-3">[Project Title]</h1>
     <p class="text-muted">[Academic / Work] • [Year or Duration]</p>
     <p class="text-muted">Team: Sooa Mo, teammate, teammate,</p>
@@ -57,8 +58,7 @@
     <div class="text-center">
     <img src="img/projects/example.jpg"
     alt="Example"
-    class="project-img img-fluid rounded shadow-sm mt-3"
-    style="max-width: 600px;">
+    class="project-img img-fluid rounded shadow-sm mt-3">
     <small class="text-muted d-block mt-2">Fig.1: - </small>
     </div>
 
@@ -99,15 +99,15 @@
 </div>
 
     <!-- Links -->
-    <div class="mt-4">
-      <a href="index.html#projects" class="btn btn-outline-secondary">← Back to Projects</a>
-    </div>
+    
   </section>
+  <div class="proj-back">
+      <a href="index.html#projects"><small>Back</small>← All Projects</a>
+    </div>
+  </main>
 
   <!-- Back to Top Button -->
-<button id="backToTopBtn" class="btn btn-outline-custom rounded-circle" title="Go to top">
-  <i class="fas fa-arrow-up"></i>
-</button>
+<button id="backToTopBtn" title="Go to top" aria-label="Go to top">↑</button>
 
 
   <!-- Footer + Top Button -->

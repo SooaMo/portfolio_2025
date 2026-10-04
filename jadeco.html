@@ -6,7 +6,6 @@
   <title>Jadeco | Sooa Mo</title>
   <link rel="icon" href="img/logo.png" type="image/png">
   <link href="https://cdn.jsdelivr.net/npm/bootstrap@5.3.2/dist/css/bootstrap.min.css" rel="stylesheet" />
-  <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.5.0/css/all.min.css">
   <link rel="stylesheet" href="style.css" />
 </head>
 <body>
@@ -61,7 +60,7 @@
     </p>
 
     <!-- Brand image -->
-    <div style="margin-top: 1.75rem;">
+    <div class="tl-block">
       <img src="img/jadeco/jadeco-brand.jpg" alt="Jadeco brand and products" class="tl-img">
       <div class="tl-caption">Jadeco's product line — nature-inspired home objects crafted from jade and natural materials</div>
     </div>
@@ -85,7 +84,7 @@
         <div class="tl-2col">
           <div>
             <p>To understand the local market, I visited home decor shops across Metro Vancouver and documented product presentation, pricing strategies, and promotional techniques — focusing on items comparable to Jadeco's candle holders and book stands.</p>
-            <p style="margin-top: 0.75rem;">Key observations included how traditional aesthetics, cultural familiarity, and eco-conscious values influenced purchase decisions — insights that directly shaped our positioning recommendations for Jadeco.</p>
+            <p>Key observations included how traditional aesthetics, cultural familiarity, and eco-conscious values influenced purchase decisions — insights that directly shaped our positioning recommendations for Jadeco.</p>
           </div>
           <div>
             <img src="img/jadeco/jadeco-one.jpg" alt="Field research notes and photos" class="tl-img project-img">
@@ -110,7 +109,7 @@
               <div class="tl-caption">Fig.3: QR-linked thank-you card — inviting customers into Jadeco's community post-purchase</div>
             </div>
           </div>
-          <div class="tl-img-row2" style="margin-top: 0.625rem;">
+          <div class="tl-img-row2">
             <div>
               <img src="img/jadeco/jadeco-four.jpg" alt="Packaging storyboard" class="tl-img project-img">
               <div class="tl-caption">Fig.4: Packaging emphasis — positioning Jadeco products as meaningful, gift-worthy objects</div>
@@ -144,7 +143,7 @@
         <div class="tl-2col">
           <div>
             <p>I collaborated with the team to build a clear visual and narrative structure for Jadeco's brand film. All hand-drawn illustrations seen in the guideline are my own work — I built the visual structure scene by scene, then edited the final video using those drawings as the framework.</p>
-            <p style="margin-top: 0.75rem;">The film aimed to communicate Jadeco's core identity: nature-inspired craft, everyday beauty, and the quiet story behind each object.</p>
+            <p>The film aimed to communicate Jadeco's core identity: nature-inspired craft, everyday beauty, and the quiet story behind each object.</p>
           </div>
           <div>
             <img src="img/jadeco/jadeco-SIx.jpg" alt="Brand film guideline" class="tl-img project-img">
@@ -157,13 +156,12 @@
     <!-- end timeline -->
 
     <!-- Final Deliverables -->
-    <div class="proj-takeaway">
+    <div class="proj-media">
       <div class="proj-takeaway-label">Final Deliverables</div>
-      <p style="font-size: 0.9375rem; color: #555; margin-bottom: 1.25rem;">The final brand video and full report are available below.</p>
-      <div class="ratio ratio-16x9" style="margin-bottom: 1.25rem;">
+      <p class="proj-media-desc">The final brand video and full report are available below.</p>
+      <div class="ratio ratio-16x9">
         <iframe
           class="no-cursor"
-          style="border: 0.5px solid #e8e8e8; border-radius: 0.5rem;"
           src="https://www.youtube.com/embed/eU6nRjqYO-A"
           title="Jadeco Brand Video"
           allowfullscreen>
@@ -180,7 +178,8 @@
 
     <!-- Back -->
     <div class="proj-back">
-      <a href="index.html#projects">← Back to Projects</a>
+      <a class="proj-prev" href="evensync.html"><small>Prev · 02</small><span>← Even$ync</span></a>
+      <a class="proj-next" href="MomoTodo.html"><small>Next · 04</small><span>Momo Todo →</span></a>
     </div>
 
   </div>
@@ -196,9 +195,7 @@
     </div>
   </div>
 
-  <button id="backToTopBtn" class="btn btn-outline-custom rounded-circle" title="Go to top">
-    <i class="fas fa-arrow-up"></i>
-  </button>
+  <button id="backToTopBtn" title="Go to top" aria-label="Go to top">↑</button>
 
   <div data-include="partials/footer.html"></div>
 

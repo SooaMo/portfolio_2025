@@ -6,7 +6,6 @@
   <title>Momo Todo | Sooa Mo</title>
   <link rel="icon" href="img/logo.png" type="image/png">
   <link href="https://cdn.jsdelivr.net/npm/bootstrap@5.3.2/dist/css/bootstrap.min.css" rel="stylesheet" />
-  <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.5.0/css/all.min.css">
   <link rel="stylesheet" href="style.css" />
 </head>
 <body>
@@ -70,7 +69,7 @@
         <div class="tl-2col">
           <div>
             <p>Most todo apps feel functional but impersonal — they're designed to be efficient, not to feel like yours. I wanted something that handled the complexity of different task types (daily habits, deadlines, one-off tasks) while also feeling like a space I actually wanted to open every day.</p>
-            <p style="margin-top: 0.75rem;">As a designer who wanted to move closer to implementation, I used Claude AI as a development partner throughout — describing what I wanted to build, iterating on the code, and learning as I went. The result is a fully working desktop app that I use daily and that others have now tested and given feedback on.</p>
+            <p>As a designer who wanted to move closer to implementation, I used Claude AI as a development partner throughout — describing what I wanted to build, iterating on the code, and learning as I went. The result is a fully working desktop app that I use daily and that others have now tested and given feedback on.</p>
             <a href="https://github.com/SooaMo/momo-todo" target="_blank" class="tl-btn">View on GitHub ↗</a>
           </div>
           <div>
@@ -105,11 +104,11 @@
         <div class="tl-title">Key Features</div>
 
         <!-- 4 Todo types -->
-        <div class="tl-2col" style="margin-bottom: 1.5rem;">
+        <div class="tl-2col">
           <div>
             <p><strong>4 Task Types</strong></p>
-            <p style="margin-top: 0.5rem;">Rather than a flat checklist, I designed four distinct task types to match how people actually manage their time. Each type has its own recurrence logic and completion tracking — stored per-date so history is never lost.</p>
-            <div class="tl-note" style="margin-top: 0.75rem;">
+            <p>Rather than a flat checklist, I designed four distinct task types to match how people actually manage their time. Each type has its own recurrence logic and completion tracking — stored per-date so history is never lost.</p>
+            <div class="tl-note">
               <strong>Daily</strong> — repeats every day<br>
               <strong>Weekly</strong> — repeats on selected days of the week<br>
               <strong>Date</strong> — active between a start and end date<br>
@@ -137,7 +136,7 @@
         </div>
 
         <!-- Additional features -->
-        <div style="margin-top: 1.25rem;">
+        <div class="tl-block">
           <img src="img/momotodo/momotodo-features.jpg" alt="Stickers, banner, memo features" class="tl-img project-img">
           <div class="tl-caption">Fig.7: Custom banner upload, sticker layer (draggable, resizable, per-page state), and memo with auto-linked URLs</div>
         </div>
@@ -170,8 +169,8 @@
         <div class="tl-title">User Testing & Iteration</div>
         <div class="tl-full">
           <p>After the initial release, I shared the app with 10+ users and collected feedback through real usage — not a formal test, but actual day-to-day use by people with different habits and workflows. Bugs surfaced, edge cases appeared, and missing features became obvious quickly.</p>
-          <p style="margin-top: 0.75rem;">Each version addressed a specific round of feedback. The app is currently at v1.0.6.</p>
-          <div class="tl-note" style="margin-top: 0.75rem;">
+          <p>Each version addressed a specific round of feedback. The app is currently at v1.0.6.</p>
+          <div class="tl-note">
             <strong>v1.0.0 — Initial Release</strong><br>
             Daily, weekly, date, one-time task types · Priority levels · Custom labels · Drag &amp; drop reordering · Calendar (month &amp; week) · Archive &amp; restore · Sticker system · Banner customization · 4 themes · Always on top<br><br>
             <strong>v1.0.1 – v1.0.2</strong><br>
@@ -185,7 +184,7 @@
             <strong>v1.0.6</strong><br>
             Banner customization expanded — height, zoom, drag to reposition, new fonts (Playfair, Caveat, Dancing Script, Noto Serif), text size slider, vertical position · Date type "Repeat daily" option added · Daily/weekly edit with Google Calendar-style options (edit all / edit this and following) · Sticker drag improved — pixel-perfect movement, arrow key fine-tuning · One-time todos without due date now default to today
           </div>
-          <div class="tl-img-row2" style="margin-top: 1.25rem;">
+          <div class="tl-img-row2">
             <div>
               <img src="img/momotodo/momotodo-versions1.jpg" alt="Version history v1.0.0–v1.0.3" class="tl-img project-img">
               <div class="tl-caption">Fig.8: v1.0.0 → v1.0.3 — key visual and functional changes across early releases</div>
@@ -222,13 +221,14 @@
     <div class="proj-takeaway">
       <div class="proj-takeaway-label">Takeaway</div>
       <p>Momo Todo changed how I think about the boundary between design and development. Using Claude AI as a coding collaborator, I was able to build something technically complex — drag-and-drop, native notifications, runtime theming, desktop packaging — without a formal engineering background. What mattered most wasn't knowing every API, but knowing what I wanted to build and being able to communicate it precisely. That clarity came from design thinking.</p>
-      <p style="margin-top: 0.75rem;">Real-user testing surfaced bugs I never would have caught on my own — edge cases, timing issues, crashes in situations I hadn't imagined. Watching that happen taught me that no matter how well you understand the design, the code has its own logic. To fix things confidently, I had to understand not just what each feature does, but how it flows and how changes in one place ripple through others. Building the ErrorBoundary — a dedicated crash screen with a report button — came directly from that realization: if something goes wrong, users need a way out, not a frozen white screen.</p>
-      <p style="margin-top: 0.75rem;">Every version made the app a little better. Seeing that progression — and knowing real people are using something I made — has been the most satisfying part of this project.</p>
+      <p>Real-user testing surfaced bugs I never would have caught on my own — edge cases, timing issues, crashes in situations I hadn't imagined. Watching that happen taught me that no matter how well you understand the design, the code has its own logic. To fix things confidently, I had to understand not just what each feature does, but how it flows and how changes in one place ripple through others. Building the ErrorBoundary — a dedicated crash screen with a report button — came directly from that realization: if something goes wrong, users need a way out, not a frozen white screen.</p>
+      <p>Every version made the app a little better. Seeing that progression — and knowing real people are using something I made — has been the most satisfying part of this project.</p>
     </div>
 
     <!-- Back -->
     <div class="proj-back">
-      <a href="index.html#projects">← Back to Projects</a>
+      <a class="proj-prev" href="jadeco.html"><small>Prev · 03</small><span>← Jadeco</span></a>
+      <a class="proj-next" href="flui-banana.html"><small>Next · 05</small><span>FLUI Design Hackathon →</span></a>
     </div>
 
   </div>
@@ -244,9 +244,7 @@
     </div>
   </div>
 
-  <button id="backToTopBtn" class="btn btn-outline-custom rounded-circle" title="Go to top">
-    <i class="fas fa-arrow-up"></i>
-  </button>
+  <button id="backToTopBtn" title="Go to top" aria-label="Go to top">↑</button>
 
   <div data-include="partials/footer.html"></div>
 

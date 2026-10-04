@@ -6,7 +6,6 @@
   <title>FLUI Design Hackathon — Banana Art Lab | Sooa Mo</title>
   <link rel="icon" href="img/logo.png" type="image/png">
   <link href="https://cdn.jsdelivr.net/npm/bootstrap@5.3.2/dist/css/bootstrap.min.css" rel="stylesheet" />
-  <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.5.0/css/all.min.css">
   <link rel="stylesheet" href="style.css" />
 </head>
 <body>
@@ -91,8 +90,8 @@
         <div class="tl-2col">
           <div>
             <p>Within the team, I owned two main areas: the booking system user flow and visual illustration work.</p>
-            <p style="margin-top: 0.75rem;">For the booking system, I mapped out how five distinct services — tufting, decoden, workshops, groups & parties, and space rental — could each have a consistent, step-by-step booking structure without feeling repetitive. The goal was to make each flow feel familiar while clearly reflecting the differences between services.</p>
-            <p style="margin-top: 0.75rem;">For illustration, I created custom visuals including a canvas size comparison graphic that the original site completely lacked, giving users a clearer sense of what each service involved before booking.</p>
+            <p>For the booking system, I mapped out how five distinct services — tufting, decoden, workshops, groups & parties, and space rental — could each have a consistent, step-by-step booking structure without feeling repetitive. The goal was to make each flow feel familiar while clearly reflecting the differences between services.</p>
+            <p>For illustration, I created custom visuals including a canvas size comparison graphic that the original site completely lacked, giving users a clearer sense of what each service involved before booking.</p>
           </div>
           <div>
             <img src="img/flui/flui-one.jpg" alt="Booking system user flow" class="tl-img project-img">
@@ -110,7 +109,7 @@
           <img src="img/flui/flui-branding.jpg" alt="Style guide — color, typography, logo" class="tl-img project-img">
           <div class="tl-caption">Fig.2: Style guide — primary logo, color palette (#FFBFCB, #CAE7AA, #FDEEA2, #C3B2D4), and typography (Lexend + Arco)</div>
         </div>
-        <div style="margin-top: 1.25rem;">
+        <div class="tl-block">
           <img src="img/flui/flui-three.jpg" alt="Custom illustrations" class="tl-img project-img">
           <div class="tl-caption">Fig.3: Custom illustrations by Sooa Mo — used throughout the prototype</div>
         </div>
@@ -132,7 +131,7 @@
               <div class="tl-caption">Fig.5: Booking flow — step-by-step structure across all 5 services</div>
             </div>
           </div>
-          <div style="margin-top: 0.625rem;">
+          <div class="tl-block">
             <img src="img/flui/flui-screen-service.jpg" alt="Service detail, gift card, and FAQ pages" class="tl-img project-img">
             <div class="tl-caption">Fig.6: Service detail page, gift card feature, and FAQ page</div>
           </div>
@@ -146,7 +145,7 @@
         <div class="tl-2col">
           <div>
             <p>We had one client meeting, a short brief, and 72 hours. Here's how we divided it:</p>
-            <div class="tl-note" style="margin-top: 0.75rem;">
+            <div class="tl-note">
               <strong>Day 1 — Research & Define</strong><br>
               Audited the existing site, identified pain points, held a team alignment session, and mapped out the scope of the redesign.<br><br>
               <strong>Day 2 — Design & Build</strong><br>
@@ -166,12 +165,11 @@
     <!-- end timeline -->
 
     <!-- Figma Prototype -->
-    <div class="proj-takeaway" style="border-top: 0.5px solid #f0f0f0;">
+    <div class="proj-media">
       <div class="proj-takeaway-label">Figma Prototype</div>
-      <p style="margin-bottom: 1.25rem; font-size: 0.9375rem; color: #555;">Interact with the full prototype below — explore the home page, service selection, and booking flows.</p>
+      <p class="proj-media-desc">Interact with the full prototype below — explore the home page, service selection, and booking flows.</p>
       <div class="ratio ratio-16x9">
         <iframe class="no-cursor"
-          style="border: 0.5px solid #e8e8e8; border-radius: 0.5rem;"
           allowfullscreen
           src="https://www.figma.com/embed?embed_host=share&url=https%3A%2F%2Fwww.figma.com%2Fproto%2FtIJQjIdFpvtvvmbUFx15vU%2FSooa-Portfolio%3Fpage-id%3D260%253A521%26node-id%3D260-4430%26viewport%3D547%252C564%252C0.04%26t%3Dik4mH5R8rn1lQoI6-1%26scaling%3Dmin-zoom%26content-scaling%3Dfixed%26starting-point-node-id%3D260%253A4430">
         </iframe>
@@ -186,7 +184,8 @@
 
     <!-- Back -->
     <div class="proj-back">
-      <a href="index.html#projects">← Back to Projects</a>
+      <a class="proj-prev" href="MomoTodo.html"><small>Prev · 04</small><span>← Momo Todo</span></a>
+      <a class="proj-next" href="crackthelemon.html"><small>Next · 06</small><span>CrackTheLemon →</span></a>
     </div>
 
   </div>
@@ -202,9 +201,7 @@
     </div>
   </div>
 
-  <button id="backToTopBtn" class="btn btn-outline-custom rounded-circle" title="Go to top">
-    <i class="fas fa-arrow-up"></i>
-  </button>
+  <button id="backToTopBtn" title="Go to top" aria-label="Go to top">↑</button>
 
   <div data-include="partials/footer.html"></div>
 
