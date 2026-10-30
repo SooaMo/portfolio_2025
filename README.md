@@ -1,6 +1,6 @@
 # sooamo.github.io
 
-My portfolio site. I'm Sooa Mo, a UX/UI and graphic designer based in Vancouver.
+My portfolio site. I'm Sooa Mo, a UX/UI and graphic designer based in Metro Vancouver, BC.
 
 **Live:** https://sooamo.github.io
 

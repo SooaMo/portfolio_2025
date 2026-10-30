@@ -56,7 +56,7 @@
 
     <!-- Overview -->
     <p class="proj-overview">
-      Momo Todo is a Windows desktop app built with Electron and React — designed to handle daily routines, recurring tasks, and deadlines all in one place. What started as a personal need grew into a fully featured app that has been tested by over 10 real users, iterated through multiple versions, and is still actively maintained. The entire development process was driven by Claude AI as a coding collaborator, making this project an exploration of what a designer with no formal engineering background can build when AI becomes part of the workflow.
+      Momo Todo is a Windows desktop app built with Electron and React, designed to handle daily routines, recurring tasks, and deadlines all in one place. What started as a personal need grew into a fully featured app that has been tested by over 10 real users, iterated through multiple versions, and is still actively maintained. The entire development process was driven by Claude AI as a coding collaborator, making this project an exploration of what a designer with no formal engineering background can build when AI becomes part of the workflow.
     </p>
 
     <!-- Timeline -->
@@ -68,13 +68,13 @@
         <div class="tl-title">Why I Built This</div>
         <div class="tl-2col">
           <div>
-            <p>Most todo apps feel functional but impersonal — they're designed to be efficient, not to feel like yours. I wanted something that handled the complexity of different task types (daily habits, deadlines, one-off tasks) while also feeling like a space I actually wanted to open every day.</p>
-            <p>As a designer who wanted to move closer to implementation, I used Claude AI as a development partner throughout — describing what I wanted to build, iterating on the code, and learning as I went. The result is a fully working desktop app that I use daily and that others have now tested and given feedback on.</p>
+            <p>Most todo apps feel functional but impersonal. They're designed to be efficient, not to feel like yours. I wanted something that handled the complexity of different task types (daily habits, deadlines, one-off tasks) while also feeling like a space I actually wanted to open every day.</p>
+            <p>As a designer who wanted to move closer to implementation, I used Claude AI as a development partner throughout: describing what I wanted to build, iterating on the code, and learning as I went. The result is a fully working desktop app that I use daily and that others have now tested and given feedback on.</p>
             <a href="https://github.com/SooaMo/momo-todo" target="_blank" class="tl-btn">View on GitHub ↗</a>
           </div>
           <div>
             <img src="img/momotodo/momotodo-sketch.jpg" alt="Initial layout sketch" class="tl-img project-img">
-            <div class="tl-caption">Fig.1: First sketch (feature list + flow notes) and second sketch (layout wireframe) — before writing any code</div>
+            <div class="tl-caption">Fig.1: First sketch (feature list + flow notes) and second sketch (layout wireframe), made before writing any code</div>
           </div>
         </div>
       </div>
@@ -84,15 +84,15 @@
         <div class="tl-eyebrow">Design · 02</div>
         <div class="tl-title">From Sketch to Interface</div>
         <div class="tl-full-2img">
-          <p>Before writing any code, I sketched the layout by hand to figure out information hierarchy and navigation structure. One of the earliest decisions was the icon — I explored multiple candidates before landing on the final mark, wanting something that felt personal rather than generic.</p>
+          <p>Before writing any code, I sketched the layout by hand to figure out information hierarchy and navigation structure. One of the earliest decisions was the icon. I explored multiple candidates before landing on the final mark, wanting something that felt personal rather than generic.</p>
           <div class="tl-img-row2">
             <div>
               <img src="img/momotodo/momotodo-icon.jpg" alt="Icon selection process" class="tl-img project-img">
-              <div class="tl-caption">Fig.2: Icon candidates — exploring different directions before choosing the final mark</div>
+              <div class="tl-caption">Fig.2: Icon candidates, exploring different directions before choosing the final mark</div>
             </div>
             <div>
               <img src="img/momotodo/momotodo-home.jpg" alt="Home screen" class="tl-img project-img">
-              <div class="tl-caption">Fig.3: Today view, Calendar Month, and Calendar Week — the three main navigation states</div>
+              <div class="tl-caption">Fig.3: Today view, Calendar Month, and Calendar Week, the three main navigation states</div>
             </div>
           </div>
         </div>
@@ -107,17 +107,17 @@
         <div class="tl-2col">
           <div>
             <p><strong>4 Task Types</strong></p>
-            <p>Rather than a flat checklist, I designed four distinct task types to match how people actually manage their time. Each type has its own recurrence logic and completion tracking — stored per-date so history is never lost.</p>
+            <p>Rather than a flat checklist, I designed four distinct task types to match how people actually manage their time. Each type has its own recurrence logic and completion tracking, stored per date so history is never lost.</p>
             <div class="tl-note">
-              <strong>Daily</strong> — repeats every day<br>
-              <strong>Weekly</strong> — repeats on selected days of the week<br>
-              <strong>Date</strong> — active between a start and end date<br>
-              <strong>One-time</strong> — single deadline task
+              <strong>Daily</strong>: repeats every day<br>
+              <strong>Weekly</strong>: repeats on selected days of the week<br>
+              <strong>Date</strong>: active between a start and end date<br>
+              <strong>One-time</strong>: single deadline task
             </div>
           </div>
           <div>
             <img src="img/momotodo/momotodo-types.jpg" alt="4 task types" class="tl-img project-img">
-            <div class="tl-caption">Fig.4: Four task types — each with its own creation flow and display logic</div>
+            <div class="tl-caption">Fig.4: Four task types, each with its own creation flow and display logic</div>
           </div>
         </div>
 
@@ -126,11 +126,11 @@
           <div class="tl-img-row2">
             <div>
               <img src="img/momotodo/momotodo-urgency.jpg" alt="Urgency border visualization" class="tl-img project-img">
-              <div class="tl-caption">Fig.5: Urgency visualization — 6 stages from D-4 (no indicator) through D-3, D-2, D-1, D-day, and Overdue — each with a distinct border color, badge, and background tint</div>
+              <div class="tl-caption">Fig.5: Urgency visualization: 6 stages from D-4 (no indicator) through D-3, D-2, D-1, D-day, and Overdue, each with a distinct border color, badge, and background tint</div>
             </div>
             <div>
               <img src="img/momotodo/momotodo-themes.jpg" alt="6 themes" class="tl-img project-img">
-              <div class="tl-caption">Fig.6: 8 themes including dark mode — switchable instantly via CSS Variables, with click-to-preview before applying</div>
+              <div class="tl-caption">Fig.6: 8 themes including dark mode, switchable instantly via CSS Variables, with click-to-preview before applying</div>
             </div>
           </div>
         </div>
@@ -149,12 +149,12 @@
         <div class="tl-full">
           <p>Several decisions in Momo Todo came from a deliberate design philosophy rather than technical defaults. Each one addresses a specific frustration with how most todo apps work.</p>
           <div class="tl-note">
-            <strong>"What you don't open is still information" — Urgency Visualization</strong><br>
-            The colored top border on each task card communicates deadline urgency at a glance. Six distinct stages — from D-4 (no indicator) through D-3, D-2, D-1, D-day, and Overdue — each with a progressively stronger border color, badge, and background tint. Deadline pressure is visible without opening a single task.<br><br>
+            <strong>"What you don't open is still information": Urgency Visualization</strong><br>
+            The colored top border on each task card communicates deadline urgency at a glance. Six distinct stages, from D-4 (no indicator) through D-3, D-2, D-1, D-day, and Overdue, each with a progressively stronger border color, badge, and background tint. Deadline pressure is visible without opening a single task.<br><br>
             <strong>Archive instead of immediate delete</strong><br>
-            Clicking the × button on a task moves it to the Archive rather than deleting it immediately — accounting for accidental taps. From the archive, users can either restore the task or permanently delete it. Note: deleting daily/weekly tasks from the calendar view removes them directly (with in-app guidance), as the recurrence logic requires different handling.<br><br>
+            Clicking the × button on a task moves it to the Archive rather than deleting it immediately, in case of accidental taps. From the archive, users can either restore the task or permanently delete it. Note: deleting daily/weekly tasks from the calendar view removes them directly (with in-app guidance), as the recurrence logic requires different handling.<br><br>
             <strong>The app as a personal space</strong><br>
-            Most todo apps are purely functional — and that's why people stop using them. Momo Todo adds customizable banner images, freely placeable stickers, and 8 themes so the app feels like a space the user has shaped themselves. When an app reflects your personality, you're more likely to keep coming back to it.<br><br>
+            Most todo apps are purely functional, and that's why people stop using them. Momo Todo adds customizable banner images, freely placeable stickers, and 8 themes so the app feels like a space the user has shaped themselves. When an app reflects your personality, you're more likely to keep coming back to it.<br><br>
             <strong>Memos as a resource layer</strong><br>
             URLs in memos are automatically converted to clickable links and open in an external browser. This turns the memo field into a lightweight reference space rather than just a text box.<br><br>
             <strong>Theme preview before committing</strong><br>
@@ -168,30 +168,30 @@
         <div class="tl-eyebrow">Testing · 05</div>
         <div class="tl-title">User Testing & Iteration</div>
         <div class="tl-full">
-          <p>After the initial release, I shared the app with 10+ users and collected feedback through real usage — not a formal test, but actual day-to-day use by people with different habits and workflows. Bugs surfaced, edge cases appeared, and missing features became obvious quickly.</p>
+          <p>After the initial release, I shared the app with 10+ users and collected feedback through real usage. It wasn't a formal test, just actual day-to-day use by people with different habits and workflows. Bugs surfaced, edge cases appeared, and missing features became obvious quickly.</p>
           <p>Each version addressed a specific round of feedback. The app is currently at v1.0.6.</p>
           <div class="tl-note">
-            <strong>v1.0.0 — Initial Release</strong><br>
+            <strong>v1.0.0: Initial Release</strong><br>
             Daily, weekly, date, one-time task types · Priority levels · Custom labels · Drag &amp; drop reordering · Calendar (month &amp; week) · Archive &amp; restore · Sticker system · Banner customization · 4 themes · Always on top<br><br>
             <strong>v1.0.1 – v1.0.2</strong><br>
             Loading animation · Feedback email button · Sticker page isolation fix · Manual update check + notification dot · Korean/English language support · Calendar type filter · Export/Import data backup · Peach, Rose themes · Banner edit button shortcut · Theme hover preview<br><br>
             <strong>v1.0.3</strong><br>
             Folder system with drag &amp; drop · Alarm system (default + custom per task) · Label reuse · Memo URL links · Multi-memo expand · Calendar date span overlap fix · Sticker rotation handle<br><br>
             <strong>v1.0.4</strong><br>
-            Urgency badge + background color for due dates · Memo inline editing (double-click) · 2 new themes (Ivory, Sky — now 8 total) · Responsive modal width · Banner defaults to theme color · CSS refactored (2,161 → 1,397 lines)<br><br>
+            Urgency badge + background color for due dates · Memo inline editing (double-click) · 2 new themes (Ivory, Sky; now 8 total) · Responsive modal width · Banner defaults to theme color · CSS refactored (2,161 → 1,397 lines)<br><br>
             <strong>v1.0.5</strong><br>
             Calendar week view task deletion (Google Calendar-style options) · Folder reordering via drag &amp; drop · Calendar filter persistence · ErrorBoundary crash screen · Dismissed alarm auto-cleanup · Alarm/timezone bug fixes<br><br>
             <strong>v1.0.6</strong><br>
-            Banner customization expanded — height, zoom, drag to reposition, new fonts (Playfair, Caveat, Dancing Script, Noto Serif), text size slider, vertical position · Date type "Repeat daily" option added · Daily/weekly edit with Google Calendar-style options (edit all / edit this and following) · Sticker drag improved — pixel-perfect movement, arrow key fine-tuning · One-time todos without due date now default to today
+            Banner customization expanded: height, zoom, drag to reposition, new fonts (Playfair, Caveat, Dancing Script, Noto Serif), text size slider, vertical position · Date type "Repeat daily" option added · Daily/weekly edit with Google Calendar-style options (edit all / edit this and following) · Sticker drag improved: pixel-perfect movement, arrow key fine-tuning · One-time todos without due date now default to today
           </div>
           <div class="tl-img-row2">
             <div>
               <img src="img/momotodo/momotodo-versions1.jpg" alt="Version history v1.0.0–v1.0.3" class="tl-img project-img">
-              <div class="tl-caption">Fig.8: v1.0.0 → v1.0.3 — key visual and functional changes across early releases</div>
+              <div class="tl-caption">Fig.8: Key visual and functional changes from v1.0.0 to v1.0.3</div>
             </div>
             <div>
               <img src="img/momotodo/momotodo-versions2.jpg" alt="Current version v1.0.4 all features" class="tl-img project-img">
-              <div class="tl-caption">Fig.9: v1.0.6 — full feature overview including urgency badges, themes, stickers, banner customization, archive, export/import, and settings</div>
+              <div class="tl-caption">Fig.9: Full feature overview of v1.0.6, including urgency badges, themes, stickers, banner customization, archive, export/import, and settings</div>
             </div>
           </div>
         </div>
@@ -202,14 +202,14 @@
         <div class="tl-eyebrow">Next · 06</div>
         <div class="tl-title">What's Next</div>
         <div class="tl-full">
-          <p>v1.0.6 is live on Windows. macOS support was explored but paused — without trusted developer status, the app triggers a "file is damaged" warning on macOS, which requires an Apple Developer account to resolve. The focus going forward is on stability, new features, and eventually a mobile version.</p>
+          <p>v1.0.6 is live on Windows. macOS support was explored but paused. Without trusted developer status, the app triggers a "file is damaged" warning on macOS, which requires an Apple Developer account to resolve. The focus going forward is on stability, new features, and eventually a mobile version.</p>
           <div class="tl-note">
             <strong>Stability & bug check</strong><br>
-            Before new features, the priority is reviewing the existing codebase for potential conflicts, unused variables, and edge cases that could cause errors — building on the same mindset that led to the ErrorBoundary in v1.0.5.<br><br>
+            Before new features, the priority is reviewing the existing codebase for potential conflicts, unused variables, and edge cases that could cause errors, building on the same mindset that led to the ErrorBoundary in v1.0.5.<br><br>
             <strong>v1.0.7 (exploring)</strong><br>
-            Alarm customization improvement — one-time tasks to support direct date + time input instead of relative "X hours before" · Today view completion filter (Todo / Done / All) · Simple weekly stats — completion rate and streaks · Widget / mini view — a small always-on-top window for quick task checks<br><br>
+            Alarm customization: one-time tasks to support direct date + time input instead of relative "X hours before" · Today view completion filter (Todo / Done / All) · Simple weekly stats: completion rate and streaks · Widget / mini view: a small always-on-top window for quick task checks<br><br>
             <strong>Mobile version (longer term)</strong><br>
-            A mobile version is a longer-term goal — enabling cross-device task sharing via the existing Export/Import system so users can carry their list from desktop to mobile seamlessly.
+            A mobile version is a longer-term goal, enabling cross-device task sharing via the existing Export/Import system so users can carry their list from desktop to mobile seamlessly.
           </div>
         </div>
       </div>
@@ -220,9 +220,13 @@
     <!-- Takeaway -->
     <div class="proj-takeaway">
       <div class="proj-takeaway-label">Takeaway</div>
-      <p>Momo Todo changed how I think about the boundary between design and development. Using Claude AI as a coding collaborator, I was able to build something technically complex — drag-and-drop, native notifications, runtime theming, desktop packaging — without a formal engineering background. What mattered most wasn't knowing every API, but knowing what I wanted to build and being able to communicate it precisely. That clarity came from design thinking.</p>
-      <p>Real-user testing surfaced bugs I never would have caught on my own — edge cases, timing issues, crashes in situations I hadn't imagined. Watching that happen taught me that no matter how well you understand the design, the code has its own logic. To fix things confidently, I had to understand not just what each feature does, but how it flows and how changes in one place ripple through others. Building the ErrorBoundary — a dedicated crash screen with a report button — came directly from that realization: if something goes wrong, users need a way out, not a frozen white screen.</p>
-      <p>Every version made the app a little better. Seeing that progression — and knowing real people are using something I made — has been the most satisfying part of this project.</p>
+      <p class="proj-takeaway-lead">Knowing what I wanted to build mattered more than knowing every API.</p>
+      <ul class="proj-takeaway-list">
+        <li>With Claude AI as a coding collaborator, I built drag-and-drop, native notifications, runtime theming, and desktop packaging without an engineering background. Clear design decisions made that possible.</li>
+        <li>Real users found bugs I would never have caught: edge cases, timing issues, and crashes I hadn't imagined. Fixing them meant understanding how a change in one place affects others.</li>
+        <li>That led to the ErrorBoundary, a crash screen with a report button, so users get a way out instead of a frozen white screen.</li>
+        <li>Seeing each version improve, and knowing real people use it, was the most satisfying part.</li>
+      </ul>
     </div>
 
     <!-- Back -->
