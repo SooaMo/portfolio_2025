@@ -51,20 +51,20 @@
       Tintpal gives each person a different color every day. You look around for something that feels like that color, post one photo, and only mutual friends can see it.
     </p>
     <p class="ps-3">
-      The idea came from a few Instagram Reels where friends picked colors on a trip, took photos of things in those colors, and made a collage video. I wanted to have that experience with my friends too, not just on a trip but in everyday life, and in a private place instead of a public feed. I started planning in September and built the first version from late October to mid November. It works on iPhone and Android as a home screen app, in Korean and English.
+      The idea came from a few Instagram Reels where friends picked colors on a trip, took photos of things in those colors, and made a collage video. I wanted to try it with my friends too. But a trip only lasts a few days, so I wanted something we could do every day, just with people we know. I started planning in September and built the first version from late October to mid November. It works on iPhone and Android as a home screen app, in Korean and English.
     </p>
 
     <!-- My Role -->
     <h3 class="mt-5">1. My Role</h3>
     <p><b>Product Design · UX/UI · QA</b></p>
     <p class="ps-3">
-      I planned the features and rules, set the design direction, and decided between options in each of the 14 design rounds. I used Claude Design to explore screen ideas and Claude to write the code. My main work was deciding what the app should do, testing every flow on real phones, and finding what was broken or confusing.
+      I planned the features and rules and made the design decisions. I used Claude Design to try out screen ideas and Claude to write the code. Most of my time went into QA. I kept checking for errors and things that felt inconvenient, thought through the user flow again, and fixed what was needed.
     </p>
 
     <!-- Design Decisions -->
     <h3 class="mt-5">2. Design Decisions</h3>
 
-    <h5 class="mt-4 ps-3">2-1. Private by default</h5>
+    <h5 class="mt-4 ps-3">2-1. Keeping photos private</h5>
     <p class="ps-3">
       During my co-op, I took and edited photos of attendees and coworkers at events. People's rights to their own image mattered, so I always got consent forms before working with the photos. Maybe because of that experience, I felt that if an app stores photos other people took and shares them, it has to be clear that the photos are kept safe and only shown to the people the user chooses. That's why I thought clear Terms of Service and a Privacy Policy were a must.
     </p>
@@ -82,9 +82,9 @@
     <small class="text-muted d-block mt-2">Fig.1: Reporting a friend's photo. The admin only sees the reported photo.</small>
     </div>
 
-    <h5 class="mt-5 ps-3">2-2. Making the daily color worth opening</h5>
+    <h5 class="mt-5 ps-3">2-2. Making it fun every day</h5>
     <p class="ps-3">
-      I had to think about how to make the app fun to use. A trip only lasts a few days, so I had to figure out what would make people keep using it in their everyday life.
+      I had to think about what would make people want to open the app every day.
     </p>
     <p class="ps-3">
       First, the daily color should never make you think, "I always get the same color." I made a list of 212 colors and blocked colors that are too close to the last 7 days. The color is picked from a wide range of color families, like red, orange, yellow, green, blue, purple, and black.
@@ -103,7 +103,7 @@
     <small class="text-muted d-block mt-2">Fig.2: The daily color reveal.</small>
     </div>
 
-    <h5 class="mt-5 ps-3">2-3. Rethinking the navigation</h5>
+    <h5 class="mt-5 ps-3">2-3. Changing the tab bar</h5>
     <p class="ps-3">
       To make the app feel like taking a photo, the first tab bar put today's color in the center as a circle that went straight to the camera. When I walked through the real user flow, though, the tabs felt awkward, so I looked for another approach.
     </p>
@@ -121,16 +121,12 @@
     <small class="text-muted d-block mt-2">Fig.3: How the tab bar changed, from the first version to now.</small>
     </div>
 
-    <p class="ps-3 mt-4">
-      I also checked the details that are easy to skip: text contrast of at least 4.5:1, touch areas of at least 44px, and color names always written out in text for people who have trouble telling colors apart.
-    </p>
-
     <h5 class="mt-5 ps-3">2-4. Designing the logo</h5>
     <p class="ps-3">
       Tintpal is an app for taking and posting photos, but I felt that picking a color was the most important part. So I thought about combining a color ring with a camera lens. While working on the color ring, I felt a plain circle was too simple, and a water drop shape could add a small twist and the feel of paint. In the final logo, the drop sits in the center of the color ring.
     </p>
     <p class="ps-3">
-      For the wordmark, I compared several fonts, from rounded sans to serif. The icon is colorful and thick, so I wanted letters bold enough to stand next to it. The logo also has to be readable at very small sizes, so I checked each font small to see which ones got too thin. That's how I chose Arvo 700, a slab serif. Arvo is also used in the app for dates and color codes, so the logo and the screens feel like one brand.
+      For the wordmark, I compared several fonts, from rounded sans to serif. The icon is colorful and thick, so I wanted letters bold enough to stand next to it. The logo also has to be readable at very small sizes, so I checked each font small to see which ones got too thin. That's how I chose Arvo 700, a slab serif. Arvo is also used in the app for dates and color codes, so the logo matches the text in the app.
     </p>
 
     <div class="text-center">
@@ -140,7 +136,7 @@
     <small class="text-muted d-block mt-2">Fig.4: From paper sketches to the final logo.</small>
     </div>
 
-    <h5 class="mt-5 ps-3">2-5. Testing every flow myself</h5>
+    <h5 class="mt-5 ps-3">2-5. Testing it myself</h5>
     <p class="ps-3">
       Since I had to do everything from planning to development, I had to use Claude well. That also meant testing every step myself on my own phone: signing up, posting photos, adding friends, reporting, and deleting an account. On November 14, I introduced the app to close friends and asked them to tell me about any errors or suggestions. I'm still fixing the small bugs and changes they find.
     </p>
