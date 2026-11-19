@@ -1,0 +1,217 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8" />
+  <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+  <title>Tintpal | Sooa Mo</title>
+  <link rel="icon" href="img/logo.png" type="image/png">
+
+  <!-- Bootstrap -->
+  <link href="https://cdn.jsdelivr.net/npm/bootstrap@5.3.2/dist/css/bootstrap.min.css" rel="stylesheet" />
+  <!-- Font Awesome -->
+  <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.5.0/css/all.min.css">
+  <!-- Custom CSS -->
+  <link rel="stylesheet" href="style.css" />
+</head>
+<body>
+
+  <!-- Navbar -->
+  <div data-include="partials/navbar.html"></div>
+
+  <!-- Project Detail Section -->
+  <main class="legacy-page">
+
+  <!-- Cover -->
+  <img src="img/projects/tintpal-thumb.jpg" alt="Tintpal" class="proj-cover cover-left">
+
+  <section class="legacy-card">
+    <h1 class="mb-3">Tintpal</h1>
+    <p class="text-muted">Personal • Sep – Nov 2026 • <span class="badge bg-secondary">In progress: testing with real users</span></p>
+    <p class="text-muted">Team: Sooa Mo (solo)</p>
+
+    <!-- Tags -->
+    <div class="mb-4">
+      <span class="text-muted"> Project Type: </span>
+      <span class="badge tag-skill me-1">• Mobile Web App (PWA)</span>
+      <span class="badge tag-skill me-1">• UX/UI Design</span>
+      <span class="badge tag-skill me-1">• Design System</span>
+      <span class="badge tag-skill me-1">• User Testing</span>
+    </div>
+
+    <!-- Main Image -->
+    <img src="img/projects/tintpal-cover.jpg" alt="Tintpal app screens: today's color, friends feed, and history" class="project-img img-fluid rounded mb-4" />
+
+    <div class="mb-4">
+      <a href="https://tintpal.app/" target="_blank" rel="noopener" class="btn btn-dark rounded-pill px-4">Visit tintpal.app <i class="fa-solid fa-arrow-up-right-from-square ms-1"></i></a>
+    </div>
+
+    <!-- Overview -->
+    <h3 class="mt-5">0. Overview</h3>
+    <p class="ps-3">
+      Tintpal gives each person a different color every day. You look around for something that feels like that color, post one photo, and only mutual friends can see it.
+    </p>
+    <p class="ps-3">
+      The idea came from a few Instagram Reels where friends picked colors on a trip, took photos of things in those colors, and made a collage video. I wanted to have that experience with my friends too, not just on a trip but in everyday life, and in a private place instead of a public feed. I started planning in September and built the first version from late October to mid November. It works on iPhone and Android as a home screen app, in Korean and English.
+    </p>
+
+    <!-- My Role -->
+    <h3 class="mt-5">1. My Role</h3>
+    <p><b>Product Design · UX/UI · QA</b></p>
+    <p class="ps-3">
+      I planned the features and rules, set the design direction, and decided between options in each of the 14 design rounds. I used Claude Design to explore screen ideas and Claude to write the code. My main work was deciding what the app should do, testing every flow on real phones, and finding what was broken or confusing.
+    </p>
+
+    <!-- Design Decisions -->
+    <h3 class="mt-5">2. Design Decisions</h3>
+
+    <h5 class="mt-4 ps-3">2-1. Private by default</h5>
+    <p class="ps-3">
+      During my co-op, I took and edited photos of attendees and coworkers at events. People's rights to their own image mattered, so I always got consent forms before working with the photos. Maybe because of that experience, I felt that if an app stores photos other people took and shares them, it has to be clear that the photos are kept safe and only shown to the people the user chooses. That's why I thought clear Terms of Service and a Privacy Policy were a must.
+    </p>
+    <p class="ps-3">
+      So in Tintpal, only mutual friends can see each other's photos, and people who aren't logged in can't see any. The friend request button only appears after you type at least the first 4 characters of someone's username, so no one can find other users by typing random letters.
+    </p>
+    <p class="ps-3">
+      The part I thought about most was reporting. From the start, I planned to make this PWA downloadable from places like the Google Play Store someday, and to publish there, a way to report content and let an admin handle it was required. When a report comes in, the admin has to check the reported photo and act on that account. Looking at other people's photos wasn't something I wanted, but I needed it for my original goal, so I found a way to keep it to a minimum. The admin can only see the one reported photo. Not even I, as the admin, can see that person's other photos, their friends, or their email.
+    </p>
+
+    <div class="text-center">
+    <img src="img/projects/tintpal-report.jpg"
+    alt="Photo menu with Report and Block, and the report sheet"
+    class="project-img img-fluid rounded shadow-sm mt-3">
+    <small class="text-muted d-block mt-2">Fig.1: Reporting a friend's photo. The admin only sees the reported photo.</small>
+    </div>
+
+    <h5 class="mt-5 ps-3">2-2. Making the daily color worth opening</h5>
+    <p class="ps-3">
+      I had to think about how to make the app fun to use. A trip only lasts a few days, so I had to figure out what would make people keep using it in their everyday life.
+    </p>
+    <p class="ps-3">
+      First, the daily color should never make you think, "I always get the same color." I made a list of 212 colors and blocked colors that are too close to the last 7 days. The color is picked from a wide range of color families, like red, orange, yellow, green, blue, purple, and black.
+    </p>
+    <p class="ps-3">
+      Second, the reveal animation. I thought showing the color right away when you open the app would be less fun. So the first time you open the app each day, there's a button to get your color. When you tap it, colors pass by like a slot machine and stop on today's color.
+    </p>
+    <p class="ps-3">
+      Third, the onboarding and guides say the photo doesn't have to match the color exactly. The exact color is actually hard to find. The same color can look different depending on the light, the phone, or the screen, and photos often come out a different color from what you see. So there's no failing in my app. The goal isn't taking an exact photo. It's taking a photo, sharing it with people you're close to, and having fun with it.
+    </p>
+
+    <div class="text-center">
+    <img src="img/projects/tintpal-reveal.gif"
+    alt="Today's color reveal animation"
+    class="project-img img-fluid rounded shadow-sm mt-3 phone-shot">
+    <small class="text-muted d-block mt-2">Fig.2: The daily color reveal.</small>
+    </div>
+
+    <h5 class="mt-5 ps-3">2-3. Rethinking the navigation</h5>
+    <p class="ps-3">
+      To make the app feel like taking a photo, the first tab bar put today's color in the center as a circle that went straight to the camera. When I walked through the real user flow, though, the tabs felt awkward, so I looked for another approach.
+    </p>
+    <p class="ps-3">
+      I tried three directions. The first kept the photo feel. The second aimed for a cleaner look, since the big circle seemed to cover the screen. The third followed a layout many apps already use. History, Today, and Friends alone felt too limiting for the app's navigation, so I went with the familiar layout. It also gave me a place for user settings in the nav.
+    </p>
+    <p class="ps-3">
+      Then I refined it. I didn't like the Friends icon, and "Me" didn't really read as a profile here, because the tab mostly held personal settings. Friends became a two-person icon, and Me became Settings. Later I asked what could make the app more fun to use. Group challenges felt strong enough to be their own part of the app, so they got a tab too.
+    </p>
+
+    <div class="text-center">
+    <img src="img/projects/tintpal-tabbar-process.jpg"
+    alt="Tab bar process: the first tab bar, three directions, the refined four-tab version, and the current five tabs with Challenge"
+    class="project-img img-fluid rounded shadow-sm mt-3">
+    <small class="text-muted d-block mt-2">Fig.3: How the tab bar changed, from the first version to now.</small>
+    </div>
+
+    <p class="ps-3 mt-4">
+      I also checked the details that are easy to skip: text contrast of at least 4.5:1, touch areas of at least 44px, and color names always written out in text for people who have trouble telling colors apart.
+    </p>
+
+    <h5 class="mt-5 ps-3">2-4. Designing the logo</h5>
+    <p class="ps-3">
+      Tintpal is an app for taking and posting photos, but I felt that picking a color was the most important part. So I thought about combining a color ring with a camera lens. While working on the color ring, I felt a plain circle was too simple, and a water drop shape could add a small twist and the feel of paint. In the final logo, the drop sits in the center of the color ring.
+    </p>
+    <p class="ps-3">
+      For the wordmark, I compared several fonts, from rounded sans to serif. The icon is colorful and thick, so I wanted letters bold enough to stand next to it. The logo also has to be readable at very small sizes, so I checked each font small to see which ones got too thin. That's how I chose Arvo 700, a slab serif. Arvo is also used in the app for dates and color codes, so the logo and the screens feel like one brand.
+    </p>
+
+    <div class="text-center">
+    <img src="img/projects/tintpal-logo-process.jpg"
+    alt="Logo process: nine paper sketches, first concepts, lens and pals directions, refined color drop, wordmark font options, and the final logo"
+    class="project-img img-fluid rounded shadow-sm mt-3">
+    <small class="text-muted d-block mt-2">Fig.4: From paper sketches to the final logo.</small>
+    </div>
+
+    <h5 class="mt-5 ps-3">2-5. Testing every flow myself</h5>
+    <p class="ps-3">
+      Since I had to do everything from planning to development, I had to use Claude well. That also meant testing every step myself on my own phone: signing up, posting photos, adding friends, reporting, and deleting an account. On November 14, I introduced the app to close friends and asked them to tell me about any errors or suggestions. I'm still fixing the small bugs and changes they find.
+    </p>
+
+
+    <!-- Notable Result -->
+    <h3 class="mt-5">3. Result</h3>
+    <p class="ps-3">
+      I bought the domain tintpal.app, and the app is running live there (v0.1.0). The first version includes the daily color, friends feed, history, collages, weekly group challenges, notifications, and a separate admin page for handling reports.
+    </p>
+    <p class="ps-3">
+      I haven't promoted it yet. Before asking more people to use it, I'm testing with a small group of real users first to find any bugs or problems. I'm also using free database plans, so the app can't handle a large number of users yet. To keep it free, I have to think about server costs, so I also built a way to close sign-ups from the admin page.
+    </p>
+
+
+    <!-- Takeaway -->
+    <h3 class="mt-5">4. Takeaway</h3>
+    <p class="ps-3">
+      I learned that making a single app takes a lot of steps and decisions. Doing the planning, design, and development alone meant a lot of thinking. Working solo, I was the only one who had to decide. But when I work with other people, I'll need to explain the reasons behind each decision clearly, and back them up well enough to make my case.
+    </p>
+    <p class="ps-3">
+      I also learned how important QA is. Things I thought were fine while building felt different once I actually used the app. Errors came up often, some things worked differently on Android and iOS, and I saw that people have different ideas of what feels normal. Still, by handling planning, design, and development on my own, I learned what each area cares about and what it needs.
+    </p>
+
+    <!-- Screens -->
+    <section class="container py-5">
+      <h3 class="mb-4">Screens</h3>
+      <div class="row g-3">
+        <div class="col-6 col-md-4"><img src="img/projects/tintpal-screen-1.jpg" alt="Onboarding" class="project-img img-fluid rounded shadow-sm"></div>
+        <div class="col-6 col-md-4"><img src="img/projects/tintpal-screen-2.jpg" alt="Today's color" class="project-img img-fluid rounded shadow-sm"></div>
+        <div class="col-6 col-md-4"><img src="img/projects/tintpal-screen-3.jpg" alt="Friends feed" class="project-img img-fluid rounded shadow-sm"></div>
+        <div class="col-6 col-md-4"><img src="img/projects/tintpal-screen-4.jpg" alt="History spectrum" class="project-img img-fluid rounded shadow-sm"></div>
+        <div class="col-6 col-md-4"><img src="img/projects/tintpal-screen-5.jpg" alt="Collage" class="project-img img-fluid rounded shadow-sm"></div>
+        <div class="col-6 col-md-4"><img src="img/projects/tintpal-screen-6.jpg" alt="Group challenge" class="project-img img-fluid rounded shadow-sm"></div>
+      </div>
+      <div class="text-center mt-4">
+        <a href="https://tintpal.app/" target="_blank" rel="noopener" class="btn btn-dark rounded-pill px-4">Try Tintpal <i class="fa-solid fa-arrow-up-right-from-square ms-1"></i></a>
+      </div>
+    </section>
+
+  </section>
+
+  <!-- Back -->
+  <div class="proj-back">
+    <a class="proj-prev" href="sfu-gs.html"><small>Prev · 01</small><span>← SFU Graduate Studies</span></a>
+    <a class="proj-next" href="evensync.html"><small>Next · 03</small><span>Even$ync →</span></a>
+  </div>
+  </main>
+
+  <!-- Image Modal -->
+  <div class="modal fade" id="imageModal" tabindex="-1" aria-hidden="true">
+    <div class="modal-dialog modal-xl modal-dialog-centered">
+      <div class="modal-content bg-transparent border-0">
+        <div class="modal-body p-0">
+          <img id="modalImage" src="" class="img-fluid w-100" alt="">
+        </div>
+      </div>
+    </div>
+  </div>
+
+  <button id="backToTopBtn" title="Go to top" aria-label="Go to top"></button>
+
+  <div data-include="partials/footer.html"></div>
+
+  <script src="https://cdn.jsdelivr.net/npm/bootstrap@5.3.2/dist/js/bootstrap.bundle.min.js"></script>
+  <script src="js/include.js"></script>
+  <script src="js/script.js"></script>
+
+  <div id="cursor-dot"></div>
+  <div id="cursor-box"></div>
+  <div id="cursor-fill"></div>
+
+</body>
+</html>

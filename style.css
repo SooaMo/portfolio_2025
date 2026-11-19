@@ -405,3 +405,31 @@ body.cursor-snap.cursor-on-dark .cursor-corner { border-color: var(--mint); }
   .site-nav-links a:not(.site-nav-resume) { padding: 8px 7px; }
   .contact-links { grid-template-columns: 1fr; }
 }
+
+/* ═══════════════════════════════════
+   2026-11 CLEANUP
+═══════════════════════════════════ */
+
+/* Archive: five cards */
+.archive-tile { grid-template-columns: repeat(5, minmax(0, 1fr)); }
+@media (max-width: 67.5rem) {
+  .archive-tile { grid-template-columns: repeat(2, minmax(0, 1fr)); }
+  .archive-card:nth-child(even):last-child { grid-column: 1 / -1; }
+}
+@media (max-width: 35rem) { .archive-tile { grid-template-columns: 1fr; } }
+
+/* Cover whose logo sits near the left edge: crop from the right on narrow screens */
+.proj-cover.cover-left { object-position: left center; }
+
+/* Single phone screen in the text (Tintpal Fig.2): same width, so same height,
+   as one cell of the Screens grid below (Bootstrap row g-3: 3 columns from md, 2 below) */
+.legacy-card .project-img.phone-shot { max-width: calc((100% - 2rem) / 3); }
+@media (max-width: 47.98rem) {
+  .legacy-card .project-img.phone-shot { max-width: calc((100% - 1rem) / 2); }
+}
+
+/* Back-to-top arrow drawn by CSS so it is not read as page text */
+#backToTopBtn::before { content: "↑"; }
+
+/* Zoom modal stays hidden even if Bootstrap's CSS fails to load */
+#imageModal:not(.show) { display: none; }
